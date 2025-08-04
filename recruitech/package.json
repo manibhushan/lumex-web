@@ -1,0 +1,78 @@
+{
+  "name": "techrecruit-solutions-website",
+  "version": "1.0.0",
+  "description": "Modern recruitment and tech integration company website built with modular JavaScript architecture",
+  "type": "module",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "dev": "npm run start:dev",
+    "start": "npm run serve",
+    "start:dev": "concurrently \"npm run serve\" \"npm run open:browser\"",
+    "serve": "live-server --port=3000 --host=localhost --entry-file=index.html --no-browser --cors",
+    "serve:production": "http-server -p 3000 -c-1 --cors",
+    "open:browser": "sleep 2 && opener http://localhost:3000",
+    "build": "npm run validate && npm run optimize",
+    "validate": "npm run validate:html && npm run validate:css && npm run validate:js",
+    "validate:html": "html-validate *.html pages/*.html",
+    "validate:css": "stylelint assets/css/*.css",
+    "validate:js": "eslint assets/js/**/*.js",
+    "optimize": "npm run optimize:css && npm run optimize:js",
+    "optimize:css": "cleancss -o assets/css/style.min.css assets/css/style.css",
+    "optimize:js": "terser assets/js/main.js -o assets/js/main.min.js",
+    "test": "npm run validate",
+    "lint": "npm run validate:js",
+    "lint:fix": "eslint assets/js/**/*.js --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "clean": "rimraf dist/ *.log",
+    "prebuild": "npm run clean",
+    "postinstall": "echo \"✅ Dependencies installed successfully! Run 'npm run dev' to start development server.\"",
+    "deploy:netlify": "netlify deploy --prod --dir=.",
+    "deploy:vercel": "vercel --prod",
+    "content:validate": "node scripts/validate-content.js",
+    "content:extract": "node scripts/extract-content.js",
+    "help": "echo \"Available commands:\n  npm run dev     - Start development server with auto-reload\n  npm run build   - Build and optimize for production\n  npm run test    - Run validation tests\n  npm run format  - Format code with Prettier\n  npm run help    - Show this help message\""
+  },
+  "keywords": [
+    "recruitment",
+    "tech-integration",
+    "website",
+    "javascript",
+    "modular",
+    "spa",
+    "responsive"
+  ],
+  "author": "TechRecruit Solutions",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/techrecruit-solutions-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/techrecruit-solutions-website/issues"
+  },
+  "homepage": "https://techrecruitsolutions.com",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1",
+    "opener": "^1.5.2",
+    "sleep-ms": "^2.0.1",
+    "eslint": "^8.57.0",
+    "stylelint": "^16.2.1",
+    "html-validate": "^8.9.1",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.28.1",
+    "netlify-cli": "^17.15.4",
+    "vercel": "^33.4.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}
