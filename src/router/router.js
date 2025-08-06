@@ -4,8 +4,8 @@ export class Router {
         this.currentRoute = 'home';
         this.routes = {
             'home': 'pages/home.html',
+            'technology-solutions': 'technology-solutions.html',
             'recruitment': 'pages/recruitment.html',
-            'integration': 'pages/integration.html',
             'careers': 'pages/careers.html'
         };
         this.pageContent = document.getElementById('page-content');

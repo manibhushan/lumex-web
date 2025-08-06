@@ -1,6 +1,6 @@
-# Deployment Guide - TechRecruit Solutions
+# Deployment Guide - Lumex
 
-This guide covers various deployment options for the TechRecruit Solutions website.
+This guide covers various deployment options for the Lumex website.
 
 ## 🌐 Hosting Options
 
@@ -47,7 +47,7 @@ This guide covers various deployment options for the TechRecruit Solutions websi
 
 2. **Deploy**
    ```bash
-   cd recruitment-tech-integration
+   cd lumex
    vercel
    ```
 
@@ -304,4 +304,4 @@ Before deploying:
    - Check viewport meta tag
    - Verify CSS media queries
 
-For additional support, contact: info@techrecruitsolutions.com
+For additional support, contact: info@lumex.in
