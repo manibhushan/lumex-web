@@ -1,4 +1,4 @@
-# Deployment Guide - Lumex
+# Deployment Guide - Lumex-web
 
 This guide covers various deployment options for the Lumex website.
 
@@ -47,7 +47,7 @@ This guide covers various deployment options for the Lumex website.
 
 2. **Deploy**
    ```bash
-   cd lumex
+   cd lumex-web
    vercel
    ```
 

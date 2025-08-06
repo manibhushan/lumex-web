@@ -50,7 +50,7 @@ lumex/
    ```bash
    # If using git
    git clone [repository-url]
-   cd lumex
+   cd lumex-web
    ```
 
 2. **Start a local web server**
