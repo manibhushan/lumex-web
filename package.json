@@ -11,7 +11,7 @@
     "serve": "live-server --port=3000 --host=localhost --entry-file=index.html --no-browser --cors",
     "serve:production": "http-server -p 3000 -c-1 --cors",
     "open:browser": "sleep 2 && opener http://localhost:3000",
-    "build": "npm run optimize",
+    "build": "vue-cli-service build --mode prod",
     "validate": "npm run validate:html && npm run validate:css && npm run validate:js",
     "validate:html": "html-validate *.html pages/*.html",
     "validate:css": "stylelint assets/css/*.css",
@@ -66,7 +66,9 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^39.0.0",
     "terser": "^5.28.1",
-    "vercel": "^33.4.1"
+    "vercel": "^33.4.1",
+    "vue-cli-service": "^5.0.10",
+    "vue-template-compiler": "^2.7.16"
   },
   "engines": {
     "node": ">=16.0.0",
