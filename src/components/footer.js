@@ -16,10 +16,10 @@ export class Footer {
                 <div class="footer">
                     <div class="footer__content">
                         <div class="footer__section">
-                            <h3 class="footer__title">TechRecruit Solutions</h3>
+                            <h3 class="footer__title">Lumex</h3>
                             <p class="footer__description">
-                                Bridging the gap between exceptional talent and innovative technology. 
-                                Your trusted partner for recruitment and systems integration.
+                                Bridging the gap between innovative technology and exceptional talent. 
+                                Your trusted partner for tech solutions and recruitment.
                             </p>
                             <div class="footer__social">
                                 <a href="#" class="footer__social-link" aria-label="LinkedIn">
@@ -38,11 +38,11 @@ export class Footer {
                         <div class="footer__section">
                             <h4 class="footer__section-title">Services</h4>
                             <ul class="footer__links">
+                            <li><a href="#technology-solutions" class="footer__link" data-route="technology-solutions">API Integration</a></li>
+                            <li><a href="#technology-solutions" class="footer__link" data-route="technology-solutions">Cloud Migration</a></li>
+                            <li><a href="#technology-solutions" class="footer__link" data-route="technology-solutions">System Modernization</a></li>
                                 <li><a href="#recruitment" class="footer__link" data-route="recruitment">Executive Search</a></li>
                                 <li><a href="#recruitment" class="footer__link" data-route="recruitment">Technical Recruitment</a></li>
-                                <li><a href="#integration" class="footer__link" data-route="integration">API Integration</a></li>
-                                <li><a href="#integration" class="footer__link" data-route="integration">Cloud Migration</a></li>
-                                <li><a href="#integration" class="footer__link" data-route="integration">System Modernization</a></li>
                             </ul>
                         </div>
 
@@ -62,8 +62,8 @@ export class Footer {
                             <div class="footer__contact">
                                 <div class="footer__contact-item">
                                     <strong>Email:</strong><br>
-                                    <a href="mailto:info@techrecruitsolutions.com" class="footer__link">
-                                        info@techrecruitsolutions.com
+                                    <a href="mailto:info@lumex.in" class="footer__link">
+                                        info@lumex.in
                                     </a>
                                 </div>
                                 <div class="footer__contact-item">
@@ -84,7 +84,7 @@ export class Footer {
                     <div class="footer__bottom">
                         <div class="footer__bottom-content">
                             <p class="footer__copyright">
-                                © 2025 TechRecruit Solutions. All rights reserved.
+                                © 2025 Lumex. All rights reserved.
                             </p>
                             <div class="footer__legal">
                                 <a href="#" class="footer__legal-link">Privacy Policy</a>

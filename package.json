@@ -1,7 +1,7 @@
 {
-  "name": "techrecruit-solutions-website",
+  "name": "lumex-web",
   "version": "1.0.0",
-  "description": "Modern recruitment and tech integration company website built with modular JavaScript architecture",
+  "description": "Modern recruitment and tech solutions company website built with modular JavaScript architecture",
   "type": "module",
   "main": "assets/js/main.js",
   "scripts": {
@@ -34,23 +34,23 @@
   },
   "keywords": [
     "recruitment",
-    "tech-integration",
+    "tech-solutions",
     "website",
     "javascript",
     "modular",
     "spa",
     "responsive"
   ],
-  "author": "TechRecruit Solutions",
+  "author": "Lumex",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/techrecruit-solutions-website.git"
+    "url": "https://github.com/yourusername/lumex-web.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/techrecruit-solutions-website/issues"
+    "url": "https://github.com/yourusername/lumex-web/issues"
   },
-  "homepage": "https://techrecruitsolutions.com",
+  "homepage": "https://lumex.in",
   "devDependencies": {
     "clean-css-cli": "^5.6.2",
     "concurrently": "^8.2.2",

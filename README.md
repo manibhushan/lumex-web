@@ -1,6 +1,6 @@
-# TechRecruit Solutions - Modular Website
+# Lumex - Modular Website
 
-A modern, responsive website for TechRecruit Solutions, built with vanilla JavaScript using modular architecture principles.
+A modern, responsive website for Lumex, built with vanilla JavaScript using modular architecture principles.
 
 ## 🚀 Features
 
@@ -14,12 +14,12 @@ A modern, responsive website for TechRecruit Solutions, built with vanilla JavaS
 ## 📁 Project Structure
 
 ```
-recruitment-tech-integration/
+lumex/
 ├── index.html                 # Main entry point
 ├── pages/                     # Individual page content
 │   ├── home.html
 │   ├── recruitment.html
-│   ├── integration.html
+│   ├── technology-solutions.html
 │   └── careers.html
 ├── assets/
 │   ├── css/
@@ -50,7 +50,7 @@ recruitment-tech-integration/
    ```bash
    # If using git
    git clone [repository-url]
-   cd recruitment-tech-integration
+   cd lumex
    ```
 
 2. **Start a local web server**
@@ -166,7 +166,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 For questions or support:
-- Email: info@techrecruitsolutions.com
+- Email: info@lumex.in
 - Phone: +1 (555) 123-4567
 
 ## 🔄 Version History

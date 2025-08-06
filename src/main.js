@@ -3,7 +3,7 @@ import { Router } from './router/router.js';
 import { Navigation } from './components/navigation.js';
 import { Footer } from './components/footer.js';
 
-class TechRecruitApp {
+class LumexApp {
     constructor() {
         this.router = null;
         this.navigation = null;
@@ -12,7 +12,7 @@ class TechRecruitApp {
     }
 
     async init() {
-        console.log('Initializing TechRecruit Solutions App...');
+        console.log('Initializing Lumex App...');
 
         try {
             // Wait for DOM to be ready
@@ -176,4 +176,4 @@ class TechRecruitApp {
 }
 
 // Initialize the application when the script loads
-new TechRecruitApp();
+new LumexApp();
