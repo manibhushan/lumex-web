@@ -4,7 +4,7 @@ export class Router {
         this.currentRoute = 'home';
         this.routes = {
             'home': 'pages/home.html',
-            'technology-solutions': 'technology-solutions.html',
+            'technology-solutions': 'pages/technology-solutions.html',
             'recruitment': 'pages/recruitment.html',
             'careers': 'pages/careers.html'
         };
