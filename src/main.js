@@ -1,7 +1,7 @@
 // Main Application Entry Point
-import { Router } from './assets/js/router/router.js';
-import { Navigation } from './assets/js/components/navigation.js';
-import { Footer } from './assets/js/components/footer.js';
+import { Router } from './router/router.js';
+import { Navigation } from './components/navigation.js';
+import { Footer } from './components/footer.js';
 
 class TechRecruitApp {
     constructor() {
@@ -87,7 +87,7 @@ class TechRecruitApp {
             const formData = new FormData(form);
 
             // Import validation module dynamically when needed
-            const { FormValidator } = await import('./assets/js/utils/validation.js');
+            const { FormValidator } = await import('./utils/validation.js');
             const validator = new FormValidator();
 
             // Validate form
