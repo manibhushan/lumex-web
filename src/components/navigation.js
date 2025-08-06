@@ -34,6 +34,11 @@ export class Navigation {
                                 Recruitment
                             </a>
                         </li>
+                        <li class="nav__item">
+                            <a href="#careers" class="nav__link" data-route="careers">
+                                Careers
+                            </a>
+                        </li>
                     </ul>
                     <div class="nav__mobile-toggle" id="mobile-menu-toggle">
                         <span class="nav__hamburger"></span>
