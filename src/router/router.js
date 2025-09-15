@@ -6,7 +6,8 @@ export class Router {
             'home': 'pages/home.html',
             'technology-solutions': 'pages/technology-solutions.html',
             'recruitment': 'pages/recruitment.html',
-            'careers': 'pages/careers.html'
+            'careers': 'pages/careers.html',
+            'contact-us': 'pages/contact-us.html'
         };
         this.pageContent = document.getElementById('page-content');
     }
