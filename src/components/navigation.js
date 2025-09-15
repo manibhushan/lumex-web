@@ -16,7 +16,7 @@ export class Navigation {
                 <nav class="nav">
                     <div class="nav__brand">
                         <h1 class="nav__logo">Lumex</h1>
-                        <p class="nav__tagline">Technology Solutions and Recruitment</p>
+                        <p class="nav__tagline">Bridging Talent and Technology</p>
                     </div>
                     <ul class="nav__menu">
                         <li class="nav__item">
@@ -25,18 +25,23 @@ export class Navigation {
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#technology-solutions" class="nav__link" data-route="technology-solutions">
-                                Technology Solutions
-                            </a>
-                        </li>
-                        <li class="nav__item">
                             <a href="#recruitment" class="nav__link" data-route="recruitment">
                                 Recruitment
                             </a>
                         </li>
                         <li class="nav__item">
+                            <a href="#technology-solutions" class="nav__link" data-route="technology-solutions">
+                                Technology Solutions
+                            </a>
+                        </li>
+                        <li class="nav__item">
                             <a href="#careers" class="nav__link" data-route="careers">
                                 Careers
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact-us" class="nav__link" data-route="contact-us">
+                                Contact Us
                             </a>
                         </li>
                     </ul>
