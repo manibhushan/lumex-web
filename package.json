@@ -6,7 +6,7 @@
   "main": "assets/js/main.js",
   "scripts": {
     "dev": "npm run start:dev",
-    "start": "npm run serve",
+    "start": "vue-cli-service serve",
     "start:dev": "concurrently \"npm run serve\" \"npm run open:browser\"",
     "serve": "live-server --port=3000 --host=localhost --entry-file=index.html --no-browser --cors",
     "serve:production": "http-server -p 3000 -c-1 --cors",
@@ -57,8 +57,8 @@
     "eslint": "^8.57.0",
     "html-validate": "^8.9.1",
     "http-server": "^14.1.1",
-    "live-server": "^1.2.2",
-    "netlify-cli": "^17.15.4",
+    "live-server": "^1.2.0",
+    "netlify-cli": "^23.5.1",
     "opener": "^1.5.2",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
@@ -66,9 +66,9 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^39.0.0",
     "terser": "^5.28.1",
-    "vercel": "^33.4.1",
+    "vercel": "^48.0.0",
     "vue-cli-service": "^5.0.10",
-    "vue-template-compiler": "^2.7.16"
+    "vue-template-compiler": "^0.1.0"
   },
   "engines": {
     "node": ">=16.0.0",
