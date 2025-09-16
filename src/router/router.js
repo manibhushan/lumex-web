@@ -1,13 +1,19 @@
 // Router Module - Handles page navigation and loading
+import { homeHTML } from "../components/home";
+import { technologySolutionsHTML } from "../components/technology-solutions";
+import { recruitmentHTML } from "../components/recruitment";
+import { careersHTML } from "../components/careers";
+import { contactUsHTML } from "../components/contact-us";
+
 export class Router {
     constructor() {
         this.currentRoute = 'home';
         this.routes = {
-            'home': 'pages/home.html',
-            'technology-solutions': 'pages/technology-solutions.html',
-            'recruitment': 'pages/recruitment.html',
-            'careers': 'pages/careers.html',
-            'contact-us': 'pages/contact-us.html'
+            'home': homeHTML,
+            'technology-solutions': technologySolutionsHTML,
+            'recruitment': recruitmentHTML,
+            'careers': careersHTML,
+            'contact-us': contactUsHTML
         };
         this.pageContent = document.getElementById('page-content');
     }
@@ -68,14 +74,7 @@ export class Router {
         this.showLoadingState();
 
         try {
-            // Fetch page content
-            const response = await fetch(this.routes[route]);
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const html = await response.text();
+            const html = this.routes[route];
 
             // Update page content with fade effect
             await this.updatePageContent(html);

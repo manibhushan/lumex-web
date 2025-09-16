@@ -8,16 +8,29 @@ export class FormValidator {
         const errors = {};
         let isValid = true;
 
-        // Validate full name
-        const fullName = formData.get('fullName')?.trim();
-        if (!fullName) {
-            errors.fullName = 'Full name is required';
+        // Validate first name
+        const firstName = formData.get('firstName')?.trim();
+        if (!firstName) {
+            errors.firstName = 'First name is required';
             isValid = false;
-        } else if (fullName.length < 2) {
-            errors.fullName = 'Full name must be at least 2 characters';
+        } else if (firstName.length < 2) {
+            errors.firstName = 'First name must be at least 2 characters';
             isValid = false;
-        } else if (!/^[a-zA-Z\s'-]+$/.test(fullName)) {
-            errors.fullName = 'Full name can only contain letters, spaces, hyphens, and apostrophes';
+        } else if (!/^[a-zA-Z\s'-]+$/.test(firstName)) {
+            errors.firstName = 'First name can only contain letters, spaces, hyphens, and apostrophes';
+            isValid = false;
+        }
+
+        // Validate last name
+        const lastName = formData.get('lastName')?.trim();
+        if (!lastName) {
+            errors.lastName = 'Last name is required';
+            isValid = false;
+        } else if (lastName.length < 2) {
+            errors.lastName = 'Last name must be at least 2 characters';
+            isValid = false;
+        } else if (!/^[a-zA-Z\s'-]+$/.test(lastName)) {
+            errors.lastName = 'Last name can only contain letters, spaces, hyphens, and apostrophes';
             isValid = false;
         }
 
@@ -41,13 +54,6 @@ export class FormValidator {
             isValid = false;
         }
 
-        // Validate position
-        const position = formData.get('position');
-        if (!position) {
-            errors.position = 'Please select a position of interest';
-            isValid = false;
-        }
-
         // Validate resume file
         const resumeFile = formData.get('resume');
         if (!resumeFile || resumeFile.size === 0) {
@@ -65,6 +71,56 @@ export class FormValidator {
         const coverLetter = formData.get('coverLetter')?.trim();
         if (coverLetter && coverLetter.length > 2000) {
             errors.coverLetter = 'Cover letter must be less than 2000 characters';
+            isValid = false;
+        }
+
+        return { isValid, errors };
+    }
+
+    validateContactForm(formData) {
+        const errors = {};
+        let isValid = true;
+
+        // Validate name
+        const name = formData.get('name')?.trim();
+        if (!name) {
+            errors.name = 'Name is required';
+            isValid = false;
+        } else if (name.length < 2) {
+            errors.name = 'Name must be at least 2 characters';
+            isValid = false;
+        } else if (!/^[a-zA-Z\s'-]+$/.test(name)) {
+            errors.name = 'Name can only contain letters, spaces, hyphens, and apostrophes';
+            isValid = false;
+        }
+
+        // Validate email
+        const email = formData.get('email')?.trim();
+        if (!email) {
+            errors.email = 'Email address is required';
+            isValid = false;
+        } else if (!this.isValidEmail(email)) {
+            errors.email = 'Please enter a valid email address';
+            isValid = false;
+        }
+
+        // Validate phone (optional, but if provided, check validity)
+        const phone = formData.get('phone')?.trim();
+        if (phone && !this.isValidPhone(phone)) {
+            errors.phone = 'Please enter a valid phone number';
+            isValid = false;
+        }
+
+        // Validate message
+        const message = formData.get('message')?.trim();
+        if (!message) {
+            errors.message = 'Message is required';
+            isValid = false;
+        } else if (message.length < 10) {
+            errors.message = 'Message must be at least 10 characters';
+            isValid = false;
+        } else if (message.length > 2000) {
+            errors.message = 'Message must be less than 2000 characters';
             isValid = false;
         }
 

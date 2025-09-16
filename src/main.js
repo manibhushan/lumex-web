@@ -77,21 +77,27 @@ class LumexApp {
         document.addEventListener('submit', (event) => {
             if (event.target.id === 'career-form') {
                 event.preventDefault();
-                this.handleCareerFormSubmission(event.target);
+                this.handleCareerFormSubmission(event);
+            } else if (event.target.id === 'contact-form') {
+                event.preventDefault();
+                this.handleContactFormSubmission(event);
             }
         });
     }
 
-    async handleCareerFormSubmission(form) {
+    async handleFormSubmission(event, { validate, successMessage, loadingText, resetButtonText }) {
         try {
-            const formData = new FormData(form);
+
+            // Ensure all form fields have 'name' attributes and are not disabled
+            // Also, make sure the submit button triggering this handler has type="submit"
+            const formData = new FormData(event.target);
 
             // Import validation module dynamically when needed
             const { FormValidator } = await import('./utils/validation.js');
             const validator = new FormValidator();
 
             // Validate form
-            const validationResult = validator.validateCareerForm(formData);
+            const validationResult = validate(validator, formData);
 
             if (!validationResult.isValid) {
                 validator.displayErrors(validationResult.errors);
@@ -104,60 +110,49 @@ class LumexApp {
             // Show loading state
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
-            submitButton.textContent = 'Submitting...';
+            submitButton.textContent = loadingText;
             submitButton.disabled = true;
 
-            // Submit to Google Forms (or your preferred endpoint)
-            await this.submitToGoogleForms(form, formData);
-
             // Show success message
-            this.showSuccessMessage();
+            this.showSuccessMessageForForm(successMessage);
 
             // Reset form
             form.reset();
 
         } catch (error) {
             console.error('Form submission error:', error);
-            alert('There was an error submitting your application. Please try again.');
+            alert('There was an error submitting the form. Please try again.');
         } finally {
             // Reset button state
             const submitButton = form.querySelector('button[type="submit"]');
             if (submitButton) {
-                submitButton.textContent = 'Submit Application';
+                submitButton.textContent = resetButtonText;
                 submitButton.disabled = false;
             }
         }
     }
 
-    async submitToGoogleForms(form, formData) {
-        // For Google Forms integration, you would:
-        // 1. Create a Google Form
-        // 2. Get the form action URL
-        // 3. Map field names to Google Forms entry IDs
-        // 4. Submit the form data
-
-        // Example implementation:
-        try {
-            // If using Google Forms, uncomment and modify this:
-            // const response = await fetch(form.action, {
-            //     method: 'POST',
-            //     body: formData,
-            //     mode: 'no-cors'
-            // });
-
-            // For demonstration, we'll simulate a successful submission
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            console.log('Form data submitted:', Object.fromEntries(formData));
-
-        } catch (error) {
-            console.error('Form submission failed:', error);
-            throw error;
-        }
+    async handleCareerFormSubmission(event) {
+        await this.handleFormSubmission(event, {
+            validate: (validator, formData) => validator.validateCareerForm(formData),
+            successMessage: 'Submitted Successfully',
+            loadingText: 'Submitting...',
+            resetButtonText: 'Submit Application'
+        });
     }
 
-    showSuccessMessage() {
-        const form = document.getElementById('career-form');
-        const successMessage = document.getElementById('success-message');
+    async handleContactFormSubmission(event) {
+        await this.handleFormSubmission(event, {
+            validate: (validator, formData) => validator.validateContactForm(formData),
+            successMessage: 'Submitted Successfully',
+            loadingText: 'Sending...',
+            resetButtonText: 'Send Message'
+        });
+    }
+
+    showSuccessMessageForForm(formId, messageId, timeout = 10000) {
+        const form = document.getElementById(formId);
+        const successMessage = document.getElementById(messageId);
 
         if (form && successMessage) {
             form.style.display = 'none';
@@ -166,12 +161,20 @@ class LumexApp {
             // Scroll to success message
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-            // Hide success message after 10 seconds and show form again
+            // Hide success message after timeout and show form again
             setTimeout(() => {
                 successMessage.style.display = 'none';
                 form.style.display = 'block';
-            }, 10000);
+            }, timeout);
         }
+    }
+
+    showCareerSuccessMessage() {
+        this.showSuccessMessageForForm('career-form', 'success-message');
+    }
+
+    showContactSuccessMessage() {
+        this.showSuccessMessageForForm('contact-form', 'contact-success-message');
     }
 }
 

@@ -1,5 +1,5 @@
-<!-- Careers Page Content -->
-<section id="careers-page" class="page">
+export const careersHTML = 
+`<section id="careers-page" class="page">
     <!-- Header Section -->
     <section class="page-header">
         <div class="container">
@@ -158,14 +158,14 @@
         <div class="container">
             <h2 class="section-title">Apply Now</h2>
             <div class="application-form">
-                <form id="career-form" class="form" action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="hidden_iframe">
+                <form id="career-form" class="form" action="https://formspree.io/f/xyzdqggy" method="POST">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="firstName" class="form-label">First Name *</label>
                             <input 
                                 type="text" 
                                 id="firstName" 
-                                name="entry.123456789" 
+                                name="firstName" 
                                 class="form-input" 
                                 required
                                 placeholder="Enter your first name"
@@ -177,7 +177,7 @@
                             <input 
                                 type="text" 
                                 id="lastName" 
-                                name="entry.234567891" 
+                                name="lastName" 
                                 class="form-input" 
                                 required
                                 placeholder="Enter your last name"
@@ -190,7 +190,7 @@
                             <input 
                                 type="email" 
                                 id="email" 
-                                name="entry.987654321" 
+                                name="email" 
                                 class="form-input" 
                                 required
                                 placeholder="Enter your email address"
@@ -203,7 +203,7 @@
                             <input 
                                 type="tel" 
                                 id="phone" 
-                                name="entry.456789123" 
+                                name="phone" 
                                 class="form-input" 
                                 required
                                 placeholder="Enter your phone number"
@@ -231,7 +231,7 @@
                         <label for="coverLetter" class="form-label">Cover Letter</label>
                         <textarea 
                             id="coverLetter" 
-                            name="entry.321654987" 
+                            name="coverLetter" 
                             class="form-textarea" 
                             rows="6"
                             placeholder="Tell us why you're interested in joining our team..."
@@ -259,4 +259,4 @@
             </div>
         </div>
     </section>
-</section>
+</section>`;

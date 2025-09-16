@@ -1,5 +1,5 @@
-<!-- Integration Page Content -->
-<section id="technology-solutions-page" class="page">
+export const technologySolutionsHTML =
+`<section id="technology-solutions-page" class="page">
     <!-- Header Section -->
     <section class="page-header">
         <div class="container">
@@ -240,4 +240,4 @@
             </div>
         </div>
     </section>
-</section>
+</section>`;

@@ -1,4 +1,6 @@
-<!-- Home Page Content -->
+// Home Component
+export const homeHTML = 
+`<!-- Home Page Content -->
 <section id="home-page" class="page">
     <!-- Hero Section -->
     <section class="hero">
@@ -94,4 +96,4 @@
             </div>
         </div>
     </section>
-</section>
+</section> `;

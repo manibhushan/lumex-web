@@ -1,5 +1,5 @@
-<!-- Recruitment Page Content -->
-<section id="recruitment-page" class="page">
+export const recruitmentHTML =
+`<section id="recruitment-page" class="page">
     <!-- Header Section -->
     <section class="page-header">
         <div class="container">
@@ -165,4 +165,4 @@
             </div>
         </div>
     </section>
-</section>
+</section>`;
