@@ -88,9 +88,10 @@ class LumexApp {
     async handleFormSubmission(event, { validate, successMessage, loadingText, resetButtonText }) {
         try {
 
+            const form = event.target;
             // Ensure all form fields have 'name' attributes and are not disabled
             // Also, make sure the submit button triggering this handler has type="submit"
-            const formData = new FormData(event.target);
+            const formData = new FormData(form);
 
             // Import validation module dynamically when needed
             const { FormValidator } = await import('./utils/validation.js');
@@ -124,7 +125,7 @@ class LumexApp {
             alert('There was an error submitting the form. Please try again.');
         } finally {
             // Reset button state
-            const submitButton = form.querySelector('button[type="submit"]');
+            const submitButton = event.target.querySelector('button[type="submit"]');
             if (submitButton) {
                 submitButton.textContent = resetButtonText;
                 submitButton.disabled = false;
