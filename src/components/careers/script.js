@@ -39,9 +39,14 @@ export default {
       }
     },
     handleFileUpload(event) {
-      const file = event.target.files[0];
+      const file = event.target.files[0] || null;
       this.formData.resume = file;
       this.errors.resume = '';
+      
+      // Clear any previous error styling
+      if (file) {
+        event.target.classList.remove('form-input--error');
+      }
     },
     validateForm() {
       // Create FormData object for validation utility
@@ -82,7 +87,7 @@ export default {
         formDataToSubmit.append('lastName', this.formData.lastName);
         formDataToSubmit.append('email', this.formData.email);
         formDataToSubmit.append('phone', this.formData.phone);
-        formDataToSubmit.append('resume', this.formData.resume);
+        // formDataToSubmit.append('resume', this.formData.resume);
         formDataToSubmit.append('coverLetter', this.formData.coverLetter);
 
         // Submit to Formspree

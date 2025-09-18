@@ -33,12 +33,14 @@ export default {
       // Use validation utility
       const validationResult = this.validator.validateContactForm(formData);
       
-      // Update component errors state
-      this.errors = {
-        name: validationResult.errors.name || '',
-        email: validationResult.errors.email || '',
-        message: validationResult.errors.message || ''
-      };
+      console.log('Validation result:', validationResult); // Debug log
+
+      // Update component errors state - ensure reactivity
+      Object.keys(this.errors).forEach(key => {
+        this.errors[key] = validationResult.errors[key] || '';
+      });
+
+      console.log('Updated errors:', this.errors); // Debug log
 
       return validationResult.isValid;
     },
@@ -106,6 +108,13 @@ export default {
       
       // Clear validation errors using utility
       this.validator.clearErrors();
+    },
+
+    clearFieldError(fieldName) {
+      // Clear the error for this specific field when user starts typing
+      if (this.errors[fieldName]) {
+        this.errors[fieldName] = '';
+      }
     }
   },
   
@@ -113,7 +122,15 @@ export default {
     // Set up real-time validation when component is mounted
     const formElement = this.$el.querySelector('form');
     if (formElement) {
-      this.validator.setupRealTimeValidation(formElement);
+      this.validator.setupRealTimeValidation(formElement, 'contact');
+      
+      // Listen for error-cleared events to update Vue state
+      formElement.addEventListener('error-cleared', (event) => {
+        const fieldName = event.detail.fieldName;
+        if (this.errors[fieldName]) {
+          this.errors[fieldName] = '';
+        }
+      });
     }
   },
   

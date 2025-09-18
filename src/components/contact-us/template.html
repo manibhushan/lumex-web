@@ -17,6 +17,7 @@
           required
           v-model="formData.name"
           :class="{ 'error': errors.name }"
+          @input="clearFieldError('name')"
         >
         <span v-if="errors.name" class="error-message">{{ errors.name }}</span>
       </div>
@@ -30,6 +31,7 @@
           required
           v-model="formData.email"
           :class="{ 'error': errors.email }"
+          @input="clearFieldError('email')"
         >
         <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
       </div>
@@ -43,6 +45,7 @@
           required
           v-model="formData.message"
           :class="{ 'error': errors.message }"
+          @input="clearFieldError('message')"
         ></textarea>
         <span v-if="errors.message" class="error-message">{{ errors.message }}</span>
       </div>

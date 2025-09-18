@@ -56,14 +56,20 @@ export class FormValidator {
 
         // Validate resume file
         const resumeFile = formData.get('resume');
-        if (!resumeFile || resumeFile.size === 0) {
+        if (!resumeFile || resumeFile === 'null' || (resumeFile instanceof File && resumeFile.size === 0)) {
             errors.resume = 'Please upload your resume';
             isValid = false;
-        } else if (!this.isValidResumeFile(resumeFile)) {
-            errors.resume = 'Please upload a valid resume file (PDF, DOC, or DOCX)';
-            isValid = false;
-        } else if (resumeFile.size > 5 * 1024 * 1024) { // 5MB limit
-            errors.resume = 'Resume file size must be less than 5MB';
+        } else if (resumeFile instanceof File) {
+            if (!this.isValidResumeFile(resumeFile)) {
+                errors.resume = 'Please upload a valid resume file (PDF, DOC, or DOCX)';
+                isValid = false;
+            } else if (resumeFile.size > 5 * 1024 * 1024) { // 5MB limit
+                errors.resume = 'Resume file size must be less than 5MB';
+                isValid = false;
+            }
+        } else {
+            // Handle case where resumeFile is not a proper File object
+            errors.resume = 'Please upload your resume';
             isValid = false;
         }
 
@@ -147,6 +153,11 @@ export class FormValidator {
     }
 
     isValidResumeFile(file) {
+        // Safety check - ensure file exists and has required properties
+        if (!file || !file.name || typeof file.name !== 'string') {
+            return false;
+        }
+
         const allowedTypes = [
             'application/pdf',
             'application/msword',
@@ -155,21 +166,20 @@ export class FormValidator {
 
         const allowedExtensions = ['.pdf', '.doc', '.docx'];
 
-        // Check MIME type
-        if (!allowedTypes.includes(file.type)) {
-            // Fallback to extension check if MIME type is not reliable
-            const fileName = file.name.toLowerCase();
-            return allowedExtensions.some(ext => fileName.endsWith(ext));
+        // Check MIME type first
+        if (allowedTypes.includes(file.type)) {
+            return true;
         }
+
+        // Fallback to extension check if MIME type is not reliable or empty
+        const fileName = file.name.toLowerCase();
+        return allowedExtensions.some(ext => fileName.endsWith(ext));
 
         return true;
     }
 
-    displayErrors(errors) {
-        // Clear existing errors first
-        this.clearErrors();
-
-        // Display each error
+    displayErrors(errors, autoFocus = false) {
+        // Display each error without clearing others during real-time validation
         Object.keys(errors).forEach(field => {
             const errorElement = document.getElementById(`${field}-error`);
             const inputElement = document.getElementById(field) || document.querySelector(`[name="${field}"]`);
@@ -182,8 +192,8 @@ export class FormValidator {
             if (inputElement) {
                 inputElement.classList.add('form-input--error');
 
-                // Focus on the first error field
-                if (Object.keys(errors)[0] === field) {
+                // Only focus and scroll on form submission, not during real-time validation
+                if (autoFocus && Object.keys(errors)[0] === field) {
                     inputElement.focus();
                     inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
@@ -199,44 +209,67 @@ export class FormValidator {
             element.style.display = 'none';
         });
 
-        // Remove error styling from inputs
-        const inputElements = document.querySelectorAll('.form-input--error, .form-select--error, .form-file--error, .form-textarea--error');
+        // Remove error styling from inputs (handle both naming conventions)
+        const inputElements = document.querySelectorAll('.form-input--error, .form-select--error, .form-file--error, .form-textarea--error, .error');
         inputElements.forEach(element => {
-            element.classList.remove('form-input--error', 'form-select--error', 'form-file--error', 'form-textarea--error');
+            element.classList.remove('form-input--error', 'form-select--error', 'form-file--error', 'form-textarea--error', 'error');
         });
     }
 
     // Real-time validation helper
-    setupRealTimeValidation(formElement) {
+    setupRealTimeValidation(formElement, formType = 'career') {
         if (!formElement) return;
 
         const inputs = formElement.querySelectorAll('input, select, textarea');
 
         inputs.forEach(input => {
-            input.addEventListener('blur', () => {
-                this.validateField(input);
+            // Validate field on blur (when user leaves the field)
+            input.addEventListener('blur', (e) => {
+                // Only validate if the field has content or was previously in error state
+                if (input.value.trim() || input.classList.contains('form-input--error')) {
+                    this.validateField(input, formType);
+                }
             });
 
+            // Clear errors on input (when user starts typing)
             input.addEventListener('input', () => {
-                // Clear error on input if there was one
-                if (input.classList.contains('form-input--error')) {
+                // Check for both error class names
+                const hasError = input.classList.contains('form-input--error') || 
+                               input.classList.contains('error');
+                
+                if (hasError) {
                     const errorElement = document.getElementById(`${input.name}-error`);
                     if (errorElement) {
                         errorElement.style.display = 'none';
-                        input.classList.remove('form-input--error');
                     }
+                    
+                    // Remove both possible error classes
+                    input.classList.remove('form-input--error', 'error');
+                    
+                    // Trigger a custom event to notify Vue component
+                    input.dispatchEvent(new CustomEvent('error-cleared', {
+                        detail: { fieldName: input.name }
+                    }));
                 }
             });
         });
     }
 
-    validateField(field) {
+    validateField(field, formType = 'career') {
         const formData = new FormData();
-        formData.append(field.name, field.type === 'file' ? field.files[0] : field.value);
+        
+        if (field.type === 'file') {
+            // Handle file input - append the file or null if no file selected
+            const file = field.files && field.files[0] ? field.files[0] : null;
+            formData.append(field.name, file);
+        } else {
+            formData.append(field.name, field.value);
+        }
 
-        // This is a simplified single-field validation
-        // In a real implementation, you might want more sophisticated field-by-field validation
-        const result = this.validateCareerForm(formData);
+        // Use appropriate validation method based on form type
+        const result = formType === 'contact' 
+            ? this.validateContactForm(formData)
+            : this.validateCareerForm(formData);
 
         if (result.errors[field.name]) {
             this.displayErrors({ [field.name]: result.errors[field.name] });
