@@ -1,9 +1,9 @@
   <div class="container">
     <nav class="nav">
-      <div class="nav__brand">
+      <a href="/" class="nav__brand" @click="handleNavClick({ route: 'home', href: '/' }, $event)">
         <h1 class="nav__logo">{{ brandInfo.name }}</h1>
         <p class="nav__tagline">{{ brandInfo.tagline }}</p>
-      </div>
+      </a>
       
       <ul class="nav__menu" :class="{ 'nav__menu--active': isMobileMenuOpen }">
         <li 
