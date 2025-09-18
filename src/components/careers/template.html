@@ -1,0 +1,199 @@
+  <section id="careers-page" class="page">
+    <!-- Header Section -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__content">
+          <h1 class="page-header__title">Join Our Team</h1>
+          <p class="page-header__description">
+            Build your career with Lumex and help shape the future of talent acquisition and technology integration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Culture -->
+    <section class="culture">
+      <div class="container">
+        <h2 class="section-title">Why Work With Us?</h2>
+        <div class="culture-grid">
+          <div v-for="item in cultureItems" :key="item.id" class="culture-item">
+            <div class="culture-item__icon">{{ item.icon }}</div>
+            <h3 class="culture-item__title">{{ item.title }}</h3>
+            <p class="culture-item__description">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Openings -->
+    <section class="job-openings">
+      <div class="container">
+        <h2 class="section-title">Current Openings</h2>
+        <div class="jobs-list">
+          <div v-for="job in jobOpenings" :key="job.id" class="job-card">
+            <div class="job-card__header">
+              <h3 class="job-card__title">{{ job.title }}</h3>
+              <button 
+                class="job-card__apply-btn" 
+                @click="scrollToApplication"
+              >
+                Apply Now
+              </button>
+            </div>
+            <div class="job-card__department">{{ job.department }}</div>
+            <p class="job-card__description">
+              {{ job.description }}
+            </p>
+            <div class="job-card__requirements">
+              <strong>Key Requirements:</strong>
+              <ul>
+                <li v-for="requirement in job.requirements" :key="requirement">
+                  {{ requirement }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+      <div class="container">
+        <h2 class="section-title">Employee Benefits</h2>
+        <div class="benefits-grid">
+          <div v-for="benefit in benefits" :key="benefit.id" class="benefit-item">
+            <h3 class="benefit-item__title">{{ benefit.title }}</h3>
+            <p class="benefit-item__description">
+              {{ benefit.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="application" class="application">
+      <div class="container">
+        <h2 class="section-title">Apply Now</h2>
+        <div class="application-form">
+          <form 
+            id="career-form" 
+            class="form" 
+            action="https://formspree.io/f/xyzdqggy" 
+            method="POST"
+            @submit.prevent="handleSubmit"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName" class="form-label">First Name *</label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName" 
+                  class="form-input" 
+                  required
+                  placeholder="Enter your first name"
+                  v-model="formData.firstName"
+                >
+                <span class="form-error" id="firstName-error">{{ errors.firstName }}</span>
+              </div>
+              <div class="form-group">
+                <label for="lastName" class="form-label">Last Name *</label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName" 
+                  class="form-input" 
+                  required
+                  placeholder="Enter your last name"
+                  v-model="formData.lastName"
+                >
+                <span class="form-error" id="lastName-error">{{ errors.lastName }}</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  required
+                  placeholder="Enter your email address"
+                  v-model="formData.email"
+                >
+                <span class="form-error" id="email-error">{{ errors.email }}</span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-input" 
+                  required
+                  placeholder="Enter your phone number"
+                  v-model="formData.phone"
+                >
+                <span class="form-error" id="phone-error">{{ errors.phone }}</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="resume" class="form-label">Resume *</label>
+              <input 
+                type="file" 
+                id="resume" 
+                name="resume" 
+                class="form-file" 
+                accept=".pdf,.doc,.docx" 
+                required
+                @change="handleFileUpload"
+              >
+              <span class="form-help">Please upload your resume (PDF, DOC, or DOCX format)</span>
+              <span class="form-error" id="resume-error">{{ errors.resume }}</span>
+            </div>
+
+            <div class="form-group">
+              <label for="coverLetter" class="form-label">Cover Letter</label>
+              <textarea 
+                id="coverLetter" 
+                name="coverLetter" 
+                class="form-textarea" 
+                rows="6"
+                placeholder="Tell us why you're interested in joining our team..."
+                v-model="formData.coverLetter"
+              ></textarea>
+              <span class="form-error" id="coverLetter-error">{{ errors.coverLetter }}</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary btn--lg" :disabled="isSubmitting">
+                {{ isSubmitting ? 'Submitting...' : 'Submit Application' }}
+              </button>
+            </div>
+          </form>
+
+          <!-- Success Message -->
+          <div 
+            id="success-message" 
+            class="success-message" 
+            v-show="showSuccessMessage" 
+            title="success"
+          >
+            <div class="success-content">
+              <div class="success-icon">✅</div>
+              <h3 class="success-title">Application Submitted Successfully!</h3>
+              <p class="success-description">
+                Thank you for your interest in joining Lumex. We'll review your application and get back to you within 5-7 business days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>

@@ -1,0 +1,110 @@
+  <div class="container">
+    <div class="footer">
+      <div class="footer__content">
+        <!-- Company Info Section -->
+        <div class="footer__section">
+          <h3 class="footer__title">{{ companyInfo.name }}</h3>
+          <p class="footer__description">
+            {{ companyInfo.description }}
+          </p>
+          <div class="footer__social">
+            <a 
+              v-for="social in socialLinks" 
+              :key="social.name"
+              :href="social.url" 
+              target="_blank" 
+              class="footer__social-link" 
+              :aria-label="social.name"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path :d="social.iconPath"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="footer__section">
+          <h4 class="footer__section-title">Services</h4>
+          <ul class="footer__links">
+            <li v-for="service in services" :key="service.name">
+              <a 
+                :href="service.href" 
+                class="footer__link" 
+                :data-route="service.route"
+                @click="handleLinkClick"
+              >
+                {{ service.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company Links Section -->
+        <div class="footer__section">
+          <h4 class="footer__section-title">Company</h4>
+          <ul class="footer__links">
+            <li v-for="link in companyLinks" :key="link.name">
+              <a 
+                :href="link.href" 
+                class="footer__link" 
+                :data-route="link.route"
+                @click="handleLinkClick"
+              >
+                {{ link.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="footer__section">
+          <h4 class="footer__section-title">Contact Info</h4>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <strong>Email:</strong><br>
+              <a 
+                :href="`mailto:${contactInfo.email}`" 
+                class="footer__link"
+              >
+                {{ contactInfo.email }}
+              </a>
+            </div>
+            <div class="footer__contact-item">
+              <strong>Phone:</strong><br>
+              <a 
+                :href="`tel:${contactInfo.phone}`" 
+                class="footer__link"
+              >
+                {{ contactInfo.phoneDisplay }}
+              </a>
+            </div>
+            <div class="footer__contact-item">
+              <strong>Address:</strong><br>
+              <span v-html="contactInfo.address"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-content">
+          <p class="footer__copyright">
+            © {{ currentYear }} {{ companyInfo.name }}. All rights reserved.
+          </p>
+          <div class="footer__legal">
+            <a 
+              v-for="legal in legalLinks" 
+              :key="legal.name"
+              :href="legal.href" 
+              class="footer__legal-link"
+              @click="handleLegalLinkClick"
+            >
+              {{ legal.name }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

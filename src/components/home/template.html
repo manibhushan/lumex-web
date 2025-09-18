@@ -1,0 +1,80 @@
+  <!-- Home Page Content -->
+  <section id="home-page" class="page">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">{{ heroContent.title }}</h1>
+          <p class="hero__description">{{ heroContent.description }}</p>
+          <div class="hero__actions">
+            <button 
+              class="btn btn--primary btn--lg" 
+              @click="handleNavigation('recruitment')"
+              type="button"
+            >
+              {{ heroContent.primaryButton }}
+            </button>
+            <button 
+              class="btn btn--secondary btn--lg" 
+              @click="handleNavigation('technology-solutions')"
+              type="button"
+            >
+              {{ heroContent.secondaryButton }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="overview">
+      <div class="container">
+        <div class="overview__content">
+          <h2 class="overview__title">{{ companyOverview.title }}</h2>
+          <p class="overview__description" v-html="companyOverview.description"></p>
+
+          <div class="services">
+            <div class="services__grid">
+              <div 
+                v-for="service in services" 
+                :key="service.id" 
+                class="service-card"
+              >
+                <div class="service-card__icon">{{ service.icon }}</div>
+                <h3 class="service-card__title">{{ service.title }}</h3>
+                <p class="service-card__description">
+                  {{ service.description }}
+                </p>
+                <button 
+                  class="btn btn--outline" 
+                  @click="handleNavigation(service.route)"
+                  type="button"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Values -->
+    <section class="values">
+      <div class="container">
+        <h2 class="values__title">{{ valuesSection.title }}</h2>
+        <div class="values__grid">
+          <div 
+            v-for="value in coreValues" 
+            :key="value.id" 
+            class="value-item"
+          >
+            <h3 class="value-item__title">{{ value.title }}</h3>
+            <p class="value-item__description">
+              {{ value.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>

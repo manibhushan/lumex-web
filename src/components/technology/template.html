@@ -1,0 +1,147 @@
+  <section id="technology-solutions-page" class="page">
+    <!-- Header Section -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__content">
+          <h1 class="page-header__title">{{ pageHeader.title }}</h1>
+          <p class="page-header__description">
+            {{ pageHeader.description }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+      <div class="container">
+        <h2 class="section-title">{{ servicesSection.title }}</h2>
+        <div class="services-grid">
+          <div 
+            v-for="service in techServices" 
+            :key="service.id" 
+            class="service-item"
+            @click="handleServiceClick(service)"
+          >
+            <div class="service-item__icon">{{ service.icon }}</div>
+            <h3 class="service-item__title">{{ service.title }}</h3>
+            <p class="service-item__description">
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="technologies">
+      <div class="container">
+        <h2 class="section-title">{{ technologiesSection.title }}</h2>
+        <div class="tech-grid">
+          <div 
+            v-for="category in techCategories" 
+            :key="category.id" 
+            class="tech-category"
+            @click="handleCategoryClick(category)"
+          >
+            <h3 class="tech-category__title">{{ category.title }}</h3>
+            <div class="tech-items">
+              <span 
+                v-for="tech in category.technologies" 
+                :key="tech" 
+                class="tech-tag"
+                @click.stop="handleTechClick(tech, category)"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+      <div class="container">
+        <h2 class="section-title">{{ caseStudiesSection.title }}</h2>
+        <div class="case-studies-grid">
+          <div 
+            v-for="caseStudy in caseStudies" 
+            :key="caseStudy.id" 
+            class="case-study"
+            @click="handleCaseStudyClick(caseStudy)"
+          >
+            <h3 class="case-study__title">{{ caseStudy.title }}</h3>
+            <p class="case-study__description">
+              {{ caseStudy.description }}
+            </p>
+            <div class="case-study__results">
+              <span 
+                v-for="result in caseStudy.results" 
+                :key="result" 
+                class="result-tag"
+              >
+                {{ result }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+      <div class="container">
+        <h2 class="section-title">{{ processSection.title }}</h2>
+        <div class="process-steps">
+          <div 
+            v-for="step in processSteps" 
+            :key="step.id" 
+            class="step"
+            @click="handleStepClick(step)"
+          >
+            <div class="step__number">{{ step.number }}</div>
+            <h3 class="step__title">{{ step.title }}</h3>
+            <p class="step__description">
+              {{ step.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <h2 class="contact-title">{{ contactSection.title }}</h2>
+          <p class="contact-description">
+            {{ contactSection.description }}
+          </p>
+          <div class="contact-info">
+            <div 
+              v-for="contact in contactSection.contactInfo" 
+              :key="contact.type" 
+              class="contact-item"
+            >
+              <strong>{{ contact.label }}:</strong> 
+              <a 
+                v-if="contact.link" 
+                :href="contact.link" 
+                class="contact-link"
+              >
+                {{ contact.value }}
+              </a>
+              <span v-else>{{ contact.value }}</span>
+            </div>
+          </div>
+          <button 
+            class="btn btn--primary btn--lg" 
+            type="button"
+            @click="handleContactClick"
+          >
+            {{ contactSection.buttonText }}
+          </button>
+        </div>
+      </div>
+    </section>
+  </section>

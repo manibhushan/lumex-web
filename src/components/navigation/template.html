@@ -1,0 +1,39 @@
+  <div class="container">
+    <nav class="nav">
+      <div class="nav__brand">
+        <h1 class="nav__logo">{{ brandInfo.name }}</h1>
+        <p class="nav__tagline">{{ brandInfo.tagline }}</p>
+      </div>
+      
+      <ul class="nav__menu" :class="{ 'nav__menu--active': isMobileMenuOpen }">
+        <li 
+          v-for="item in navigationItems" 
+          :key="item.id" 
+          class="nav__item"
+        >
+          <a 
+            :href="item.href" 
+            class="nav__link" 
+            :class="{ 'nav__link--active': item.route === activeRoute }"
+            :data-route="item.route"
+            @click="handleNavClick(item, $event)"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+      
+      <div 
+        class="nav__mobile-toggle" 
+        :class="{ 'nav__mobile-toggle--active': isMobileMenuOpen }"
+        @click="toggleMobileMenu"
+        role="button"
+        :aria-expanded="isMobileMenuOpen"
+        aria-label="Toggle mobile menu"
+      >
+        <span class="nav__hamburger"></span>
+        <span class="nav__hamburger"></span>
+        <span class="nav__hamburger"></span>
+      </div>
+    </nav>
+  </div>

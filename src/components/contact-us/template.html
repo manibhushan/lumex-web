@@ -1,0 +1,93 @@
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
+    
+    <form 
+      class="contact-form" 
+      action="https://formspree.io/f/mnnbyevy" 
+      method="POST"
+      @submit.prevent="handleSubmit"
+    >
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required
+          v-model="formData.name"
+          :class="{ 'error': errors.name }"
+        >
+        <span v-if="errors.name" class="error-message">{{ errors.name }}</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required
+          v-model="formData.email"
+          :class="{ 'error': errors.email }"
+        >
+        <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="5" 
+          required
+          v-model="formData.message"
+          :class="{ 'error': errors.message }"
+        ></textarea>
+        <span v-if="errors.message" class="error-message">{{ errors.message }}</span>
+      </div>
+      
+      <button 
+        type="submit" 
+        class="btn-primary"
+        :disabled="isSubmitting"
+      >
+        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+      </button>
+    </form>
+
+    <!-- Success Message -->
+    <div 
+      v-if="showSuccessMessage" 
+      class="success-message"
+    >
+      <h3>Message Sent Successfully!</h3>
+      <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
+    </div>
+
+    <!-- Error Message -->
+    <div 
+      v-if="showErrorMessage" 
+      class="error-message-container"
+    >
+      <h3>Oops! Something went wrong.</h3>
+      <p>There was an error sending your message. Please try again or contact us directly.</p>
+    </div>
+    
+    <div class="contact-details">
+      <h2>Other Ways to Reach Us</h2>
+      <ul>
+        <li>
+          Email: 
+          <a :href="`mailto:${contactInfo.email}`">{{ contactInfo.email }}</a>
+        </li>
+        <li>
+          Phone: 
+          <a :href="`tel:${contactInfo.phone}`">{{ contactInfo.phoneDisplay }}</a>
+        </li>
+        <li>
+          Address: {{ contactInfo.address }}
+        </li>
+      </ul>
+    </div>
+  </section>
