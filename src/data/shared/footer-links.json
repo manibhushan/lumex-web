@@ -1,0 +1,70 @@
+{
+  "services": [
+    {
+      "name": "API Integration",
+      "href": "#technology-solutions",
+      "route": "technology-solutions"
+    },
+    {
+      "name": "Cloud Migration",
+      "href": "#technology-solutions",
+      "route": "technology-solutions"
+    },
+    {
+      "name": "System Modernization",
+      "href": "#technology-solutions",
+      "route": "technology-solutions"
+    },
+    {
+      "name": "Executive Search",
+      "href": "#recruitment",
+      "route": "recruitment"
+    },
+    {
+      "name": "Technical Recruitment",
+      "href": "#recruitment",
+      "route": "recruitment"
+    }
+  ],
+  "companyLinks": [
+    {
+      "name": "About Us",
+      "href": "#home",
+      "route": "home"
+    },
+    {
+      "name": "Careers",
+      "href": "#careers",
+      "route": "careers"
+    },
+    {
+      "name": "Blog",
+      "href": "#",
+      "route": null
+    },
+    {
+      "name": "Case Studies",
+      "href": "#",
+      "route": null
+    },
+    {
+      "name": "Contact",
+      "href": "#contact",
+      "route": "contact"
+    }
+  ],
+  "legalLinks": [
+    {
+      "name": "Privacy Policy",
+      "href": "#"
+    },
+    {
+      "name": "Terms of Service",
+      "href": "#"
+    },
+    {
+      "name": "Cookie Policy",
+      "href": "#"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Cloud Platforms",
+    "technologies": ["AWS", "Azure", "Google Cloud", "Salesforce"]
+  },
+  {
+    "id": 2,
+    "title": "Integration Protocols",
+    "technologies": ["REST APIs", "GraphQL", "SOAP", "WebSockets"]
+  },
+  {
+    "id": 3,
+    "title": "Architecture Patterns",
+    "technologies": ["Microservices", "Event-Driven", "Service Mesh", "Serverless"]
+  },
+  {
+    "id": 4,
+    "title": "Container Technologies",
+    "technologies": ["Docker", "Kubernetes", "OpenShift", "Helm"]
+  }
+]

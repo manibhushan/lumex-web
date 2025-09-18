@@ -1,0 +1,12 @@
+/* Main Style Import File - Import this file to get all styles */
+
+/* Import main global styles and variables */
+@import url('./style.css');
+
+/* Import component styles */
+@import url('./components/navigation.css');
+@import url('./components/hero.css');
+@import url('./components/cards.css');
+@import url('./components/forms.css');
+@import url('./components/careers.css');
+@import url('./components/footer.css');

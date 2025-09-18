@@ -1,3 +1,6 @@
+import navigationItemsData from '../../data/shared/navigation-items.json';
+import { shortName, tagline } from '../../data/shared/company-info.json';
+
 export default {
   name: 'NavigationComponent',
   props: {
@@ -10,41 +13,10 @@ export default {
     return {
       isMobileMenuOpen: false,
       brandInfo: {
-        name: 'Lumex',
-        tagline: 'Bridging Talent and Technology'
+        name: shortName,
+        tagline: tagline
       },
-      navigationItems: [
-        {
-          id: 1,
-          label: 'Home',
-          href: '#home',
-          route: 'home'
-        },
-        {
-          id: 2,
-          label: 'Recruitment',
-          href: '#recruitment',
-          route: 'recruitment'
-        },
-        {
-          id: 3,
-          label: 'Technology Solutions',
-          href: '#technology-solutions',
-          route: 'technology-solutions'
-        },
-        {
-          id: 4,
-          label: 'Careers',
-          href: '#careers',
-          route: 'careers'
-        },
-        {
-          id: 5,
-          label: 'Contact Us',
-          href: '#contact-us',
-          route: 'contact-us'
-        }
-      ]
+      navigationItems: navigationItemsData
     }
   },
   computed: {

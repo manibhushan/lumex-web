@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Health & Wellness",
+    "description": "Comprehensive health insurance, dental, vision, and wellness programs."
+  },
+  {
+    "id": 2,
+    "title": "Professional Development",
+    "description": "Training budget, conference attendance, and certification support."
+  },
+  {
+    "id": 3,
+    "title": "Flexible Work",
+    "description": "Hybrid work options, flexible hours, and generous PTO policy."
+  },
+  {
+    "id": 4,
+    "title": "Financial Benefits",
+    "description": "Competitive salary, performance bonuses, and retirement plan matching."
+  }
+]

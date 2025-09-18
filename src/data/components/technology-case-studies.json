@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Platform Integration",
+    "description": "Integrated 15+ third-party services for a major retailer, reducing processing time by 60% and improving customer experience.",
+    "results": ["60% faster processing", "15+ integrations", "Zero downtime"]
+  },
+  {
+    "id": 2,
+    "title": "Healthcare System Modernization",
+    "description": "Migrated legacy healthcare system to cloud infrastructure, ensuring HIPAA compliance and improving system reliability by 99.9%.",
+    "results": ["99.9% uptime", "HIPAA compliant", "50% cost reduction"]
+  },
+  {
+    "id": 3,
+    "title": "Financial Services API Gateway",
+    "description": "Implemented secure API gateway for fintech startup, enabling rapid partner integrations and scaling to handle 1M+ transactions daily.",
+    "results": ["1M+ daily transactions", "Bank-grade security", "20+ partner APIs"]
+  },
+  {
+    "id": 4,
+    "title": "Manufacturing IoT Integration",
+    "description": "Connected factory floor devices to a centralized dashboard, enabling real-time monitoring and predictive maintenance.",
+    "results": ["Real-time analytics", "Predictive maintenance", "30% downtime reduction"]
+  },
+  {
+    "id": 5,
+    "title": "Education Platform Data Unification",
+    "description": "Unified student data from multiple sources, improving reporting accuracy and enabling personalized learning experiences.",
+    "results": ["Unified data", "Personalized learning", "Improved reporting"]
+  },
+  {
+    "id": 6,
+    "title": "Retail POS System Upgrade",
+    "description": "Modernized POS systems for a retail chain, integrating inventory and sales data for seamless operations across 100+ stores.",
+    "results": ["100+ stores", "Integrated inventory", "Seamless operations"]
+  }
+]

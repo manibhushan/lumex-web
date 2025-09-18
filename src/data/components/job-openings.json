@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Recruitment Consultant",
+    "department": "Recruitment",
+    "description": "Lead talent acquisition initiatives for technical roles. Work with clients to understand their hiring needs and build strong candidate pipelines.",
+    "requirements": [
+      "3+ years of technical recruitment experience",
+      "Strong understanding of software development roles",
+      "Excellent communication and relationship-building skills"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Systems Integration Engineer",
+    "department": "Technology",
+    "description": "Design and implement complex system integrations for enterprise clients. Work with APIs, cloud platforms, and modern architecture patterns.",
+    "requirements": [
+      "5+ years of systems integration experience",
+      "Expertise in REST APIs, microservices, and cloud platforms",
+      "Experience with Docker, Kubernetes, and CI/CD pipelines"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Business Development Manager",
+    "department": "Sales",
+    "description": "Drive growth in both recruitment and integration services. Build relationships with new clients and expand existing accounts.",
+    "requirements": [
+      "3+ years of B2B sales experience",
+      "Understanding of recruitment and/or technology services",
+      "Track record of meeting and exceeding sales targets"
+    ]
+  }
+]

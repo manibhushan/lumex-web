@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "🚀",
+    "title": "Growth Opportunities",
+    "description": "Continuous learning and professional development in a rapidly evolving industry."
+  },
+  {
+    "id": 2,
+    "icon": "🤝",
+    "title": "Collaborative Environment",
+    "description": "Work with talented professionals in a supportive and inclusive workplace."
+  },
+  {
+    "id": 3,
+    "icon": "⚖️",
+    "title": "Work-Life Balance",
+    "description": "Flexible work arrangements and competitive benefits package."
+  },
+  {
+    "id": 4,
+    "icon": "💡",
+    "title": "Innovation Focus",
+    "description": "Work on cutting-edge projects and contribute to innovative solutions."
+  }
+]

@@ -1,3 +1,6 @@
+import contactInfoData from '../../data/shared/contact-info.json';
+import { FormValidator } from '../../utils/validation.js';
+
 export default {
   name: 'ContactUs',
   data() {
@@ -15,50 +18,29 @@ export default {
       isSubmitting: false,
       showSuccessMessage: false,
       showErrorMessage: false,
-      contactInfo: {
-        email: 'info@lumex.in',
-        phone: '+919431429005',
-        phoneDisplay: '+91-9431429005',
-        address: '16th Cross Road, Bengaluru North, Karnataka 560016, IN'
-      }
+      contactInfo: contactInfoData,
+      validator: new FormValidator()
     }
   },
   methods: {
     validateForm() {
-      let isValid = true;
+      // Create FormData object for validation utility
+      const formData = new FormData();
+      formData.append('name', this.formData.name);
+      formData.append('email', this.formData.email);
+      formData.append('message', this.formData.message);
+
+      // Use validation utility
+      const validationResult = this.validator.validateContactForm(formData);
+      
+      // Update component errors state
       this.errors = {
-        name: '',
-        email: '',
-        message: ''
+        name: validationResult.errors.name || '',
+        email: validationResult.errors.email || '',
+        message: validationResult.errors.message || ''
       };
 
-      // Validate name
-      if (!this.formData.name.trim()) {
-        this.errors.name = 'Name is required';
-        isValid = false;
-      }
-
-      // Validate email
-      if (!this.formData.email.trim()) {
-        this.errors.email = 'Email is required';
-        isValid = false;
-      } else if (!this.isValidEmail(this.formData.email)) {
-        this.errors.email = 'Please enter a valid email address';
-        isValid = false;
-      }
-
-      // Validate message
-      if (!this.formData.message.trim()) {
-        this.errors.message = 'Message is required';
-        isValid = false;
-      }
-
-      return isValid;
-    },
-
-    isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
+      return validationResult.isValid;
     },
 
     async handleSubmit() {
@@ -121,6 +103,24 @@ export default {
         email: '',
         message: ''
       };
+      
+      // Clear validation errors using utility
+      this.validator.clearErrors();
+    }
+  },
+  
+  mounted() {
+    // Set up real-time validation when component is mounted
+    const formElement = this.$el.querySelector('form');
+    if (formElement) {
+      this.validator.setupRealTimeValidation(formElement);
+    }
+  },
+  
+  beforeUnmount() {
+    // Clean up any event listeners if needed
+    if (this.validator) {
+      this.validator.clearErrors();
     }
   }
 }

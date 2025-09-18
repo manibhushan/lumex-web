@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "📝",
+    "title": "Contract Staffing",
+    "description": "We provide end-to-end contract staffing across industries, customized as per your needs and requirements."
+  },
+  {
+    "id": 2,
+    "icon": "🔒",
+    "title": "Permanent Recruiting",
+    "description": "We have years of experience when it comes to permanent workforce supply leading us to be one of the best."
+  },
+  {
+    "id": 3,
+    "icon": "⚡",
+    "title": "On Demand Staffing",
+    "description": "Boosted with a large database of potential job candidates, we are swift in completing on demand staffing."
+  },
+  {
+    "id": 4,
+    "icon": "👨‍👩‍👧‍👦",
+    "title": "Volume Hiring",
+    "description": "Efficient recruitment processes for large-scale hiring initiatives."
+  },
+  {
+    "id": 5,
+    "icon": "🌟",
+    "title": "Employer Branding",
+    "description": "Build and enhance your company's reputation as an employer of choice."
+  },
+  {
+    "id": 6,
+    "icon": "🌍",
+    "title": "Employee Deployment",
+    "description": "We take the complete ownership when it comes to employee deployment - from onboarding, visa to payroll."
+  }
+]

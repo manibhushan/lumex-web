@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "🔗",
+    "title": "API Integration",
+    "description": "Connect disparate systems and applications through robust API integration solutions."
+  },
+  {
+    "id": 2,
+    "icon": "☁️",
+    "title": "Cloud Migration",
+    "description": "Migrate your infrastructure to cloud platforms with minimal downtime and maximum efficiency."
+  },
+  {
+    "id": 3,
+    "icon": "🔄",
+    "title": "Legacy System Modernization",
+    "description": "Transform outdated systems into modern, scalable, and maintainable solutions."
+  },
+  {
+    "id": 4,
+    "icon": "📊",
+    "title": "Data Integration",
+    "description": "Unify data across multiple sources for better insights and decision-making."
+  },
+  {
+    "id": 5,
+    "icon": "🏗️",
+    "title": "System Architecture",
+    "description": "Design scalable and resilient system architectures for your growing business needs."
+  },
+  {
+    "id": 6,
+    "icon": "🔒",
+    "title": "Security & Compliance",
+    "description": "Ensure your technology solutions meet industry security standards and regulatory compliance."
+  }
+]

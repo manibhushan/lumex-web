@@ -1,0 +1,62 @@
+{
+  "pageHeaders": {
+    "technology": {
+      "title": "Technology Solutions Services",
+      "description": "Seamless technology system integration and modernization solutions for businesses of all sizes."
+    },
+    "recruitment": {
+      "title": "Recruitment Services", 
+      "description": "Expert talent acquisition and staffing solutions tailored to your organization's unique needs."
+    }
+  },
+  "sectionTitles": {
+    "techExpertise": "Our Tech Expertise",
+    "technologiesWeWorkWith": "Technologies We Work With", 
+    "successStories": "Success Stories",
+    "integrationProcess": "Our Integration Process",
+    "recruitmentExpertise": "Our Recruitment Expertise",
+    "industriesWeServe": "Industries We Serve",
+    "recruitmentProcess": "Our Recruitment Process",
+    "valuesSection": "Our Core Values"
+  },
+  "contactSections": {
+    "technology": {
+      "title": "Ready to Modernize Your Systems?",
+      "description": "Let's discuss your integration challenges and create a solution that scales with your business.",
+      "buttonText": "Contact Our Integration Team",
+      "contactInfo": [
+        {
+          "type": "email",
+          "label": "Email",
+          "value": "info@lumex.in",
+          "link": "mailto:info@lumex.in"
+        },
+        {
+          "type": "phone",
+          "label": "Phone", 
+          "value": "+91-9431429005",
+          "link": "tel:+919431429005"
+        }
+      ]
+    },
+    "recruitment": {
+      "title": "Ready to Find Your Next Great Hire?",
+      "description": "Let's discuss your recruitment needs and how we can help you build an exceptional team.",
+      "buttonText": "Contact Our Recruitment Team",
+      "contactInfo": [
+        {
+          "type": "email",
+          "label": "Email",
+          "value": "hr@lumex.in",
+          "link": "mailto:hr@lumex.in"
+        },
+        {
+          "type": "phone",
+          "label": "Phone",
+          "value": "+91-9431429005", 
+          "link": "tel:+919431429005"
+        }
+      ]
+    }
+  }
+}

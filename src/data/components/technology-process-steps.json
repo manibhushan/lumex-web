@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "number": 1,
+    "title": "Assessment",
+    "description": "Comprehensive analysis of your current systems, infrastructure, and integration needs."
+  },
+  {
+    "id": 2,
+    "number": 2,
+    "title": "Architecture Design",
+    "description": "Create detailed integration architecture and implementation roadmap."
+  },
+  {
+    "id": 3,
+    "number": 3,
+    "title": "Implementation",
+    "description": "Agile development and deployment with continuous testing and monitoring."
+  },
+  {
+    "id": 4,
+    "number": 4,
+    "title": "Support & Optimization",
+    "description": "Ongoing support, monitoring, and performance optimization for your integrated systems."
+  }
+]

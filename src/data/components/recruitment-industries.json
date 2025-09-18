@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Technology",
+    "description": "Startups to enterprise tech companies, from software development to AI/ML specialists."
+  },
+  {
+    "id": 2,
+    "title": "Healthcare",
+    "description": "Medical professionals, healthcare IT, and biotechnology talent acquisition."
+  },
+  {
+    "id": 3,
+    "title": "Finance",
+    "description": "Banking, fintech, investment management, and financial services recruitment."
+  },
+  {
+    "id": 4,
+    "title": "Manufacturing",
+    "description": "Engineering, operations, and manufacturing technology professionals."
+  },
+  {
+    "id": 5,
+    "title": "Retail",
+    "description": "E-commerce, retail operations, and customer experience specialists."
+  },
+  {
+    "id": 6,
+    "title": "Education",
+    "description": "Recruitment for schools, universities, edtech companies, and academic professionals."
+  }
+]

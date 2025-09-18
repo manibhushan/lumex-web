@@ -1,7 +1,7 @@
 /* Import all global styles for the Vue app */
 
 /* Import main stylesheet from public directory */
-@import url('../public/css/style.css');
+@import url('../public/css/index.css');
 
 /* Additional global styles for Vue app */
 html, body {

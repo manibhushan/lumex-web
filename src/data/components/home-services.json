@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "icon": "👥",
+    "title": "Tech Recruitment",
+    "description": "We don't just build systems; we help build the teams behind them. Our specialized recruitment services focus on placing top integration, cloud, and backend talent.",
+    "route": "recruitment"
+  },
+  {
+    "id": 2,
+    "icon": "🔗",
+    "title": "Technology Solutions",
+    "description": "We develop smart, scalable solutions that help businesses streamline operations, connect platforms, and enable true digital transformation.",
+    "route": "technology-solutions"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "label": "Home",
+    "href": "#home",
+    "route": "home"
+  },
+  {
+    "id": 2,
+    "label": "Recruitment",
+    "href": "#recruitment",
+    "route": "recruitment"
+  },
+  {
+    "id": 3,
+    "label": "Technology Solutions",
+    "href": "#technology-solutions",
+    "route": "technology-solutions"
+  },
+  {
+    "id": 4,
+    "label": "Careers",
+    "href": "#careers",
+    "route": "careers"
+  },
+  {
+    "id": 5,
+    "label": "Contact Us",
+    "href": "#contact-us",
+    "route": "contact-us"
+  }
+]

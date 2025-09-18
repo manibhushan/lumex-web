@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "number": 1,
+    "title": "Discovery",
+    "description": "We understand your company culture, role requirements, and ideal candidate profile."
+  },
+  {
+    "id": 2,
+    "number": 2,
+    "title": "Sourcing",
+    "description": "Leveraging our network and advanced sourcing techniques to identify top talent."
+  },
+  {
+    "id": 3,
+    "number": 3,
+    "title": "Screening",
+    "description": "Comprehensive evaluation including technical assessments and cultural fit analysis."
+  },
+  {
+    "id": 4,
+    "number": 4,
+    "title": "Placement",
+    "description": "Facilitating interviews, negotiations, and ensuring successful candidate placement."
+  }
+]
