@@ -1,4 +1,9 @@
 import contactInfoData from '../../data/shared/contact-info.json';
+import contactMethodsData from '../../data/components/contact-methods.json';
+import contactFaqData from '../../data/components/contact-faq.json';
+import officeLocationsData from '../../data/components/office-locations.json';
+import responseCommitmentsData from '../../data/components/response-commitments.json';
+import contactFormAlternativesData from '../../data/components/contact-form-alternatives.json';
 import { FormValidator } from '../../utils/validation.js';
 
 export default {
@@ -19,7 +24,27 @@ export default {
       showSuccessMessage: false,
       showErrorMessage: false,
       contactInfo: contactInfoData,
-      validator: new FormValidator()
+      contactMethods: contactMethodsData,
+      contactFaq: contactFaqData,
+      officeLocations: officeLocationsData,
+      responseCommitments: responseCommitmentsData,
+      contactAlternatives: contactFormAlternativesData,
+      validator: new FormValidator(),
+      // FAQ functionality
+      activeFaqCategory: 'All',
+      activeFaq: null
+    }
+  },
+  computed: {
+    faqCategories() {
+      const categories = ['All', ...new Set(this.contactFaq.map(faq => faq.category))];
+      return categories;
+    },
+    filteredFaqs() {
+      if (this.activeFaqCategory === 'All') {
+        return this.contactFaq;
+      }
+      return this.contactFaq.filter(faq => faq.category === this.activeFaqCategory);
     }
   },
   methods: {
@@ -115,6 +140,16 @@ export default {
       if (this.errors[fieldName]) {
         this.errors[fieldName] = '';
       }
+    },
+
+    // FAQ methods
+    setActiveFaqCategory(category) {
+      this.activeFaqCategory = category;
+      this.activeFaq = null; // Close any open FAQ when switching categories
+    },
+
+    toggleFaq(faqId) {
+      this.activeFaq = this.activeFaq === faqId ? null : faqId;
     }
   },
   

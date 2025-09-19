@@ -88,6 +88,155 @@
       </div>
     </section>
 
+    <!-- Technology Metrics Section -->
+    <section class="tech-metrics">
+      <div class="container">
+        <h2 class="section-title">Our Technology Excellence</h2>
+        <div class="metrics-grid">
+          <div 
+            v-for="metric in techMetrics" 
+            :key="metric.id" 
+            class="metric-card"
+          >
+            <div class="metric-card__number">{{ metric.value }}</div>
+            <div class="metric-card__label">{{ metric.label }}</div>
+            <p class="metric-card__description">{{ metric.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="tech-testimonials">
+      <div class="container">
+        <h2 class="section-title">Client Success Stories</h2>
+        <div class="testimonials-grid">
+          <div 
+            v-for="testimonial in techTestimonials" 
+            :key="testimonial.id" 
+            class="testimonial-card"
+          >
+            <div class="testimonial-card__quote">"{{ testimonial.quote }}"</div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__name">{{ testimonial.name }}</div>
+              <div class="testimonial-card__position">{{ testimonial.position }}</div>
+              <div class="testimonial-card__company">{{ testimonial.company }}</div>
+            </div>
+            <div class="testimonial-card__project">
+              <strong>Project:</strong> {{ testimonial.project }}
+            </div>
+            <div class="testimonial-card__technologies">
+              <span 
+                v-for="tech in testimonial.technologies" 
+                :key="tech" 
+                class="tech-badge"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Innovation Approaches Section -->
+    <section class="tech-innovation">
+      <div class="container">
+        <h2 class="section-title">Our Innovation Approaches</h2>
+        <div class="innovation-grid">
+          <div 
+            v-for="approach in techInnovation" 
+            :key="approach.id" 
+            class="innovation-card"
+          >
+            <div class="innovation-card__icon">{{ approach.icon }}</div>
+            <h3 class="innovation-card__title">{{ approach.title }}</h3>
+            <p class="innovation-card__description">{{ approach.description }}</p>
+            <div class="innovation-card__benefits">
+              <span 
+                v-for="benefit in approach.benefits" 
+                :key="benefit" 
+                class="benefit-tag"
+              >
+                {{ benefit }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Partnerships Section -->
+    <section class="tech-partnerships">
+      <div class="container">
+        <h2 class="section-title">Technology Partners & Certifications</h2>
+        <div class="partnerships-grid">
+          <div 
+            v-for="partner in techPartnerships" 
+            :key="partner.id" 
+            class="partner-card"
+          >
+            <div class="partner-card__logo">{{ partner.logo }}</div>
+            <h3 class="partner-card__name">{{ partner.name }}</h3>
+            <div class="partner-card__tier">{{ partner.tier }}</div>
+            <div class="partner-card__specializations">
+              <h4>Specializations:</h4>
+              <div class="specialization-tags">
+                <span 
+                  v-for="spec in partner.specializations" 
+                  :key="spec" 
+                  class="spec-tag"
+                >
+                  {{ spec }}
+                </span>
+              </div>
+            </div>
+            <div class="partner-card__certifications">
+              <h4>Certifications:</h4>
+              <ul>
+                <li v-for="cert in partner.certifications" :key="cert">{{ cert }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Benefits Section -->
+    <section class="tech-benefits">
+      <div class="container">
+        <div class="benefits-content">
+          <div class="benefits-text">
+            <h2 class="benefits-title">Why Choose Our Technology Solutions</h2>
+            <p class="benefits-description">{{ techBenefits.description }}</p>
+            <div class="benefits-features">
+              <div 
+                v-for="benefit in techBenefits.benefits" 
+                :key="benefit.id" 
+                class="benefit-feature"
+              >
+                <div class="benefit-feature__icon">{{ benefit.icon }}</div>
+                <div class="benefit-feature__content">
+                  <h4 class="benefit-feature__title">{{ benefit.title }}</h4>
+                  <p class="benefit-feature__description">{{ benefit.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="benefits-stats">
+            <div 
+              v-for="stat in techBenefits.stats" 
+              :key="stat.id" 
+              class="benefit-stat"
+            >
+              <div class="benefit-stat__number">{{ stat.value }}</div>
+              <div class="benefit-stat__label">{{ stat.label }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Process Section -->
     <section class="process">
       <div class="container">

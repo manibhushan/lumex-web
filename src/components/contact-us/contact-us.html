@@ -1,96 +1,265 @@
-  <section class="contact-section">
-    <h1>Contact Us</h1>
-    <p>We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
-    
-    <form 
-      class="contact-form" 
-      action="https://formspree.io/f/mnnbyevy" 
-      method="POST"
-      @submit.prevent="handleSubmit"
-    >
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input 
-          type="text" 
-          id="name" 
-          name="name" 
-          required
-          v-model="formData.name"
-          :class="{ 'error': errors.name }"
-          @input="clearFieldError('name')"
+  <!-- Contact Methods Section -->
+  <section class="contact-methods">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-methods-grid">
+        <div 
+          v-for="method in contactMethods" 
+          :key="method.id"
+          class="contact-method-card"
         >
-        <span v-if="errors.name" class="error-message">{{ errors.name }}</span>
+          <div class="contact-method-card__icon">
+            <i :class="method.icon"></i>
+          </div>
+          <h3 class="contact-method-card__title">{{ method.title }}</h3>
+          <p class="contact-method-card__description">{{ method.description }}</p>
+          <div class="contact-method-card__details">
+            <div class="contact-method-card__availability">
+              Available: {{ method.availability }}
+            </div>
+            <div class="contact-method-card__response">
+              {{ method.responseTime }}
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          required
-          v-model="formData.email"
-          :class="{ 'error': errors.email }"
-          @input="clearFieldError('email')"
+    </div>
+  </section>
+
+  <!-- Contact Form Alternatives Section -->
+  <section class="contact-alternatives">
+    <div class="container">
+      <h2 class="section-title">Quick Contact Options</h2>
+      <div class="alternatives-grid">
+        <div 
+          v-for="alternative in contactAlternatives" 
+          :key="alternative.id"
+          class="alternative-card"
+          :class="alternative.color"
         >
-        <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
+          <div class="alternative-card__icon">
+            <i :class="alternative.icon"></i>
+          </div>
+          <h3 class="alternative-card__title">{{ alternative.title }}</h3>
+          <p class="alternative-card__description">{{ alternative.description }}</p>
+          <div class="alternative-card__fields">
+            <div class="alternative-card__fields-title">Required Information</div>
+            <div class="alternative-card__field-list">
+              <span 
+                v-for="field in alternative.fields" 
+                :key="field"
+                class="alternative-card__field"
+              >
+                {{ field }}
+              </span>
+            </div>
+          </div>
+          <button class="alternative-card__button">
+            {{ alternative.submitText }}
+          </button>
+          <div class="alternative-card__response">
+            Response: {{ alternative.responseTime }}
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Main Contact Form Section -->
+  <section class="contact-form">
+    <div class="container">
+      <h2 class="section-title">Send Us A Message</h2>
+      <p class="section-subtitle">We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
       
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea 
-          id="message" 
-          name="message" 
-          rows="5" 
-          required
-          v-model="formData.message"
-          :class="{ 'error': errors.message }"
-          @input="clearFieldError('message')"
-        ></textarea>
-        <span v-if="errors.message" class="error-message">{{ errors.message }}</span>
-      </div>
-      
-      <button 
-        type="submit" 
-        class="btn-primary"
-        :disabled="isSubmitting"
+      <form 
+        class="contact-form-container" 
+        action="https://formspree.io/f/mnnbyevy" 
+        method="POST"
+        novalidate
+        @submit.prevent="handleSubmit"
       >
-        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
-      </button>
-    </form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required
+            v-model="formData.name"
+            :class="{ 'error': errors.name }"
+            @input="clearFieldError('name')"
+          >
+          <span v-if="errors.name" class="error-message">{{ errors.name }}</span>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required
+            v-model="formData.email"
+            :class="{ 'error': errors.email }"
+            @input="clearFieldError('email')"
+          >
+          <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required
+            v-model="formData.message"
+            :class="{ 'error': errors.message }"
+            @input="clearFieldError('message')"
+          ></textarea>
+          <span v-if="errors.message" class="error-message">{{ errors.message }}</span>
+        </div>
+        
+        <button 
+          type="submit" 
+          class="btn-primary"
+          :disabled="isSubmitting"
+        >
+          {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+        </button>
+      </form>
 
-    <!-- Success Message -->
-    <div 
-      v-if="showSuccessMessage" 
-      class="success-message"
-    >
-      <h3>Message Sent Successfully!</h3>
-      <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
-    </div>
+      <!-- Success Message -->
+      <div 
+        v-if="showSuccessMessage" 
+        class="success-message"
+      >
+        <h3>Message Sent Successfully!</h3>
+        <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
+      </div>
 
-    <!-- Error Message -->
-    <div 
-      v-if="showErrorMessage" 
-      class="error-message-container"
-    >
-      <h3>Oops! Something went wrong.</h3>
-      <p>There was an error sending your message. Please try again or contact us directly.</p>
+      <!-- Error Message -->
+      <div 
+        v-if="showErrorMessage" 
+        class="error-message-container"
+      >
+        <h3>Oops! Something went wrong.</h3>
+        <p>There was an error sending your message. Please try again or contact us directly.</p>
+      </div>
     </div>
-    
-    <div class="contact-details">
-      <h2>Other Ways to Reach Us</h2>
-      <ul>
-        <li>
-          Email: 
-          <a :href="`mailto:${contactInfo.email}`">{{ contactInfo.email }}</a>
-        </li>
-        <li>
-          Phone: 
-          <a :href="`tel:${contactInfo.phone}`">{{ contactInfo.phoneDisplay }}</a>
-        </li>
-        <li>
-          Address: {{ contactInfo.address }}
-        </li>
-      </ul>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-categories">
+        <button 
+          v-for="category in faqCategories" 
+          :key="category"
+          class="faq-category-btn"
+          :class="{ active: activeFaqCategory === category }"
+          @click="setActiveFaqCategory(category)"
+        >
+          {{ category }}
+        </button>
+      </div>
+      <div class="faq-grid">
+        <div 
+          v-for="faq in filteredFaqs" 
+          :key="faq.id"
+          class="faq-item"
+        >
+          <button 
+            class="faq-question"
+            :class="{ active: activeFaq === faq.id }"
+            @click="toggleFaq(faq.id)"
+          >
+            <span>{{ faq.question }}</span>
+            <i class="fas fa-chevron-down faq-question__icon"></i>
+          </button>
+          <div 
+            class="faq-answer"
+            :class="{ open: activeFaq === faq.id }"
+          >
+            <div class="faq-answer__content">
+              {{ faq.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Response Commitments Section -->
+  <section class="response-commitments">
+    <div class="container">
+      <h2 class="section-title">Our Response Commitments</h2>
+      <div class="commitments-grid">
+        <div 
+          v-for="commitment in responseCommitments" 
+          :key="commitment.id"
+          class="commitment-card"
+        >
+          <div class="commitment-card__icon">
+            <i :class="commitment.icon"></i>
+          </div>
+          <h3 class="commitment-card__type">{{ commitment.type }}</h3>
+          <div class="commitment-card__commitment">{{ commitment.commitment }}</div>
+          <p class="commitment-card__description">{{ commitment.description }}</p>
+          <div class="commitment-card__availability">{{ commitment.availability }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Office Locations Section -->
+  <section class="office-locations">
+    <div class="container">
+      <h2 class="section-title">Our Office Location</h2>
+      <div class="offices-grid">
+        <div 
+          v-for="office in officeLocations" 
+          :key="office.id"
+          class="office-card"
+        >
+          <div class="office-card__header">
+            <div>
+              <h3 class="office-card__title">{{ office.city }}</h3>
+              <span class="office-card__type">{{ office.type }}</span>
+            </div>
+          </div>
+          <div class="office-card__address">
+            <div>{{ office.address }}</div>
+            <div>{{ office.location }}</div>
+          </div>
+          <div class="office-card__contact">
+            <div class="office-card__contact-item">
+              <i class="fas fa-phone"></i>
+              <span>{{ office.phone }}</span>
+            </div>
+            <div class="office-card__contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>{{ office.email }}</span>
+            </div>
+            <div class="office-card__contact-item">
+              <i class="fas fa-clock"></i>
+              <span>{{ office.hours.weekdays }}</span>
+            </div>
+          </div>
+          <div class="office-card__services">
+            <div class="office-card__services-title">Key Services</div>
+            <div class="office-card__services-list">
+              <span 
+                v-for="service in office.services" 
+                :key="service"
+                class="office-card__service"
+              >
+                {{ service }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>

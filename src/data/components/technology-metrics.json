@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "value": "500+",
+    "label": "Projects Delivered",
+    "description": "Successful technology implementations across various industries"
+  },
+  {
+    "id": 2,
+    "value": "98%",
+    "label": "Client Satisfaction",
+    "description": "Consistently exceeding client expectations in technology delivery"
+  },
+  {
+    "id": 3,
+    "value": "15+",
+    "label": "Technology Stacks",
+    "description": "Comprehensive expertise across modern technology platforms"
+  },
+  {
+    "id": 4,
+    "value": "24/7",
+    "label": "Support Coverage",
+    "description": "Round-the-clock technical support and maintenance services"
+  },
+  {
+    "id": 5,
+    "value": "50+",
+    "label": "Enterprise Clients",
+    "description": "Trusted by leading organizations for mission-critical solutions"
+  },
+  {
+    "id": 6,
+    "value": "3x",
+    "label": "Faster Delivery",
+    "description": "Accelerated project timelines through optimized development processes"
+  }
+]

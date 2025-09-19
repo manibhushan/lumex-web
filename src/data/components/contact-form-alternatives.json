@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Quick Quote Request",
+    "description": "Get a fast estimate for your project",
+    "fields": ["Project Type", "Timeline", "Budget Range"],
+    "submitText": "Get Quote",
+    "responseTime": "Within 4 hours",
+    "icon": "calculator",
+    "color": "blue"
+  },
+  {
+    "id": 2,
+    "title": "Partnership Inquiry", 
+    "description": "Explore collaboration opportunities",
+    "fields": ["Company Name", "Partnership Type", "Proposal"],
+    "submitText": "Discuss Partnership", 
+    "responseTime": "Within 24 hours",
+    "icon": "handshake",
+    "color": "green"
+  },
+  {
+    "id": 3,
+    "title": "Technical Support",
+    "description": "Get help with existing projects",
+    "fields": ["Project ID", "Issue Type", "Urgency Level"],
+    "submitText": "Request Support",
+    "responseTime": "Within 2 hours", 
+    "icon": "tools",
+    "color": "orange"
+  },
+  {
+    "id": 4,
+    "title": "Career Inquiries",
+    "description": "Join our talented team",
+    "fields": ["Position Interest", "Experience Level", "Resume Upload"],
+    "submitText": "Apply Now",
+    "responseTime": "Within 48 hours",
+    "icon": "briefcase", 
+    "color": "purple"
+  },
+  {
+    "id": 5,
+    "title": "Media & Press",
+    "description": "Media inquiries and press requests", 
+    "fields": ["Media Outlet", "Story Topic", "Deadline"],
+    "submitText": "Submit Request",
+    "responseTime": "Within 12 hours",
+    "icon": "newspaper",
+    "color": "red"
+  },
+  {
+    "id": 6,
+    "title": "Schedule a Call",
+    "description": "Book a direct consultation",
+    "fields": ["Preferred Date", "Time Zone", "Call Purpose"],
+    "submitText": "Book Call",
+    "responseTime": "Same day confirmation",
+    "icon": "phone",
+    "color": "teal"
+  }
+]

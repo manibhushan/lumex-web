@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "icon": "🎓",
+    "title": "Learning & Development",
+    "description": "Comprehensive professional development programs designed to accelerate your career growth",
+    "features": [
+      "Annual $3,000 learning budget per employee",
+      "Access to 500+ online courses and certifications",
+      "Monthly skill-building workshops",
+      "Conference attendance and speaking opportunities",
+      "Internal knowledge sharing sessions"
+    ],
+    "highlight": "95% of employees utilize their learning budget annually"
+  },
+  {
+    "id": 2,
+    "icon": "🤝",
+    "title": "Mentorship Program",
+    "description": "Structured mentorship connecting you with industry leaders and senior professionals",
+    "features": [
+      "1:1 mentorship matching based on career goals",
+      "Cross-departmental mentor opportunities",
+      "Leadership development tracks",
+      "Reverse mentoring for fresh perspectives",
+      "Quarterly progress reviews and goal setting"
+    ],
+    "highlight": "85% of mentees receive promotions within 18 months"
+  },
+  {
+    "id": 3,
+    "icon": "🚀",
+    "title": "Career Advancement",
+    "description": "Clear pathways and transparent promotion processes to help you reach your potential",
+    "features": [
+      "Defined career progression frameworks",
+      "Regular performance reviews and feedback",
+      "Stretch assignments and leadership opportunities",
+      "Cross-functional project participation",
+      "Internal job posting priority for employees"
+    ],
+    "highlight": "Average promotion timeline: 18-24 months"
+  },
+  {
+    "id": 4,
+    "icon": "🌐",
+    "title": "Innovation & Research",
+    "description": "Opportunities to contribute to cutting-edge research and innovative projects",
+    "features": [
+      "20% time for personal projects and innovation",
+      "Quarterly innovation challenges and hackathons",
+      "Patent filing support and recognition",
+      "Collaboration with industry research partners",
+      "Publication and speaking opportunities"
+    ],
+    "highlight": "12 patents filed by employees in the last year"
+  },
+  {
+    "id": 5,
+    "icon": "🎯",
+    "title": "Leadership Development",
+    "description": "Comprehensive leadership training to prepare you for management and executive roles",
+    "features": [
+      "Leadership bootcamp for high-potential employees",
+      "Executive coaching and 360-degree feedback",
+      "Team lead rotation programs",
+      "Strategic planning and decision-making workshops",
+      "Board presentation and C-suite exposure opportunities"
+    ],
+    "highlight": "70% of management positions filled internally"
+  },
+  {
+    "id": 6,
+    "icon": "🔄",
+    "title": "Cross-Functional Experience",
+    "description": "Broad exposure across different departments to build versatile skill sets",
+    "features": [
+      "Inter-department rotation programs",
+      "Cross-functional project assignments",
+      "Shadow senior leadership opportunities",
+      "Client-facing experience across all roles",
+      "Global project collaboration"
+    ],
+    "highlight": "60% of employees have worked across multiple departments"
+  }
+]

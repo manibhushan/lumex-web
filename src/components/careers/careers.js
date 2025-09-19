@@ -1,6 +1,10 @@
 import jobOpeningsData from '../../data/components/job-openings.json';
 import cultureItemsData from '../../data/components/careers-culture-items.json';
 import benefitsData from '../../data/components/careers-benefits.json';
+import careerStatsData from '../../data/components/careers-statistics.json';
+import employeeTestimonialsData from '../../data/components/careers-testimonials.json';
+import careerGrowthData from '../../data/components/careers-growth.json';
+import teamsData from '../../data/components/careers-teams.json';
 import { FormValidator } from '../../utils/validation.js';
 
 export default {
@@ -23,11 +27,23 @@ export default {
         resume: '',
         coverLetter: ''
       },
+      formTouched: {
+        firstName: false,
+        lastName: false,
+        email: false,
+        phone: false,
+        resume: false,
+        coverLetter: false
+      },
       isSubmitting: false,
       showSuccessMessage: false,
       cultureItems: cultureItemsData,
       jobOpenings: jobOpeningsData,
       benefits: benefitsData,
+      careerStats: careerStatsData,
+      employeeTestimonials: employeeTestimonialsData,
+      careerGrowth: careerGrowthData,
+      teams: teamsData,
       validator: new FormValidator()
     }
   },
@@ -41,7 +57,8 @@ export default {
     handleFileUpload(event) {
       const file = event.target.files[0] || null;
       this.formData.resume = file;
-      this.errors.resume = '';
+      this.markFieldTouched('resume');
+      this.clearFieldError('resume');
       
       // Clear any previous error styling
       if (file) {
@@ -49,6 +66,11 @@ export default {
       }
     },
     validateForm() {
+      // Mark all fields as touched for form submission validation
+      Object.keys(this.formTouched).forEach(field => {
+        this.formTouched[field] = true;
+      });
+
       // Create FormData object for validation utility
       const formData = new FormData();
       formData.append('firstName', this.formData.firstName);
@@ -132,6 +154,14 @@ export default {
         phone: '',
         resume: '',
         coverLetter: ''
+      };
+      this.formTouched = {
+        firstName: false,
+        lastName: false,
+        email: false,
+        phone: false,
+        resume: false,
+        coverLetter: false
       };
       
       // Reset file input

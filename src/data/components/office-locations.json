@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "city": "Bengaluru",
+    "type": "Headquarters",
+    "address": "16th Cross Road, Bengaluru North",
+    "location": "Karnataka 560016, India",
+    "phone": "+91-9431429005",
+    "email": "info@lumex.in",
+    "hours": {
+      "weekdays": "9:00 AM - 6:00 PM IST",
+      "weekend": "Closed"
+    },
+    "services": [
+      "Executive Leadership",
+      "Strategic Consulting", 
+      "Enterprise Solutions",
+      "Client Relations",
+      "Technology Development",
+      "Talent Acquisition"
+    ],
+    "description": "Our headquarters in Bengaluru serves as the central hub for strategic operations, technology development, and client relationships across India and international markets."
+  }
+]

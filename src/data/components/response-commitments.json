@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "type": "Initial Response",
+    "commitment": "Within 4 Hours",
+    "description": "All inquiries receive an initial acknowledgment and response within 4 hours during business days.",
+    "icon": "clock",
+    "availability": "Monday - Friday, 9:00 AM - 6:00 PM EST"
+  },
+  {
+    "id": 2,
+    "type": "Project Consultation", 
+    "commitment": "Same Day",
+    "description": "Urgent project discussions and consultations are scheduled within the same business day when requested.",
+    "icon": "calendar",
+    "availability": "Business hours with emergency support available"
+  },
+  {
+    "id": 3,
+    "type": "Proposal Delivery",
+    "commitment": "Within 48 Hours",
+    "description": "Detailed project proposals and quotes are delivered within 2 business days of requirements gathering.",
+    "icon": "document", 
+    "availability": "Comprehensive proposals with clear timelines and pricing"
+  },
+  {
+    "id": 4,
+    "type": "Support Tickets",
+    "commitment": "Priority Based",
+    "description": "Critical: 1 hour • High: 4 hours • Medium: 24 hours • Low: 48 hours response times guaranteed.",
+    "icon": "support",
+    "availability": "24/7 monitoring for critical issues"
+  },
+  {
+    "id": 5,
+    "type": "Progress Updates",
+    "commitment": "Weekly Reports", 
+    "description": "All active projects receive detailed weekly progress reports with milestones and next steps.",
+    "icon": "report",
+    "availability": "Every Friday with milestone notifications"
+  },
+  {
+    "id": 6,
+    "type": "Quality Assurance",
+    "commitment": "100% Satisfaction",
+    "description": "We guarantee satisfaction with all deliverables and provide revisions until requirements are fully met.",
+    "icon": "shield",
+    "availability": "Unlimited revisions within project scope"
+  }
+]

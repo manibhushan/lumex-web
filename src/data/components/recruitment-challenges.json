@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "icon": "⏱️",
+    "title": "Long Time-to-Hire",
+    "problem": "Technical positions remain open for months, slowing down project delivery and team productivity.",
+    "solution": "Our pre-vetted talent pool and efficient screening process reduces time-to-hire by 60%."
+  },
+  {
+    "id": 2,
+    "icon": "🎯",
+    "title": "Skills Mismatch",
+    "problem": "Candidates look good on paper but lack the specific technical skills needed for the role.",
+    "solution": "Comprehensive technical assessments and hands-on coding challenges ensure skill alignment."
+  },
+  {
+    "id": 3,
+    "icon": "💰",
+    "title": "High Salary Expectations",
+    "problem": "Top technical talent demands salaries that exceed budget constraints.",
+    "solution": "We provide market salary insights and help structure competitive compensation packages."
+  },
+  {
+    "id": 4,
+    "icon": "🏃",
+    "title": "High Candidate Dropout",
+    "problem": "Candidates accept offers elsewhere during lengthy interview processes.",
+    "solution": "Streamlined interview process and candidate relationship management keeps top talent engaged."
+  },
+  {
+    "id": 5,
+    "icon": "🔍",
+    "title": "Limited Talent Pool",
+    "problem": "Difficulty finding candidates with niche technical skills or specific technology experience.",
+    "solution": "Extensive network of specialized technical professionals across various technology stacks."
+  },
+  {
+    "id": 6,
+    "icon": "🤝",
+    "title": "Cultural Fit Issues",
+    "problem": "Technically qualified candidates don't integrate well with existing team dynamics.",
+    "solution": "Thorough cultural assessment and team compatibility evaluation during screening process."
+  }
+]

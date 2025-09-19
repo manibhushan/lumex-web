@@ -1,0 +1,58 @@
+{
+  "description": "We believe that exceptional candidate experience leads to better hires and stronger employer brands. Our candidate-centric approach ensures every interaction is professional, respectful, and valuable.",
+  "features": [
+    {
+      "id": 1,
+      "icon": "💬",
+      "title": "Transparent Communication",
+      "description": "Regular updates throughout the entire recruitment process, from application to final decision."
+    },
+    {
+      "id": 2,
+      "icon": "⚡",
+      "title": "Quick Response Time",
+      "description": "Initial response within 24 hours and ongoing communication throughout the process."
+    },
+    {
+      "id": 3,
+      "icon": "🎯",
+      "title": "Personalized Matching",
+      "description": "We only present opportunities that align with your career goals and skill set."
+    },
+    {
+      "id": 4,
+      "icon": "📚",
+      "title": "Interview Preparation",
+      "description": "Comprehensive interview preparation including technical questions and company insights."
+    },
+    {
+      "id": 5,
+      "icon": "🤝",
+      "title": "Negotiation Support",
+      "description": "Assistance with salary negotiations and contract terms to ensure fair compensation."
+    },
+    {
+      "id": 6,
+      "icon": "🚀",
+      "title": "Career Guidance",
+      "description": "Long-term career advice and guidance beyond just the immediate job placement."
+    }
+  ],
+  "stats": [
+    {
+      "id": 1,
+      "value": "4.8/5",
+      "label": "Candidate Rating"
+    },
+    {
+      "id": 2,
+      "value": "92%",
+      "label": "Would Recommend"
+    },
+    {
+      "id": 3,
+      "value": "24hrs",
+      "label": "Response Time"
+    }
+  ]
+}

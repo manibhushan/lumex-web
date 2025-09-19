@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Engineering Team",
+    "icon": "💻",
+    "size": "25+ Engineers",
+    "description": "Building scalable, innovative technology solutions that power our platform and serve millions of users worldwide.",
+    "responsibilities": [
+      "Full-stack web application development",
+      "Cloud infrastructure and DevOps",
+      "Mobile application development",
+      "AI/ML model development and deployment",
+      "API design and microservices architecture"
+    ],
+    "technologies": ["React", "Node.js", "Python", "AWS", "Docker", "Kubernetes"],
+    "culture": "Collaborative, innovation-driven, and committed to engineering excellence",
+    "perks": [
+      "Latest MacBook Pro and development tools",
+      "Flexible work-from-anywhere policy",
+      "Annual tech conference attendance",
+      "Side project support and 20% innovation time"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Talent Acquisition",
+    "icon": "🎯",
+    "size": "15+ Recruiters",
+    "description": "Connecting exceptional talent with amazing opportunities, focusing on finding the perfect cultural and technical fit.",
+    "responsibilities": [
+      "End-to-end talent acquisition process",
+      "Client relationship management",
+      "Candidate experience optimization",
+      "Market research and talent mapping",
+      "Employer branding initiatives"
+    ],
+    "technologies": ["ATS Systems", "LinkedIn Recruiter", "CRM Tools", "Analytics Dashboards"],
+    "culture": "People-focused, relationship-driven, and results-oriented",
+    "perks": [
+      "Performance bonuses and commissions",
+      "Professional networking event attendance",
+      "Recruitment certification programs",
+      "Flexible meeting schedules"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Business Development",
+    "icon": "📈",
+    "size": "12+ Sales Professionals",
+    "description": "Driving company growth through strategic partnerships, client acquisition, and market expansion initiatives.",
+    "responsibilities": [
+      "New client acquisition and onboarding",
+      "Strategic partnership development",
+      "Market analysis and opportunity identification",
+      "Revenue growth and target achievement",
+      "Client success and relationship management"
+    ],
+    "technologies": ["Salesforce", "HubSpot", "Analytics Tools", "Video Conferencing"],
+    "culture": "Goal-oriented, competitive, and collaborative team environment",
+    "perks": [
+      "Uncapped commission structure",
+      "Sales trip incentives and rewards",
+      "Professional sales training programs",
+      "Client entertainment budget"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Product & Design",
+    "icon": "🎨",
+    "size": "8+ Designers",
+    "description": "Creating intuitive, beautiful user experiences that delight customers and drive business success.",
+    "responsibilities": [
+      "User experience and interface design",
+      "Product strategy and roadmap planning",
+      "User research and usability testing",
+      "Design system development",
+      "Cross-functional collaboration"
+    ],
+    "technologies": ["Figma", "Sketch", "Adobe Creative Suite", "Principle", "InVision"],
+    "culture": "Creative, user-centric, and detail-oriented design thinking",
+    "perks": [
+      "Top-tier design software and hardware",
+      "Design conference and workshop attendance",
+      "Creative workspace with inspiration walls",
+      "User research budget allocation"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Operations & Support",
+    "icon": "⚙️",
+    "size": "10+ Operations Specialists",
+    "description": "Ensuring smooth business operations, exceptional customer support, and efficient internal processes.",
+    "responsibilities": [
+      "Customer support and success management",
+      "Internal operations optimization",
+      "Quality assurance and process improvement",
+      "Vendor management and procurement",
+      "Administrative and HR support"
+    ],
+    "technologies": ["Zendesk", "Slack", "Notion", "Google Workspace", "Automation Tools"],
+    "culture": "Service-minded, process-oriented, and efficiency-focused",
+    "perks": [
+      "Cross-training opportunities",
+      "Process improvement recognition programs",
+      "Customer success celebration events",
+      "Operational excellence training"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Data & Analytics",
+    "icon": "📊",
+    "size": "6+ Data Scientists",
+    "description": "Transforming data into actionable insights that drive strategic decision-making and business intelligence.",
+    "responsibilities": [
+      "Data analysis and visualization",
+      "Predictive modeling and machine learning",
+      "Business intelligence reporting",
+      "A/B testing and experimentation",
+      "Data pipeline development"
+    ],
+    "technologies": ["Python", "R", "SQL", "Tableau", "Apache Spark", "TensorFlow"],
+    "culture": "Analytical, curious, and impact-driven data enthusiasts",
+    "perks": [
+      "Access to premium data tools and platforms",
+      "Data science conference attendance",
+      "Research publication opportunities",
+      "Collaboration with university research programs"
+    ]
+  }
+]

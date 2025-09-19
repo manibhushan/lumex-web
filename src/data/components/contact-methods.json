@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "icon": "📞",
+    "title": "Phone Support",
+    "method": "Call Us",
+    "value": "+1 (555) 123-4567",
+    "description": "Speak directly with our team for immediate assistance",
+    "availability": "Mon-Fri, 9 AM - 6 PM EST",
+    "responseTime": "Immediate",
+    "bestFor": "Urgent inquiries and complex discussions"
+  },
+  {
+    "id": 2,
+    "icon": "✉️",
+    "title": "Email Support",
+    "method": "Send Email",
+    "value": "hello@lumex.com",
+    "description": "Send us a detailed message and we'll respond promptly",
+    "availability": "24/7",
+    "responseTime": "Within 4 hours",
+    "bestFor": "Detailed inquiries and project discussions"
+  },
+  {
+    "id": 3,
+    "icon": "💬",
+    "title": "Live Chat",
+    "method": "Start Chat",
+    "value": "Live Chat Available",
+    "description": "Get instant answers from our support team",
+    "availability": "Mon-Fri, 8 AM - 8 PM EST",
+    "responseTime": "Under 2 minutes",
+    "bestFor": "Quick questions and initial consultations"
+  },
+  {
+    "id": 4,
+    "icon": "📱",
+    "title": "WhatsApp Business",
+    "method": "Message Us",
+    "value": "+1 (555) 123-4567",
+    "description": "Connect with us on WhatsApp for convenient messaging",
+    "availability": "Mon-Fri, 9 AM - 7 PM EST",
+    "responseTime": "Within 30 minutes",
+    "bestFor": "Mobile-friendly quick communication"
+  },
+  {
+    "id": 5,
+    "icon": "🔗",
+    "title": "LinkedIn",
+    "method": "Connect",
+    "value": "/company/lumex-enterprise",
+    "description": "Follow us and send professional messages",
+    "availability": "24/7",
+    "responseTime": "Within 24 hours",
+    "bestFor": "Professional networking and partnerships"
+  },
+  {
+    "id": 6,
+    "icon": "📅",
+    "title": "Schedule Meeting",
+    "method": "Book Appointment",
+    "value": "calendly.com/lumex-consultation",
+    "description": "Book a dedicated consultation session with our experts",
+    "availability": "Flexible scheduling",
+    "responseTime": "Confirmed within 2 hours",
+    "bestFor": "In-depth project discussions and consultations"
+  }
+]

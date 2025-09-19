@@ -123,6 +123,14 @@
   background-color: var(--color-white);
 }
 
+/* Suppress default HTML5 validation styling */
+.form-input:invalid,
+.form-select:invalid,
+.form-textarea:invalid {
+  border-color: var(--color-gray-300);
+  box-shadow: none;
+}
+
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
@@ -159,7 +167,26 @@
   margin-top: var(--spacing-1);
 }
 
-.form-error,
+.form-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  margin-top: var(--spacing-1);
+  display: block;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 0;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+  min-height: 1.2em;
+}
+
+/* Show error styling only when there's an actual error message - for careers form */
+.form-error:not(:empty) {
+  background-color: rgba(255, 107, 107, 0.1);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+/* Contact form error messages - always show background when rendered */
 .error-message {
   font-size: var(--font-size-xs);
   color: var(--color-error);
@@ -169,6 +196,7 @@
   background-color: rgba(255, 107, 107, 0.1);
   padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
 }
 
 .form-actions {
@@ -268,6 +296,13 @@
   z-index: 2;
   pointer-events: auto;
   cursor: text;
+}
+
+/* Suppress default HTML5 validation styling for contact form */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+  border-color: var(--color-gray-300);
+  box-shadow: none;
 }
 
 .contact-form input:focus,
@@ -386,6 +421,7 @@
   box-shadow: var(--shadow-sm);
   text-align: center;
   border-left: 4px solid var(--color-success);
+  margin-top: var(--spacing-8);
 }
 
 /* Error Message Container */

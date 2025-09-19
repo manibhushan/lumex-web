@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Amazon Web Services",
+    "logo": "🔗",
+    "tier": "Premier Partner",
+    "specializations": ["Cloud Migration", "Serverless Computing", "AI/ML Services", "Big Data Analytics"],
+    "certifications": ["AWS Solutions Architect", "DevOps Engineer", "Data Analytics"]
+  },
+  {
+    "id": 2,
+    "name": "Microsoft Azure",
+    "logo": "⭐",
+    "tier": "Gold Partner",
+    "specializations": ["Enterprise Integration", "AI & Machine Learning", "IoT Solutions", "Hybrid Cloud"],
+    "certifications": ["Azure Solutions Architect", "Azure Developer", "Azure AI Engineer"]
+  },
+  {
+    "id": 3,
+    "name": "Google Cloud Platform",
+    "logo": "🌟",
+    "tier": "Partner",
+    "specializations": ["Data Analytics", "Machine Learning", "Kubernetes", "API Management"],
+    "certifications": ["Professional Cloud Architect", "Data Engineer", "Machine Learning Engineer"]
+  },
+  {
+    "id": 4,
+    "name": "MongoDB",
+    "logo": "🍃",
+    "tier": "Certified Partner",
+    "specializations": ["Database Design", "Performance Optimization", "Atlas Cloud", "Realm Mobile"],
+    "certifications": ["MongoDB Developer", "DBA Certification", "Atlas Administration"]
+  },
+  {
+    "id": 5,
+    "name": "React",
+    "logo": "⚛️",
+    "tier": "Expert Level",
+    "specializations": ["Component Libraries", "Performance Optimization", "State Management", "Testing"],
+    "certifications": ["Meta Certified Developer", "Advanced React Patterns", "React Native"]
+  },
+  {
+    "id": 6,
+    "name": "Docker",
+    "logo": "🐳",
+    "tier": "Certified",
+    "specializations": ["Containerization", "Orchestration", "CI/CD Pipelines", "Security"],
+    "certifications": ["Docker Certified Associate", "Kubernetes Administrator", "DevOps Specialist"]
+  }
+]

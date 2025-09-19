@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Frontend Technologies",
+    "technologies": ["React", "Vue.js", "Angular", "TypeScript", "JavaScript", "HTML5/CSS3", "Webpack", "Sass/Less"]
+  },
+  {
+    "id": 2,
+    "name": "Backend Technologies",
+    "technologies": ["Node.js", "Python", "Java", "C#/.NET", "Go", "Ruby", "PHP", "Scala"]
+  },
+  {
+    "id": 3,
+    "name": "Cloud Platforms",
+    "technologies": ["AWS", "Microsoft Azure", "Google Cloud", "DigitalOcean", "Heroku", "Netlify", "Vercel"]
+  },
+  {
+    "id": 4,
+    "name": "Databases",
+    "technologies": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch", "Cassandra", "Neo4j"]
+  },
+  {
+    "id": 5,
+    "name": "DevOps & Infrastructure",
+    "technologies": ["Docker", "Kubernetes", "Jenkins", "GitLab CI", "Terraform", "Ansible", "Prometheus", "Grafana"]
+  },
+  {
+    "id": 6,
+    "name": "Mobile Development",
+    "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin", "Ionic", "Cordova"]
+  },
+  {
+    "id": 7,
+    "name": "Data & Analytics",
+    "technologies": ["Apache Spark", "Hadoop", "Kafka", "Tableau", "Power BI", "Python Data Stack", "R", "TensorFlow"]
+  },
+  {
+    "id": 8,
+    "name": "Security & Compliance",
+    "technologies": ["OAuth", "JWT", "SSL/TLS", "OWASP", "Penetration Testing", "Security Audits", "GDPR", "SOC 2"]
+  }
+]

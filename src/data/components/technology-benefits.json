@@ -1,0 +1,63 @@
+{
+  "description": "At Lumex, we believe technology should empower your business, not complicate it. Our comprehensive approach ensures that every solution we deliver provides measurable value and drives real business outcomes.",
+  "benefits": [
+    {
+      "id": 1,
+      "icon": "📈",
+      "title": "Scalable Solutions",
+      "description": "Built to grow with your business needs and handle increasing demands effortlessly"
+    },
+    {
+      "id": 2,
+      "icon": "⚡",
+      "title": "Performance Optimized",
+      "description": "High-performance applications that deliver exceptional user experiences"
+    },
+    {
+      "id": 3,
+      "icon": "🔄",
+      "title": "Future-Proof Architecture",
+      "description": "Technology choices that remain relevant and maintainable for years to come"
+    },
+    {
+      "id": 4,
+      "icon": "💰",
+      "title": "Cost-Effective Development",
+      "description": "Efficient development processes that maximize value while minimizing costs"
+    },
+    {
+      "id": 5,
+      "icon": "🛡️",
+      "title": "Enterprise-Grade Security",
+      "description": "Comprehensive security measures to protect your data and applications"
+    },
+    {
+      "id": 6,
+      "icon": "🎯",
+      "title": "Business-Focused Solutions",
+      "description": "Technology aligned with your business goals and strategic objectives"
+    }
+  ],
+  "stats": [
+    {
+      "id": 1,
+      "value": "40%",
+      "label": "Cost Reduction"
+    },
+    {
+      "id": 2,
+      "value": "300%",
+      "label": "Performance Improvement"
+    },
+    {
+      "id": 3,
+      "value": "99.9%",
+      "label": "Uptime Guarantee"
+    },
+    {
+      "id": 4,
+      "value": "60%",
+      "label": "Faster Development"
+    }
+  ]
+}

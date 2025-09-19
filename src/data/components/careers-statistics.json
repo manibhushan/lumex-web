@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "value": "95%",
+    "label": "Employee Satisfaction",
+    "description": "Our team members consistently rate their experience working at Lumex as exceptional",
+    "icon": "😊"
+  },
+  {
+    "id": 2,
+    "value": "92%",
+    "label": "Retention Rate",
+    "description": "High retention rate demonstrates our commitment to employee growth and satisfaction",
+    "icon": "🏆"
+  },
+  {
+    "id": 3,
+    "value": "300%",
+    "label": "Company Growth",
+    "description": "Rapid growth creating abundant opportunities for career advancement",
+    "icon": "📈"
+  },
+  {
+    "id": 4,
+    "value": "40%",
+    "label": "Team Diversity",
+    "description": "Diverse workforce bringing varied perspectives and innovative solutions",
+    "icon": "🌍"
+  },
+  {
+    "id": 5,
+    "value": "85%",
+    "label": "Internal Promotions",
+    "description": "Most leadership positions filled by promoting talented team members from within",
+    "icon": "⬆️"
+  },
+  {
+    "id": 6,
+    "value": "4.8/5",
+    "label": "Glassdoor Rating",
+    "description": "Outstanding employer rating reflecting our positive workplace culture",
+    "icon": "⭐"
+  }
+]

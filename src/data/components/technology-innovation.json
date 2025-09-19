@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "icon": "💡",
+    "title": "Agile Development Methodology",
+    "description": "We embrace agile principles with iterative development, continuous feedback, and adaptive planning to ensure your project stays on track and meets evolving requirements.",
+    "benefits": ["Faster Time-to-Market", "Continuous Improvement", "Risk Mitigation", "Client Collaboration"]
+  },
+  {
+    "id": 2,
+    "icon": "🔧",
+    "title": "DevOps & Continuous Integration",
+    "description": "Our DevOps practices ensure seamless integration, automated testing, and continuous deployment for reliable, scalable, and maintainable solutions.",
+    "benefits": ["Automated Deployments", "Quality Assurance", "Faster Releases", "Improved Reliability"]
+  },
+  {
+    "id": 3,
+    "icon": "🏗️",
+    "title": "Microservices Architecture",
+    "description": "We design scalable, maintainable systems using microservices architecture that allows for independent scaling, easier maintenance, and technology diversity.",
+    "benefits": ["Independent Scaling", "Technology Flexibility", "Faster Development", "Improved Fault Isolation"]
+  },
+  {
+    "id": 4,
+    "icon": "☁️",
+    "title": "Cloud-Native Solutions",
+    "description": "Our cloud-native approach leverages the full potential of cloud platforms for scalability, resilience, and cost-effectiveness in modern applications.",
+    "benefits": ["Auto-Scaling", "Cost Optimization", "High Availability", "Global Deployment"]
+  },
+  {
+    "id": 5,
+    "icon": "🔒",
+    "title": "Security-First Development",
+    "description": "Security is integrated into every layer of our development process, from secure coding practices to comprehensive testing and compliance frameworks.",
+    "benefits": ["Data Protection", "Compliance Ready", "Threat Prevention", "Secure Architecture"]
+  },
+  {
+    "id": 6,
+    "icon": "📊",
+    "title": "Data-Driven Architecture",
+    "description": "We build intelligent systems that leverage data analytics, machine learning, and real-time processing to provide actionable insights and automated decision-making.",
+    "benefits": ["Business Intelligence", "Predictive Analytics", "Real-time Insights", "Automated Decisions"]
+  }
+]

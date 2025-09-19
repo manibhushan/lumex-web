@@ -73,6 +73,158 @@
       </div>
     </section>
 
+    <!-- Specialized Roles Section -->
+    <section class="specialized-roles">
+      <div class="container">
+        <h2 class="section-title">Specialized Technical Roles We Fill</h2>
+        <div class="roles-grid">
+          <div 
+            v-for="role in specializedRoles" 
+            :key="role.id" 
+            class="role-card"
+          >
+            <div class="role-card__icon">{{ role.icon }}</div>
+            <h3 class="role-card__title">{{ role.title }}</h3>
+            <p class="role-card__description">{{ role.description }}</p>
+            <div class="role-card__skills">
+              <span 
+                v-for="skill in role.keySkills" 
+                :key="skill" 
+                class="skill-tag"
+              >
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Metrics Section -->
+    <section class="success-metrics">
+      <div class="container">
+        <h2 class="section-title">Our Recruitment Success</h2>
+        <div class="metrics-grid">
+          <div 
+            v-for="metric in recruitmentMetrics" 
+            :key="metric.id" 
+            class="metric-card"
+          >
+            <div class="metric-card__number">{{ metric.value }}</div>
+            <div class="metric-card__label">{{ metric.label }}</div>
+            <p class="metric-card__description">{{ metric.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="client-testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+          <div 
+            v-for="testimonial in clientTestimonials" 
+            :key="testimonial.id" 
+            class="testimonial-card"
+          >
+            <div class="testimonial-card__quote">"{{ testimonial.quote }}"</div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__name">{{ testimonial.name }}</div>
+              <div class="testimonial-card__position">{{ testimonial.position }}</div>
+              <div class="testimonial-card__company">{{ testimonial.company }}</div>
+            </div>
+            <div class="testimonial-card__placement">
+              <strong>Placement:</strong> {{ testimonial.placement }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hiring Challenges Section -->
+    <section class="hiring-challenges">
+      <div class="container">
+        <h2 class="section-title">Common Hiring Challenges We Solve</h2>
+        <div class="challenges-content">
+          <div class="challenges-list">
+            <div 
+              v-for="challenge in hiringChallenges" 
+              :key="challenge.id" 
+              class="challenge-item"
+            >
+              <div class="challenge-item__icon">{{ challenge.icon }}</div>
+              <div class="challenge-item__content">
+                <h3 class="challenge-item__title">{{ challenge.title }}</h3>
+                <p class="challenge-item__problem">{{ challenge.problem }}</p>
+                <p class="challenge-item__solution"><strong>Our Solution:</strong> {{ challenge.solution }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Candidate Experience Section -->
+    <section class="candidate-experience">
+      <div class="container">
+        <div class="experience-content">
+          <div class="experience-text">
+            <h2 class="experience-title">Exceptional Candidate Experience</h2>
+            <p class="experience-description">{{ candidateExperience.description }}</p>
+            <div class="experience-features">
+              <div 
+                v-for="feature in candidateExperience.features" 
+                :key="feature.id" 
+                class="experience-feature"
+              >
+                <div class="experience-feature__icon">{{ feature.icon }}</div>
+                <div class="experience-feature__content">
+                  <h4 class="experience-feature__title">{{ feature.title }}</h4>
+                  <p class="experience-feature__description">{{ feature.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-stats">
+            <div 
+              v-for="stat in candidateExperience.stats" 
+              :key="stat.id" 
+              class="experience-stat"
+            >
+              <div class="experience-stat__number">{{ stat.value }}</div>
+              <div class="experience-stat__label">{{ stat.label }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="recruitment-tech">
+      <div class="container">
+        <h2 class="section-title">Technologies We Recruit For</h2>
+        <div class="tech-categories">
+          <div 
+            v-for="category in recruitmentTech" 
+            :key="category.id" 
+            class="tech-category-card"
+          >
+            <h3 class="tech-category-card__title">{{ category.name }}</h3>
+            <div class="tech-category-card__items">
+              <span 
+                v-for="tech in category.technologies" 
+                :key="tech" 
+                class="tech-tag"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section">
       <div class="container">

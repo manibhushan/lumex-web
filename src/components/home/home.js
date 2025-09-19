@@ -2,6 +2,11 @@ import heroContentData from '../../data/components/home-hero-content.json';
 import companyOverviewData from '../../data/components/home-company-overview.json';
 import servicesData from '../../data/components/home-services.json';
 import coreValuesData from '../../data/components/home-core-values.json';
+import successStatsData from '../../data/components/home-stats.json';
+import processStepsData from '../../data/components/home-process-steps.json';
+import industriesData from '../../data/components/home-industries.json';
+import techStackData from '../../data/components/home-tech-stack.json';
+import testimonialsData from '../../data/components/home-testimonials.json';
 import { sectionTitles } from '../../data/shared/page-content.json';
 
 export default {
@@ -11,6 +16,11 @@ export default {
       heroContent: heroContentData,
       companyOverview: companyOverviewData,
       services: servicesData,
+      successStats: successStatsData,
+      processSteps: processStepsData,
+      industries: industriesData,
+      techStack: techStackData,
+      testimonials: testimonialsData,
       valuesSection: {
         title: sectionTitles.valuesSection
       },

@@ -2,6 +2,11 @@ import techServicesData from '../../data/components/technology-services.json';
 import techCategoriesData from '../../data/components/technology-categories.json';
 import caseStudiesData from '../../data/components/technology-case-studies.json';
 import processStepsData from '../../data/components/technology-process-steps.json';
+import techMetricsData from '../../data/components/technology-metrics.json';
+import techTestimonialsData from '../../data/components/technology-testimonials.json';
+import techInnovationData from '../../data/components/technology-innovation.json';
+import techPartnershipsData from '../../data/components/technology-partnerships.json';
+import techBenefitsData from '../../data/components/technology-benefits.json';
 import { pageHeaders, sectionTitles, contactSections } from '../../data/shared/page-content.json';
 
 export default {
@@ -25,6 +30,11 @@ export default {
         title: sectionTitles.integrationProcess
       },
       processSteps: processStepsData,
+      techMetrics: techMetricsData,
+      techTestimonials: techTestimonialsData,
+      techInnovation: techInnovationData,
+      techPartnerships: techPartnershipsData,
+      techBenefits: techBenefitsData,
       contactSection: contactSections.technology
     }
   },
@@ -62,6 +72,12 @@ export default {
     handleContactClick() {
       // Emit contact button click event
       this.$emit('contact-clicked');
+      this.$emit('navigate', 'contact-us');
+    },
+
+    handleConsultationClick() {
+      // Emit consultation button click event
+      this.$emit('consultation-clicked');
       this.$emit('navigate', 'contact-us');
     }
   },

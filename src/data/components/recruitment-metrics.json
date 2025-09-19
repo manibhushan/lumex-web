@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "value": "95%",
+    "label": "Successful Placements",
+    "description": "Our candidates successfully complete their probation periods and excel in their roles."
+  },
+  {
+    "id": 2,
+    "value": "14 Days",
+    "label": "Average Time to Fill",
+    "description": "Industry-leading speed in finding and placing qualified technical candidates."
+  },
+  {
+    "id": 3,
+    "value": "500+",
+    "label": "Technical Placements",
+    "description": "Successfully placed over 500 technical professionals across various industries."
+  },
+  {
+    "id": 4,
+    "value": "98%",
+    "label": "Client Satisfaction",
+    "description": "Our clients consistently rate our recruitment services as exceptional."
+  },
+  {
+    "id": 5,
+    "value": "85%",
+    "label": "Candidate Retention",
+    "description": "High retention rate shows we match candidates to roles they truly love."
+  },
+  {
+    "id": 6,
+    "value": "24/7",
+    "label": "Support Available",
+    "description": "Round-the-clock support for urgent hiring needs and candidate questions."
+  }
+]

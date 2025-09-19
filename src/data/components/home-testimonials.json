@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "quote": "Lumex didn't just solve our integration challenges—they found us the perfect team to maintain and evolve our systems. Their dual approach saved us months of separate vendor management.",
+    "name": "Sarah Chen",
+    "position": "CTO",
+    "company": "FinanceFlow Solutions"
+  },
+  {
+    "id": 2,
+    "quote": "Working with Lumex transformed our hiring process. They understand both the technical requirements and the cultural fit we needed. Every placement has been exceptional.",
+    "name": "Michael Rodriguez",
+    "position": "VP of Engineering",
+    "company": "HealthTech Innovations"
+  },
+  {
+    "id": 3,
+    "quote": "The technology solutions Lumex implemented have increased our operational efficiency by 40%. Their team's expertise in cloud migration was exactly what we needed.",
+    "name": "Jessica Park",
+    "position": "Head of Operations",
+    "company": "RetailConnect"
+  },
+  {
+    "id": 4,
+    "quote": "Lumex's ability to provide both cutting-edge technology solutions and top-tier talent in one partnership has been a game-changer for our startup's rapid growth.",
+    "name": "David Thompson",
+    "position": "Founder & CEO",
+    "company": "DataStream Analytics"
+  }
+]

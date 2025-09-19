@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "icon": "☁️",
+    "title": "Cloud Engineers",
+    "description": "AWS, Azure, and GCP certified professionals who can design and implement scalable cloud infrastructure.",
+    "keySkills": ["AWS", "Azure", "Kubernetes", "Docker", "Terraform"]
+  },
+  {
+    "id": 2,
+    "icon": "🔧",
+    "title": "DevOps Engineers",
+    "description": "CI/CD pipeline experts who streamline development and deployment processes.",
+    "keySkills": ["Jenkins", "GitLab CI", "Ansible", "Prometheus", "Grafana"]
+  },
+  {
+    "id": 3,
+    "icon": "💻",
+    "title": "Full-Stack Developers",
+    "description": "Versatile developers proficient in both frontend and backend technologies.",
+    "keySkills": ["React", "Node.js", "Python", "MongoDB", "PostgreSQL"]
+  },
+  {
+    "id": 4,
+    "icon": "🔗",
+    "title": "Integration Specialists",
+    "description": "API integration experts who connect disparate systems seamlessly.",
+    "keySkills": ["REST APIs", "GraphQL", "Microservices", "Message Queues", "OAuth"]
+  },
+  {
+    "id": 5,
+    "icon": "📊",
+    "title": "Data Engineers",
+    "description": "Big data specialists who build robust data pipelines and analytics platforms.",
+    "keySkills": ["Apache Spark", "Kafka", "Elasticsearch", "Python", "SQL"]
+  },
+  {
+    "id": 6,
+    "icon": "🔒",
+    "title": "Security Engineers",
+    "description": "Cybersecurity professionals who protect and secure technical infrastructure.",
+    "keySkills": ["CISSP", "Penetration Testing", "SIEM", "Security Audits", "Compliance"]
+  }
+]

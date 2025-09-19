@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Cloud & Infrastructure",
+    "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins"]
+  },
+  {
+    "id": 2,
+    "name": "Backend Development",
+    "technologies": ["Node.js", "Python", "Java", "C#", ".NET", "Go", "Microservices"]
+  },
+  {
+    "id": 3,
+    "name": "Integration & APIs",
+    "technologies": ["REST APIs", "GraphQL", "Message Queues", "Apache Kafka", "RabbitMQ", "Redis"]
+  },
+  {
+    "id": 4,
+    "name": "Databases",
+    "technologies": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch"]
+  },
+  {
+    "id": 5,
+    "name": "DevOps & Monitoring",
+    "technologies": ["CI/CD", "Prometheus", "Grafana", "ELK Stack", "New Relic", "DataDog"]
+  },
+  {
+    "id": 6,
+    "name": "Frontend & Mobile",
+    "technologies": ["React", "Vue.js", "Angular", "React Native", "Flutter", "TypeScript"]
+  }
+]

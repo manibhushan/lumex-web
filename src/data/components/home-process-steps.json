@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "number": "01",
+    "title": "Discovery & Analysis",
+    "description": "We start by understanding your unique challenges, whether it's finding the right talent or identifying technology gaps in your current systems."
+  },
+  {
+    "id": 2,
+    "number": "02",
+    "title": "Strategic Planning",
+    "description": "Our experts design a comprehensive approach that addresses both your immediate needs and long-term goals, ensuring sustainable growth."
+  },
+  {
+    "id": 3,
+    "number": "03",
+    "title": "Implementation & Integration",
+    "description": "We execute our plan with precision, whether deploying new technology solutions or placing top-tier talent in your organization."
+  },
+  {
+    "id": 4,
+    "number": "04",
+    "title": "Ongoing Support",
+    "description": "Our partnership doesn't end at delivery. We provide continuous support, optimization, and scaling as your business evolves."
+  }
+]

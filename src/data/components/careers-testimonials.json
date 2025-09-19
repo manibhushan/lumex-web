@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Chen",
+    "position": "Senior Software Engineer",
+    "department": "Technology",
+    "tenure": "2 years",
+    "quote": "Lumex has been instrumental in my professional growth. The mentorship program helped me transition from mid-level to senior engineer, and I'm now leading my own team. The learning opportunities are endless here.",
+    "highlight": "Promoted twice in 2 years",
+    "avatar": "👨‍💻"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "position": "Talent Acquisition Manager",
+    "department": "Recruitment",
+    "tenure": "3 years",
+    "quote": "What I love most about Lumex is how we're genuinely making a difference in people's careers. Every successful placement feels like a personal victory, and the team support is incredible.",
+    "highlight": "Placed 200+ candidates successfully",
+    "avatar": "👩‍💼"
+  },
+  {
+    "id": 3,
+    "name": "Marcus Rodriguez",
+    "position": "Project Manager",
+    "department": "Operations",
+    "tenure": "1.5 years",
+    "quote": "The work-life balance here is outstanding. I can manage complex projects while still having time for my family. The flexible remote work policy has been a game-changer for my productivity.",
+    "highlight": "Led 5+ successful project deliveries",
+    "avatar": "👨‍🎯"
+  },
+  {
+    "id": 4,
+    "name": "Emily Zhang",
+    "position": "UX Designer",
+    "department": "Design",
+    "tenure": "1 year",
+    "quote": "As a recent graduate, I was nervous about joining the workforce, but Lumex's onboarding and mentorship program made the transition seamless. I'm working on products that thousands of people use.",
+    "highlight": "Redesigned 3 major user interfaces",
+    "avatar": "👩‍🎨"
+  },
+  {
+    "id": 5,
+    "name": "David Thompson",
+    "position": "Sales Director",
+    "department": "Business Development",
+    "tenure": "4 years",
+    "quote": "The growth trajectory at Lumex is phenomenal. I started as an account executive and now lead a team of 12. The company invests in your success and provides all the tools needed to excel.",
+    "highlight": "Grew team from 3 to 12 members",
+    "avatar": "👨‍💼"
+  },
+  {
+    "id": 6,
+    "name": "Priya Patel",
+    "position": "Data Analyst",
+    "department": "Analytics",
+    "tenure": "2.5 years",
+    "quote": "The collaborative culture here is amazing. Cross-functional projects allow me to work with different teams and learn new skills. My insights directly impact business decisions, which is incredibly fulfilling.",
+    "highlight": "Improved data accuracy by 40%",
+    "avatar": "👩‍📊"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "🏦",
+    "name": "Financial Services",
+    "description": "Banking, fintech, and insurance companies looking for robust integration solutions and specialized talent."
+  },
+  {
+    "id": 2,
+    "icon": "🏥",
+    "name": "Healthcare & Biotech",
+    "description": "Healthcare organizations needing secure, compliant systems and experienced healthcare IT professionals."
+  },
+  {
+    "id": 3,
+    "icon": "🛒",
+    "name": "E-commerce & Retail",
+    "description": "Online retailers requiring scalable platforms, payment integrations, and e-commerce expertise."
+  },
+  {
+    "id": 4,
+    "icon": "🏭",
+    "name": "Manufacturing",
+    "description": "Industrial companies modernizing operations with IoT, automation, and supply chain technologies."
+  },
+  {
+    "id": 5,
+    "icon": "🚀",
+    "name": "Startups & Tech",
+    "description": "Fast-growing companies needing rapid scaling solutions and top engineering talent."
+  },
+  {
+    "id": 6,
+    "name": "Government & Public Sector",
+    "icon": "🏛️",
+    "description": "Public organizations requiring secure, compliant solutions and experienced government contractors."
+  }
+]

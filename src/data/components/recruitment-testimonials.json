@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "quote": "Lumex found us the perfect DevOps engineer in just 10 days. Their understanding of our technical requirements was exceptional.",
+    "name": "Sarah Johnson",
+    "position": "VP of Engineering",
+    "company": "TechFlow Solutions",
+    "placement": "Senior DevOps Engineer"
+  },
+  {
+    "id": 2,
+    "quote": "The quality of candidates Lumex provides is outstanding. Every person they've placed with us has exceeded our expectations.",
+    "name": "Michael Chen",
+    "position": "CTO",
+    "company": "DataStream Analytics",
+    "placement": "Cloud Architect"
+  },
+  {
+    "id": 3,
+    "quote": "Working with Lumex transformed our hiring process. They understand both the technical skills and cultural fit we need.",
+    "name": "Jennifer Rodriguez",
+    "position": "Head of Talent Acquisition",
+    "company": "FinanceFlow Inc.",
+    "placement": "Full-Stack Developer Team"
+  },
+  {
+    "id": 4,
+    "quote": "Lumex helped us scale our engineering team from 5 to 25 people in 6 months. Their volume hiring expertise is unmatched.",
+    "name": "David Park",
+    "position": "Founder & CEO",
+    "company": "CloudVision Startup",
+    "placement": "Engineering Team Scale-up"
+  }
+]

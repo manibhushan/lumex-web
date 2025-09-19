@@ -11,6 +11,21 @@
       </div>
     </section>
 
+    <!-- Career Statistics Section -->
+    <section class="career-stats">
+      <div class="container">
+        <h2 class="section-title">Our People & Culture by the Numbers</h2>
+        <div class="stats-grid">
+          <div v-for="stat in careerStats" :key="stat.id" class="stat-card">
+            <div class="stat-card__icon">{{ stat.icon }}</div>
+            <div class="stat-card__number">{{ stat.value }}</div>
+            <div class="stat-card__label">{{ stat.label }}</div>
+            <p class="stat-card__description">{{ stat.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Company Culture -->
     <section class="culture">
       <div class="container">
@@ -27,6 +42,28 @@
       </div>
     </section>
 
+    <!-- Employee Testimonials Section -->
+    <section class="employee-testimonials">
+      <div class="container">
+        <h2 class="section-title">Hear From Our Team</h2>
+        <div class="testimonials-grid">
+          <div v-for="testimonial in employeeTestimonials" :key="testimonial.id" class="employee-testimonial">
+            <div class="employee-testimonial__header">
+              <div class="employee-testimonial__avatar">{{ testimonial.avatar }}</div>
+              <div class="employee-testimonial__info">
+                <div class="employee-testimonial__name">{{ testimonial.name }}</div>
+                <div class="employee-testimonial__position">{{ testimonial.position }}</div>
+                <div class="employee-testimonial__department">{{ testimonial.department }}</div>
+                <div class="employee-testimonial__tenure">{{ testimonial.tenure }} with Lumex</div>
+              </div>
+            </div>
+            <p class="employee-testimonial__quote">"{{ testimonial.quote }}"</p>
+            <div class="employee-testimonial__highlight">{{ testimonial.highlight }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Job Openings -->
     <section class="job-openings">
       <div class="container">
@@ -36,7 +73,8 @@
             <div class="job-card__header">
               <h3 class="job-card__title">{{ job.title }}</h3>
               <button 
-                class="job-card__apply-btn" 
+                type="button"
+                class="job-card__apply-btn"
                 @click="scrollToApplication"
               >
                 Apply Now
@@ -59,6 +97,24 @@
       </div>
     </section>
 
+    <!-- Career Growth & Development Section -->
+    <section class="career-growth">
+      <div class="container">
+        <h2 class="section-title">Your Growth Journey at Lumex</h2>
+        <div class="growth-grid">
+          <div v-for="path in careerGrowth" :key="path.id" class="growth-card">
+            <div class="growth-card__icon">{{ path.icon }}</div>
+            <h3 class="growth-card__title">{{ path.title }}</h3>
+            <p class="growth-card__description">{{ path.description }}</p>
+            <ul class="growth-card__features">
+              <li v-for="feature in path.features" :key="feature">{{ feature }}</li>
+            </ul>
+            <div class="growth-card__highlight">{{ path.highlight }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Benefits -->
     <section class="benefits">
       <div class="container">
@@ -74,6 +130,51 @@
       </div>
     </section>
 
+    <!-- Team Spotlight Section -->
+    <section class="team-spotlight">
+      <div class="container">
+        <h2 class="section-title">Meet Our Teams</h2>
+        <div class="teams-grid">
+          <div v-for="team in teams" :key="team.id" class="team-card">
+            <div class="team-card__header">
+              <div class="team-card__icon">{{ team.icon }}</div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">{{ team.name }}</h3>
+                <div class="team-card__size">{{ team.size }}</div>
+              </div>
+            </div>
+            <p class="team-card__description">{{ team.description }}</p>
+            
+            <div class="team-card__section">
+              <h4 class="team-card__section-title">Key Responsibilities</h4>
+              <ul class="team-card__list">
+                <li v-for="responsibility in team.responsibilities" :key="responsibility">{{ responsibility }}</li>
+              </ul>
+            </div>
+
+            <div class="team-card__section">
+              <h4 class="team-card__section-title">Technologies We Use</h4>
+              <div class="team-card__technologies">
+                <span v-for="tech in team.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
+              </div>
+            </div>
+
+            <div class="team-card__section">
+              <h4 class="team-card__section-title">Our Culture</h4>
+              <p class="team-card__culture">{{ team.culture }}</p>
+            </div>
+
+            <div class="team-card__section">
+              <h4 class="team-card__section-title">Team Perks</h4>
+              <div class="team-card__perks">
+                <span v-for="perk in team.perks" :key="perk" class="perk-tag">{{ perk }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Application Form -->
     <section id="application" class="application">
       <div class="container">
@@ -84,6 +185,7 @@
             class="form" 
             action="https://formspree.io/f/xyzdqggy" 
             method="POST"
+            novalidate
             @submit.prevent="handleSubmit"
           >
             <div class="form-grid">
@@ -97,8 +199,10 @@
                   required
                   placeholder="Enter your first name"
                   v-model="formData.firstName"
+                  @blur="markFieldTouched('firstName')"
+                  @input="clearFieldError('firstName')"
                 >
-                <span class="form-error" id="firstName-error">{{ errors.firstName }}</span>
+                <span class="form-error" id="firstName-error">{{ (formTouched.firstName && errors.firstName) ? errors.firstName : '' }}</span>
               </div>
               <div class="form-group">
                 <label for="lastName" class="form-label">Last Name *</label>
@@ -110,8 +214,10 @@
                   required
                   placeholder="Enter your last name"
                   v-model="formData.lastName"
+                  @blur="markFieldTouched('lastName')"
+                  @input="clearFieldError('lastName')"
                 >
-                <span class="form-error" id="lastName-error">{{ errors.lastName }}</span>
+                <span class="form-error" id="lastName-error">{{ (formTouched.lastName && errors.lastName) ? errors.lastName : '' }}</span>
               </div>
 
               <div class="form-group">
@@ -124,8 +230,10 @@
                   required
                   placeholder="Enter your email address"
                   v-model="formData.email"
+                  @blur="markFieldTouched('email')"
+                  @input="clearFieldError('email')"
                 >
-                <span class="form-error" id="email-error">{{ errors.email }}</span>
+                <span class="form-error" id="email-error">{{ (formTouched.email && errors.email) ? errors.email : '' }}</span>
               </div>
 
               <div class="form-group">
@@ -138,8 +246,10 @@
                   required
                   placeholder="Enter your phone number"
                   v-model="formData.phone"
+                  @blur="markFieldTouched('phone')"
+                  @input="clearFieldError('phone')"
                 >
-                <span class="form-error" id="phone-error">{{ errors.phone }}</span>
+                <span class="form-error" id="phone-error">{{ (formTouched.phone && errors.phone) ? errors.phone : '' }}</span>
               </div>
             </div>
 
@@ -155,7 +265,7 @@
                 @change="handleFileUpload"
               >
               <span class="form-help">Please upload your resume (PDF, DOC, or DOCX format)</span>
-              <span class="form-error" id="resume-error">{{ errors.resume }}</span>
+              <span class="form-error" id="resume-error">{{ (formTouched.resume && errors.resume) ? errors.resume : '' }}</span>
             </div>
 
             <div class="form-group">
@@ -167,8 +277,10 @@
                 rows="6"
                 placeholder="Tell us why you're interested in joining our team..."
                 v-model="formData.coverLetter"
+                @blur="markFieldTouched('coverLetter')"
+                @input="clearFieldError('coverLetter')"
               ></textarea>
-              <span class="form-error" id="coverLetter-error">{{ errors.coverLetter }}</span>
+              <span class="form-error" id="coverLetter-error">{{ (formTouched.coverLetter && errors.coverLetter) ? errors.coverLetter : '' }}</span>
             </div>
 
             <div class="form-actions">

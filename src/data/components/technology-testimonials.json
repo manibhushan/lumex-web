@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "quote": "Lumex transformed our legacy systems into a modern, scalable architecture that reduced our operational costs by 40% while improving performance dramatically.",
+    "name": "Sarah Chen",
+    "position": "CTO",
+    "company": "FinTech Innovations Inc.",
+    "project": "Cloud Migration & Modernization",
+    "technologies": ["AWS", "Microservices", "React", "Node.js"]
+  },
+  {
+    "id": 2,
+    "quote": "The team delivered our e-commerce platform ahead of schedule with exceptional quality. Their expertise in React and cloud technologies was instrumental to our success.",
+    "name": "Michael Rodriguez",
+    "position": "VP of Engineering",
+    "company": "RetailMax Solutions",
+    "project": "E-commerce Platform Development",
+    "technologies": ["React", "MongoDB", "Express.js", "Docker"]
+  },
+  {
+    "id": 3,
+    "quote": "Lumex's data analytics solution provided insights we never knew we needed. Our decision-making process is now data-driven and significantly more effective.",
+    "name": "Dr. Amanda Foster",
+    "position": "Head of Analytics",
+    "company": "Healthcare Analytics Corp",
+    "project": "Big Data Analytics Platform",
+    "technologies": ["Python", "Apache Spark", "Tableau", "PostgreSQL"]
+  },
+  {
+    "id": 4,
+    "quote": "The mobile application development was flawless. Their cross-platform approach saved us time and budget while delivering native-quality user experience.",
+    "name": "James Wilson",
+    "position": "Product Manager",
+    "company": "MobileTech Enterprises",
+    "project": "Cross-Platform Mobile App",
+    "technologies": ["React Native", "Firebase", "Redux", "TypeScript"]
+  }
+]

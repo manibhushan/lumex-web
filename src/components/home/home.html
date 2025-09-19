@@ -59,6 +59,81 @@
       </div>
     </section>
 
+    <!-- Success Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <h2 class="stats__title">Our Impact in Numbers</h2>
+        <div class="stats__grid">
+          <div v-for="stat in successStats" :key="stat.id" class="stat-item">
+            <div class="stat-item__number">{{ stat.number }}</div>
+            <div class="stat-item__label">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+      <div class="container">
+        <h2 class="process__title">How We Bridge the Gap</h2>
+        <div class="process__grid">
+          <div v-for="step in processSteps" :key="step.id" class="process-step">
+            <div class="process-step__number">{{ step.number }}</div>
+            <h3 class="process-step__title">{{ step.title }}</h3>
+            <p class="process-step__description">{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+      <div class="container">
+        <h2 class="industries__title">Industries We Serve</h2>
+        <div class="industries__grid">
+          <div v-for="industry in industries" :key="industry.id" class="industry-card">
+            <div class="industry-card__icon">{{ industry.icon }}</div>
+            <h3 class="industry-card__title">{{ industry.name }}</h3>
+            <p class="industry-card__description">{{ industry.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="tech-stack">
+      <div class="container">
+        <h2 class="tech-stack__title">Our Technology Expertise</h2>
+        <div class="tech-stack__categories">
+          <div v-for="category in techStack" :key="category.id" class="tech-category">
+            <h3 class="tech-category__title">{{ category.name }}</h3>
+            <div class="tech-category__items">
+              <span v-for="tech in category.technologies" :key="tech" class="tech-item">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="testimonials__title">What Our Clients Say</h2>
+        <div class="testimonials__slider">
+          <div v-for="testimonial in testimonials" :key="testimonial.id" class="testimonial-card">
+            <div class="testimonial-card__quote">"{{ testimonial.quote }}"</div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__name">{{ testimonial.name }}</div>
+              <div class="testimonial-card__position">{{ testimonial.position }}</div>
+              <div class="testimonial-card__company">{{ testimonial.company }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Company Values -->
     <section class="values">
       <div class="container">
@@ -73,6 +148,34 @@
             <p class="value-item__description">
               {{ value.description }}
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta__content">
+          <h2 class="cta__title">Ready to Bridge Your Technology and Talent Gaps?</h2>
+          <p class="cta__description">
+            Let's discuss how Lumex can accelerate your business growth through strategic technology solutions and top-tier talent acquisition.
+          </p>
+          <div class="cta__actions">
+            <button 
+              class="btn btn--primary btn--lg" 
+              @click="handleNavigation('contact-us')"
+              type="button"
+            >
+              Get Started Today
+            </button>
+            <button 
+              class="btn btn--outline btn--lg" 
+              @click="handleNavigation('home')"
+              type="button"
+            >
+              Learn More About Us
+            </button>
           </div>
         </div>
       </div>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "category": "Services",
+    "question": "What services does Lumex offer?",
+    "answer": "Lumex specializes in talent acquisition, technology consulting, software development, and digital transformation services. We help businesses find the right talent and implement cutting-edge technology solutions to drive growth and efficiency."
+  },
+  {
+    "id": 2,
+    "category": "Services",
+    "question": "Do you work with startups or only large enterprises?",
+    "answer": "We work with businesses of all sizes, from innovative startups to Fortune 500 companies. Our scalable solutions are designed to meet the unique needs and budgets of organizations at every stage of growth."
+  },
+  {
+    "id": 3,
+    "category": "Process",
+    "question": "How long does the typical project take?",
+    "answer": "Project timelines vary based on scope and complexity. Talent acquisition typically takes 2-4 weeks, while technology projects can range from 4 weeks for small implementations to 6+ months for comprehensive digital transformations."
+  },
+  {
+    "id": 4,
+    "category": "Process",
+    "question": "What is your project onboarding process?",
+    "answer": "Our onboarding process includes: 1) Initial consultation to understand your needs, 2) Detailed proposal and timeline, 3) Contract and kick-off meeting, 4) Regular progress updates and milestones, 5) Final delivery and ongoing support."
+  },
+  {
+    "id": 5,
+    "category": "Pricing",
+    "question": "How do you structure your pricing?",
+    "answer": "We offer flexible pricing models including fixed-price projects, hourly consulting rates, and retainer agreements. Pricing depends on project scope, timeline, and resource requirements. We provide transparent quotes with no hidden fees."
+  },
+  {
+    "id": 6,
+    "category": "Pricing",
+    "question": "Do you offer free consultations?",
+    "answer": "Yes! We provide free initial consultations to understand your needs and discuss how we can help. This includes a thorough assessment of your requirements and a preliminary proposal at no cost."
+  },
+  {
+    "id": 7,
+    "category": "Support",
+    "question": "What kind of ongoing support do you provide?",
+    "answer": "We offer comprehensive post-project support including maintenance, updates, training, and technical assistance. Support packages are tailored to your needs and can include 24/7 monitoring for critical systems."
+  },
+  {
+    "id": 8,
+    "category": "Support",
+    "question": "How quickly do you respond to support requests?",
+    "answer": "Response times depend on the support tier: Critical issues (within 1 hour), High priority (within 4 hours), Medium priority (within 24 hours), Low priority (within 48 hours). Premium support customers receive priority handling."
+  },
+  {
+    "id": 9,
+    "category": "Technology",
+    "question": "What technologies do you specialize in?",
+    "answer": "We specialize in modern web technologies (React, Vue.js, Node.js), cloud platforms (AWS, Azure, Google Cloud), mobile development, AI/ML, blockchain, and enterprise software integration."
+  },
+  {
+    "id": 10,
+    "category": "Technology",
+    "question": "Do you provide training for our internal team?",
+    "answer": "Absolutely! We offer comprehensive training programs for your internal team, including technology workshops, best practices sessions, and ongoing mentorship to ensure your team can maintain and extend our solutions."
+  }
+]

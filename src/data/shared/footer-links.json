@@ -49,8 +49,8 @@
     },
     {
       "name": "Contact",
-      "href": "#contact",
-      "route": "contact"
+      "href": "#contact-us",
+      "route": "contact-us"
     }
   ],
   "legalLinks": [
