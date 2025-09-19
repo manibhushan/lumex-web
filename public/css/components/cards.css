@@ -117,6 +117,19 @@
   z-index: 1;
 }
 
+/* Fix for button clicks inside service cards */
+.service-card .btn,
+.service-item .btn {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.service-card::before,
+.service-item::before {
+  pointer-events: none;
+}
+
 /* Values Section */
 .values {
   background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
