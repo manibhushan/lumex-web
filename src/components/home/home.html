@@ -1,21 +1,21 @@
   <!-- Home Page Content -->
   <section id="home-page" class="page">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero bg-mesh-gradient particle-container">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__title">{{ heroContent.title }}</h1>
-          <p class="hero__description">{{ heroContent.description }}</p>
+          <h1 class="hero__title glow-text animate-fade-in">{{ heroContent.title }}</h1>
+          <p class="hero__description animate-slide-up">{{ heroContent.description }}</p>
           <div class="hero__actions">
             <button 
-              class="btn btn--primary btn--lg" 
+              class="btn btn--primary btn--lg vibrant-button ripple-effect" 
               @click="handleNavigation('recruitment')"
               type="button"
             >
               {{ heroContent.primaryButton }}
             </button>
             <button 
-              class="btn btn--secondary btn--lg" 
+              class="btn btn--secondary btn--lg vibrant-button glass-effect" 
               @click="handleNavigation('technology-solutions')"
               type="button"
             >
@@ -87,11 +87,11 @@
     </section>
 
     <!-- Industries Section -->
-    <section class="industries">
+    <section class="industries bg-circuit animate-on-scroll">
       <div class="container">
-        <h2 class="industries__title">Industries We Serve</h2>
-        <div class="industries__grid">
-          <div v-for="industry in industries" :key="industry.id" class="industry-card">
+        <h2 class="section-title glow-text">Industries We Serve</h2>
+        <div class="industries-grid">
+          <div v-for="industry in industries" :key="industry.id" class="industry-card vibrant-card">
             <div class="industry-card__icon">{{ industry.icon }}</div>
             <h3 class="industry-card__title">{{ industry.name }}</h3>
             <p class="industry-card__description">{{ industry.description }}</p>
@@ -101,14 +101,14 @@
     </section>
 
     <!-- Technology Stack Section -->
-    <section class="tech-stack">
+    <section class="tech-stack bg-layered-tech animate-on-scroll">
       <div class="container">
-        <h2 class="tech-stack__title">Our Technology Expertise</h2>
+        <h2 class="tech-stack__title glow-text black-text">Our Technology Expertise</h2>
         <div class="tech-stack__categories">
-          <div v-for="category in techStack" :key="category.id" class="tech-category">
+          <div v-for="category in techStack" :key="category.id" class="tech-category vibrant-card hover-lift">
             <h3 class="tech-category__title">{{ category.name }}</h3>
             <div class="tech-category__items">
-              <span v-for="tech in category.technologies" :key="tech" class="tech-item">
+              <span v-for="tech in category.technologies" :key="tech" class="tech-item ripple-effect">
                 {{ tech }}
               </span>
             </div>
@@ -118,12 +118,12 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials bg-waves animate-on-scroll">
       <div class="container">
-        <h2 class="testimonials__title">What Our Clients Say</h2>
+        <h2 class="testimonials__title glow-text">What Our Clients Say</h2>
         <div class="testimonials__slider">
-          <div v-for="testimonial in testimonials" :key="testimonial.id" class="testimonial-card">
-            <div class="testimonial-card__quote">"{{ testimonial.quote }}"</div>
+          <div v-for="testimonial in testimonials" :key="testimonial.id" class="testimonial-card vibrant-card glass-effect">
+            <div class="testimonial-card__quote neon-glow">"{{ testimonial.quote }}"</div>
             <div class="testimonial-card__author">
               <div class="testimonial-card__name">{{ testimonial.name }}</div>
               <div class="testimonial-card__position">{{ testimonial.position }}</div>

@@ -8,6 +8,7 @@ import industriesData from '../../data/components/home-industries.json';
 import techStackData from '../../data/components/home-tech-stack.json';
 import testimonialsData from '../../data/components/home-testimonials.json';
 import { sectionTitles } from '../../data/shared/page-content.json';
+import VibrancyEnhancer from '../../utils/vibrancy-enhancer.js';
 
 export default {
   name: 'HomePage',
@@ -45,6 +46,60 @@ export default {
     // Method to handle value item interactions (for analytics, etc.)
     handleValueClick(value) {
       this.$emit('value-viewed', value);
+    },
+    
+    // Initialize all vibrancy enhancement effects
+    initializeVibrancyEffects() {
+      // Wait for DOM to be fully rendered
+      this.$nextTick(() => {
+        try {
+          // Create particle systems for hero section
+          VibrancyEnhancer.createParticleSystem('.hero.particle-container', 25);
+          
+          // Add ripple effect to buttons
+          VibrancyEnhancer.addRippleEffect('.vibrant-button');
+          
+          // Initialize scroll-based effects
+          VibrancyEnhancer.initScrollBasedEffects();
+          
+          // Create mesh gradients for sections
+          VibrancyEnhancer.createMeshGradient('.bg-mesh-gradient');
+          
+          // Initialize scroll-triggered animations
+          this.initScrollAnimations();
+          
+        } catch (error) {
+          console.warn('Vibrancy enhancement initialization failed:', error);
+        }
+      });
+    },
+    
+    // Initialize scroll-triggered animations
+    initScrollAnimations() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all animated elements
+      document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+        observer.observe(element);
+      });
+      
+      // Fallback: Make sections visible after 2 seconds if not already animated
+      setTimeout(() => {
+        document.querySelectorAll('.animate-on-scroll:not(.animate-visible)').forEach((element) => {
+          element.classList.add('animate-visible');
+        });
+      }, 2000);
     }
   },
   
@@ -52,5 +107,8 @@ export default {
   mounted() {
     // Emit event when component is loaded
     this.$emit('page-loaded', 'home');
+    
+    // Initialize vibrancy enhancements
+    this.initializeVibrancyEffects();
   }
 }

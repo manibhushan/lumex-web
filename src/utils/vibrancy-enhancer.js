@@ -1,13 +1,7 @@
 // Enhanced Vibrancy Utilities - Scroll Animations and Effects
 // Add this to your main.js or create a separate utility file
 
-export class VibrancyEnhancer {
-  constructor() {
-    this.initScrollAnimations();
-    this.initParallaxEffects();
-    this.initHoverEffects();
-  }
-
+const VibrancyEnhancer = {
   // Initialize scroll-triggered animations
   initScrollAnimations() {
     const observerOptions = {
@@ -27,7 +21,7 @@ export class VibrancyEnhancer {
     document.querySelectorAll('.animate-on-scroll, .animate-slide-left, .animate-slide-right').forEach((el) => {
       observer.observe(el);
     });
-  }
+  },
 
   // Initialize parallax effects
   initParallaxEffects() {
@@ -41,7 +35,7 @@ export class VibrancyEnhancer {
         element.style.transform = `translateY(${yPos}px)`;
       });
     });
-  }
+  },
 
   // Initialize enhanced hover effects
   initHoverEffects() {
@@ -85,49 +79,117 @@ export class VibrancyEnhancer {
         }, 600);
       });
     });
-  }
+  },
 
   // Add staggered animations to grid items
-  static staggerGridItems(selector, delay = 100) {
+  staggerGridItems(selector, delay = 100) {
     document.querySelectorAll(selector).forEach((item, index) => {
       item.style.animationDelay = `${index * delay}ms`;
       item.classList.add('animate-on-scroll');
     });
-  }
+  },
 
   // Add floating animation to specific elements
-  static makeFloating(selector) {
+  makeFloating(selector) {
     document.querySelectorAll(selector).forEach((element) => {
       element.classList.add('floating-element');
     });
-  }
+  },
 
   // Add text glow effect
-  static addTextGlow(selector) {
+  addTextGlow(selector) {
     document.querySelectorAll(selector).forEach((element) => {
       element.classList.add('text-glow');
     });
-  }
-}
+  },
 
-// CSS for ripple effect (add to your stylesheet)
-const rippleCSS = `
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
+  // Advanced Background Effects
+  applyDynamicBackground(selector, backgroundType = 'layered-tech') {
+    document.querySelectorAll(selector).forEach((element) => {
+      element.classList.add(`bg-${backgroundType}`);
+    });
+  },
 
-.btn {
-  position: relative;
-  overflow: hidden;
-}
-`;
+  // Particle System
+  createParticleSystem(container, particleCount = 20) {
+    const containerElement = document.querySelector(container);
+    if (!containerElement) return;
+
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.cssText = `
+        position: absolute;
+        width: ${Math.random() * 4 + 2}px;
+        height: ${Math.random() * 4 + 2}px;
+        background: rgba(102, 126, 234, ${Math.random() * 0.3 + 0.1});
+        border-radius: 50%;
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        animation: particleFloat ${Math.random() * 10 + 8}s ease-in-out infinite;
+        animation-delay: ${Math.random() * 5}s;
+        z-index: 0;
+      `;
+      containerElement.appendChild(particle);
+    }
+  },
+
+  // Advanced Mesh Gradient Generator
+  createMeshGradient(selector, colors = ['#667eea', '#764ba2', '#f093fb']) {
+    document.querySelectorAll(selector).forEach((element) => {
+      const gradients = colors.map((color, index) => 
+        `radial-gradient(circle at ${Math.random() * 100}% ${Math.random() * 100}%, ${color}33 0%, transparent 50%)`
+      ).join(', ');
+      
+      element.style.background = `${gradients}, var(--gradient-cosmic)`;
+      element.style.backgroundSize = '300% 300%';
+      element.style.animation = 'meshGradient 20s ease infinite';
+    });
+  },
+
+  // Interactive Background Changer
+  makeBackgroundInteractive(selector) {
+    const backgrounds = [
+      'bg-dots',
+      'bg-circuit', 
+      'bg-hexagon',
+      'bg-waves',
+      'bg-mesh-gradient'
+    ];
+    
+    document.querySelectorAll(selector).forEach((element) => {
+      let currentBg = 0;
+      
+      element.addEventListener('click', () => {
+        // Remove previous background
+        backgrounds.forEach(bg => element.classList.remove(bg));
+        
+        // Add new background
+        currentBg = (currentBg + 1) % backgrounds.length;
+        element.classList.add(backgrounds[currentBg]);
+      });
+    });
+  },
+
+  // Scroll-based Background Intensity
+  initScrollBasedEffects() {
+    window.addEventListener('scroll', () => {
+      const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+      
+      // Adjust background intensity based on scroll
+      document.querySelectorAll('.bg-layered-tech, .bg-mesh-gradient').forEach((element) => {
+        const intensity = 0.5 + (scrollPercent * 0.5);
+        element.style.opacity = intensity;
+      });
+    });
+  }
+};
 
 // Auto-initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  new VibrancyEnhancer();
+  VibrancyEnhancer.initScrollAnimations();
+  VibrancyEnhancer.initParallaxEffects();
+  VibrancyEnhancer.initHoverEffects();
   
   // Add specific enhancements
   VibrancyEnhancer.staggerGridItems('.service-card', 150);
@@ -135,3 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
   VibrancyEnhancer.makeFloating('.hero__title, .section-title');
   VibrancyEnhancer.addTextGlow('.hero__title');
 });
+
+// Export for module usage
+export default VibrancyEnhancer;
