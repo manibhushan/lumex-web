@@ -1,9 +1,9 @@
 // Vue Router Configuration - Handles page navigation with Vue components
-import HomePage from "../components/home/index.vue";
-import TechnologySolutionsPage from "../components/technology/index.vue";
-import RecruitmentPage from "../components/recruitment/index.vue";
-import CareersPage from "../components/careers/index.vue";
-import ContactUs from "../components/contact-us/index.vue";
+import HomePage from "../components/home/home.vue";
+import TechnologySolutionsPage from "../components/technology/technology.vue";
+import RecruitmentPage from "../components/recruitment/recruitment.vue";
+import CareersPage from "../components/careers/careers.vue";
+import ContactUs from "../components/contact-us/contact-us.vue";
 
 // Vue Router configuration for component-based routing
 export const routes = [
@@ -79,9 +79,9 @@ export const routeNames = {
 
 // Export component mapping for dynamic imports
 export const componentMap = {
-    [routeNames.HOME]: () => import('../components/home/index.vue'),
-    [routeNames.TECHNOLOGY_SOLUTIONS]: () => import('../components/technology/index.vue'),
-    [routeNames.RECRUITMENT]: () => import('../components/recruitment/index.vue'),
-    [routeNames.CAREERS]: () => import('../components/careers/index.vue'),
-    [routeNames.CONTACT_US]: () => import('../components/contact-us/index.vue')
+    [routeNames.HOME]: () => import('../components/home/home.vue'),
+    [routeNames.TECHNOLOGY_SOLUTIONS]: () => import('../components/technology/technology.vue'),
+    [routeNames.RECRUITMENT]: () => import('../components/recruitment/recruitment.vue'),
+    [routeNames.CAREERS]: () => import('../components/careers/careers.vue'),
+    [routeNames.CONTACT_US]: () => import('../components/contact-us/contact-us.vue')
 };

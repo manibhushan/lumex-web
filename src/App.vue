@@ -41,8 +41,8 @@
 <script>
 import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import NavigationComponent from './components/navigation/index.vue'
-import FooterComponent from './components/footer/index.vue'
+import NavigationComponent from './components/navigation/navigation.vue'
+import FooterComponent from './components/footer/footer.vue'
 import { routeNames } from './router/router.js'
 
 export default {
