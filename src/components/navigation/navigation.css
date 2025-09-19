@@ -6,10 +6,11 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-6) 32px;
-  background: rgba(255, 255, 255, 0.95);
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 245, 255, 0.9) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(107, 70, 193, 0.1);
   position: fixed;
   top: 0;
   left: 0;

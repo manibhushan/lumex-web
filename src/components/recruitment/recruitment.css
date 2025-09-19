@@ -1,7 +1,13 @@
 /* Specialized Roles Section */
 .specialized-roles {
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
+  background: 
+    linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%),
+    var(--pattern-hexagon);
+  background-size: 
+    100% 100%,
+    60px 60px;
+  position: relative;
 }
 
 .specialized-roles .section-title {
@@ -35,11 +41,14 @@
 .role-card {
   text-align: center;
   padding: var(--spacing-8);
-  background: var(--gradient-card);
+  background: 
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 245, 255, 0.95) 100%);
   border-radius: var(--border-radius-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: 
+    var(--shadow-sm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   transition: all var(--transition-base);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(107, 70, 193, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -58,12 +67,15 @@
 }
 
 .role-card:hover::before {
-  opacity: 0.05;
+  opacity: 0.02;
 }
 
 .role-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-2xl);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 8px rgba(107, 70, 193, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(107, 70, 193, 0.15);
 }
 
 .role-card__icon {
@@ -883,5 +895,102 @@
   .tech-category-card,
   .experience-stat {
     padding: var(--spacing-4);
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: var(--spacing-20) 0;
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #faf5ff 100%),
+    var(--pattern-waves);
+  background-size: 
+    100% 100%,
+    250px 50px;
+  position: relative;
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  margin-bottom: var(--spacing-6);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.contact-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-8);
+  line-height: 1.7;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-10);
+  align-items: center;
+}
+
+.contact-item {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-6);
+  margin-left: var(--spacing-2);
+  background: 
+    linear-gradient(135deg, #6b46c1 0%, #8b5cf6 100%);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--border-radius-lg);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-base);
+  box-shadow: 
+    0 2px 4px rgba(107, 70, 193, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(107, 70, 193, 0.3);
+}
+
+.contact-link:hover {
+  background: 
+    linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 8px rgba(107, 70, 193, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(107, 70, 193, 0.5);
+}
+
+.contact-link:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 4px rgba(107, 70, 193, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-8);
+  }
+  
+  .contact-item {
+    text-align: center;
   }
 }

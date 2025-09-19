@@ -1,12 +1,17 @@
-/* CareersPage Component Styles */
-/* Add any component-specific styles here if needed */
-/* The existing CSS classes from your original design should work as-is *//* Careers Page Specific Styles */
+/* Careers Page Specific Styles */
 
 /* Career Statistics Section */
 /* Career Page Component Styles */
 
 .culture {
   padding: var(--spacing-20) 0;
+  background: 
+    linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%),
+    var(--pattern-hexagon);
+  background-size: 
+    100% 100%,
+    60px 60px;
+  position: relative;
 }
 
 .culture-grid {
@@ -31,9 +36,14 @@
 .culture-item {
   text-align: center;
   padding: var(--spacing-6);
-  background-color: var(--color-white);
+  background: 
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 245, 255, 0.95) 100%);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 
+    var(--shadow-sm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(107, 70, 193, 0.08);
+  transition: all var(--transition-base);
 }
 
 .culture-item__icon {
@@ -54,8 +64,14 @@
 
 /* Job Openings */
 .job-openings {
-  background-color: var(--color-gray-50);
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #faf5ff 100%),
+    var(--pattern-circuit);
+  background-size: 
+    100% 100%,
+    120px 120px;
   padding: var(--spacing-20) 0;
+  position: relative;
 }
 
 .jobs-list {
@@ -66,16 +82,42 @@
 }
 
 .job-card {
-  background-color: var(--color-white);
+  background: 
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 245, 255, 0.95) 100%);
   padding: var(--spacing-8);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 
+    var(--shadow-sm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(107, 70, 193, 0.08);
   transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 0;
 }
 
 .job-card:hover {
-  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  box-shadow: 
+    0 4px 8px rgba(107, 70, 193, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(107, 70, 193, 0.15);
+}
+
+.job-card:hover::before {
+  opacity: 0.015;
 }
 
 .job-card__header {
@@ -154,6 +196,13 @@
 /* Benefits */
 .benefits {
   padding: var(--spacing-20) 0;
+  background: 
+    linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%),
+    var(--pattern-waves);
+  background-size: 
+    100% 100%,
+    250px 50px;
+  position: relative;
 }
 
 .benefits-grid {
@@ -178,6 +227,21 @@
 .benefit-item {
   text-align: center;
   padding: var(--spacing-6);
+  background: 
+    linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 245, 255, 0.9) 100%);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 
+    var(--shadow-sm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(107, 70, 193, 0.06);
+  transition: all var(--transition-base);
+}
+
+.benefit-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 3px 6px rgba(107, 70, 193, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .benefit-item__title {
@@ -192,7 +256,12 @@
 }
 
 .career-stats {
-  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+  background: 
+    linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%),
+    var(--pattern-dots);
+  background-size: 
+    100% 100%,
+    20px 20px;
   padding: var(--spacing-20) 0;
   position: relative;
 }
@@ -897,8 +966,15 @@
 
 /* Application section enhancements */
 .application {
-  background: var(--gradient-hero);
-  color: var(--color-white);
+  background: 
+    linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #ddd6fe 100%),
+    var(--pattern-dots),
+    var(--pattern-diagonal);
+  background-size: 
+    100% 100%,
+    30px 30px,
+    60px 60px;
+  color: var(--color-gray-800);
   position: relative;
   overflow: hidden;
 }
@@ -910,20 +986,21 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") center center;
-  animation: float 6s ease-in-out infinite;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236b46c1' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") center center;
   z-index: 0;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
+
 
 .application .section-title {
-  color: var(--color-white);
+  color: var(--color-gray-900);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: var(--spacing-12);
+  font-weight: 800;
   position: relative;
   z-index: 1;
 }
