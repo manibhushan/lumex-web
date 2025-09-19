@@ -6,6 +6,7 @@ import employeeTestimonialsData from '../../data/components/careers/careers-test
 import careerGrowthData from '../../data/components/careers/careers-growth.json';
 import teamsData from '../../data/components/careers/careers-teams.json';
 import { FormValidator } from '../../utils/validation.js';
+import { uploadResumeToFirebase } from '../../utils/firebase-upload.js';
 
 export default {
   name: 'CareersPage',
@@ -37,6 +38,8 @@ export default {
       },
       isSubmitting: false,
       showSuccessMessage: false,
+      showErrorMessage: false,
+      errorMessage: '',
       cultureItems: cultureItemsData,
       jobOpenings: jobOpeningsData,
       benefits: benefitsData,
@@ -101,15 +104,30 @@ export default {
       }
 
       this.isSubmitting = true;
+      // Clear any previous error messages
+      this.showErrorMessage = false;
+      this.errorMessage = '';
 
       try {
-        // Create FormData object to handle file upload
+        // Upload resume to Firebase Storage first and get the download URL
+        let resumeUrl = '';
+        if (this.formData.resume) {
+          try {
+            resumeUrl = await uploadResumeToFirebase(this.formData.resume);
+          } catch (uploadError) {
+            console.error('Error uploading resume:', uploadError);
+            this.showError('Failed to upload resume. Please try again or contact support if the issue persists.');
+            return; // Exit early if upload fails
+          }
+        }
+
+        // Create FormData object to handle form submission
         const formDataToSubmit = new FormData();
         formDataToSubmit.append('firstName', this.formData.firstName);
         formDataToSubmit.append('lastName', this.formData.lastName);
         formDataToSubmit.append('email', this.formData.email);
         formDataToSubmit.append('phone', this.formData.phone);
-        // formDataToSubmit.append('resume', this.formData.resume);
+        formDataToSubmit.append('resumeUrl', resumeUrl);
         formDataToSubmit.append('coverLetter', this.formData.coverLetter);
 
         // Submit to Formspree
@@ -133,7 +151,7 @@ export default {
         }
       } catch (error) {
         console.error('Error submitting form:', error);
-        alert('There was an error submitting your application. Please try again.');
+        this.showError('There was an error submitting your application. Please try again.');
       } finally {
         this.isSubmitting = false;
       }
@@ -172,6 +190,29 @@ export default {
       
       // Clear validation errors using utility
       this.validator.clearErrors();
+      
+      // Clear success and error messages
+      this.showSuccessMessage = false;
+      this.showErrorMessage = false;
+      this.errorMessage = '';
+    },
+    
+    markFieldTouched(fieldName) {
+      this.formTouched[fieldName] = true;
+    },
+    
+    clearFieldError(fieldName) {
+      this.errors[fieldName] = '';
+    },
+    
+    showError(message, duration = 10000) {
+      this.errorMessage = message;
+      this.showErrorMessage = true;
+      // Hide error message after specified duration
+      setTimeout(() => {
+        this.showErrorMessage = false;
+        this.errorMessage = '';
+      }, duration);
     }
   },
   

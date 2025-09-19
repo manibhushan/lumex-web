@@ -19,43 +19,66 @@ A modern, responsive website for Lumex Enterprise Solutions, built with Vue.js 3
 
 ```
 lumex-web/
-├── index.html                      # Main entry point
-├── package.json                    # Dependencies and scripts
-├── vite.config.js                  # Vite configuration
-├── public/                         # Static assets
-│   └── css/                        # CSS stylesheets
-│       ├── style.css              # Global styles and CSS variables
-│       └── components/            # Component-specific CSS
-│           ├── navigation.css      # Navigation styling
-│           ├── hero.css           # Hero section styling
-│           ├── footer.css         # Footer styling
-│           └── careers.css        # Careers page styling
-├── src/                           # Source code
-│   ├── main.js                    # Application entry point
-│   ├── App.vue                    # Root Vue component
-│   ├── style.css                  # CSS imports
-│   ├── components/                # Vue components
-│   │   ├── home/
-│   │   │   ├── index.vue          # Home page component
-│   │   │   └── script.js          # Component logic
-│   │   ├── recruitment/
-│   │   │   ├── index.vue          # Recruitment page component
-│   │   │   └── script.js          # Component logic
-│   │   ├── technology/
-│   │   │   ├── index.vue          # Technology solutions component
-│   │   │   └── script.js          # Component logic
+├── .env                           # Environment variables (development)
+├── .env.production                # Environment variables (production)
+├── .gitignore                     # Git ignore patterns
+├── .stylelintrc.yaml             # StyleLint configuration
+├── DEPLOYMENT.md                  # Deployment documentation
+├── README.md                      # Project documentation
+├── index.html                     # Main entry point
+├── package.json                   # Dependencies and scripts
+├── package-lock.json             # Locked dependencies
+├── vite.config.js                # Vite configuration
+├── dist/                          # Built application (generated)
+├── public/                        # Static assets
+│   ├── assets/                   # Static assets
+│   └── css/                      # Global CSS stylesheets
+│       ├── index.css             # CSS entry point
+│       ├── style.css             # Global styles and CSS variables
+│       └── components/           # Shared component CSS
+│           ├── cards.css         # Card component styling
+│           ├── forms.css         # Form component styling
+│           └── hero.css          # Hero section & page header styling
+├── src/                          # Source code
+│   ├── App.vue                   # Root Vue component
+│   ├── main.js                   # Application entry point
+│   ├── style.css                 # CSS imports
+│   ├── components/               # Vue components
 │   │   ├── careers/
-│   │   │   ├── index.vue          # Careers page component
-│   │   │   └── script.js          # Component logic
+│   │   │   ├── careers.css       # Career page specific styles
+│   │   │   ├── careers.html      # Career page template
+│   │   │   ├── careers.js        # Career page logic
+│   │   │   └── careers.vue       # Career page component
 │   │   ├── contact-us/
-│   │   │   ├── index.vue          # Contact page component
-│   │   │   └── script.js          # Component logic
+│   │   │   ├── contact-us.css    # Contact page specific styles
+│   │   │   ├── contact-us.html   # Contact page template
+│   │   │   ├── contact-us.js     # Contact page logic
+│   │   │   └── contact-us.vue    # Contact page component
+│   │   ├── footer/
+│   │   │   ├── footer.css        # Footer specific styles
+│   │   │   ├── footer.html       # Footer template
+│   │   │   ├── footer.js         # Footer logic
+│   │   │   └── footer.vue        # Footer component
+│   │   ├── home/
+│   │   │   ├── home.css          # Home page specific styles
+│   │   │   ├── home.html         # Home page template
+│   │   │   ├── home.js           # Home page logic
+│   │   │   └── home.vue          # Home page component
 │   │   ├── navigation/
-│   │   │   ├── index.vue          # Navigation component
-│   │   │   └── script.js          # Navigation logic
-│   │   └── footer/
-│   │       ├── index.vue          # Footer component
-│   │       └── script.js          # Footer logic
+│   │   │   ├── navigation.css    # Navigation specific styles
+│   │   │   ├── navigation.html   # Navigation template
+│   │   │   ├── navigation.js     # Navigation logic
+│   │   │   └── navigation.vue    # Navigation component
+│   │   ├── recruitment/
+│   │   │   ├── recruitment.css   # Recruitment page specific styles
+│   │   │   ├── recruitment.html  # Recruitment page template
+│   │   │   ├── recruitment.js    # Recruitment page logic
+│   │   │   └── recruitment.vue   # Recruitment page component
+│   │   └── technology/
+│   │       ├── technology.css    # Technology page specific styles
+│   │       ├── technology.html   # Technology page template
+│   │       ├── technology.js     # Technology page logic
+│   │       └── technology.vue    # Technology page component
 │   ├── data/                      # Static content data
 │   │   ├── components/            # Component-specific data organized by page
 │   │   │   ├── careers/           # Career page data files
@@ -111,12 +134,15 @@ lumex-web/
 │   │       └── footer/            # Footer-related data
 │   │           ├── footer-links.json # Footer navigation links
 │   │           └── social-links.json # Social media links
+│   ├── firebase/                  # Firebase configuration
+│   │   └── config.js             # Firebase app and storage initialization
 │   ├── router/                    # Vue Router configuration
 │   │   ├── router.js             # Route definitions
 │   │   └── vue-router.js         # Router setup
 │   └── utils/                     # Utility functions
-│       └── validation.js          # Form validation utilities
-├── STATIC-CONTENT-REFACTORING.md # Refactoring documentation
+│       ├── firebase-upload.js     # Firebase file upload utilities
+│       ├── validation.js          # Form validation utilities
+│       └── vibrancy-enhancer.js   # Visual enhancement utilities
 └── README.md                      # This file
 ```
 
@@ -150,8 +176,41 @@ lumex-web/
    yarn dev
    ```
 
-4. **Open in browser**
+4. **Configure Firebase (for resume uploads)**
+   ```bash
+   # Copy the environment template
+   cp .env.example .env
+   
+   # Edit .env file with your Firebase project configuration
+   # Get these values from Firebase Console > Project Settings > General tab
+   ```
+
+5. **Open in browser**
    Navigate to `http://localhost:3000` (or the port shown in terminal)
+
+### Firebase Setup
+
+The careers page includes resume upload functionality using Firebase Storage. To set this up:
+
+1. **Create a Firebase project** at [Firebase Console](https://console.firebase.google.com/)
+
+2. **Enable Firebase Storage**
+   - Go to Storage in the Firebase Console
+   - Click "Get started" and set up your storage bucket
+
+3. **Configure authentication rules** (optional, for enhanced security)
+   - In Firebase Console, go to Storage > Rules
+   - Update rules based on your security requirements
+
+4. **Get your configuration**
+   - Go to Project Settings > General tab
+   - Scroll down to "Your apps" section
+   - Click the web icon to create a web app (if not already created)
+   - Copy the configuration values
+
+5. **Update environment variables**
+   - Create a `.env` file from `.env.example`
+   - Fill in your actual Firebase configuration values
 
 ### Available Scripts
 

@@ -305,6 +305,10 @@
               </p>
             </div>
           </div>
+          <!-- Error Message -->
+          <div v-if="showErrorMessage" class="error-message">
+            {{ errorMessage }}
+          </div>
         </div>
       </div>
     </section>
