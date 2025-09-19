@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" class="lumex-logo">
+  <defs>
+    <!-- Elegant turquoise primary gradient -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#0e7490"/>
+    </linearGradient>
+    
+    <!-- Sophisticated turquoise accent gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+    
+    <!-- Deep turquoise text gradient -->
+    <linearGradient id="textPrimary" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#164e63"/>
+      <stop offset="100%" style="stop-color:#0e7490"/>
+    </linearGradient>
+    
+
+    
+    <!-- Fresh turquoise subtitle gradient -->
+    <linearGradient id="subtitleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+  </defs>
+  
+
+  
+  <!-- Company Name and Branding -->
+  <g class="brand-text">
+    <!-- Main company name -->
+    <text x="20" y="25" 
+          font-family="'Segoe UI', 'Roboto', system-ui, sans-serif" 
+          font-size="28" 
+          font-weight="700" 
+          fill="url(#textPrimary)" 
+          class="company-name">
+      LUMEX
+    </text>
+    
+    <!-- Enterprise Solutions subtitle -->
+    <text x="20" y="40" 
+          font-family="'Segoe UI', 'Roboto', system-ui, sans-serif" 
+          font-size="12" 
+          font-weight="600" 
+          fill="url(#subtitleGradient)" 
+          class="company-subtitle"
+          letter-spacing="1px">
+      ENTERPRISE SOLUTIONS
+    </text>
+    
+    <!-- Brand tagline - prominently featured -->
+    <text x="20" y="52" 
+          font-family="'Segoe UI', 'Roboto', system-ui, sans-serif" 
+          font-size="10" 
+          font-weight="500" 
+          fill="url(#accentGradient)" 
+          class="brand-tagline"
+          letter-spacing="0.8px">
+      BRIDGING TALENT AND TECHNOLOGY
+    </text>
+  </g>
+  
+  <!-- Professional accent elements -->
+  <g class="accent-elements">
+    <!-- Subtle divider line -->
+    <line x1="20" y1="44" x2="240" y2="44" stroke="url(#primaryGradient)" stroke-width="0.5" opacity="0.3" class="divider-line"/>
+    
+    <!-- Corner accent -->
+    <path d="M250 15 L260 15 L260 25" stroke="url(#accentGradient)" stroke-width="2" fill="none" opacity="0.6" class="corner-accent"/>
+  </g>
+  
+  <style>
+    .lumex-logo {
+      transition: all 0.2s ease;
+    }
+    
+
+    
+    .lumex-logo:hover .company-name {
+      filter: brightness(1.2);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    
+    .lumex-logo:hover .company-subtitle {
+      filter: brightness(1.2);
+      transform: translateX(2px);
+      transition: all 0.3s ease;
+    }
+    
+    .lumex-logo:hover .innovation-dot {
+      animation: dot-pulse 1.8s ease-in-out infinite alternate;
+    }
+    
+    .lumex-logo:hover .divider-line {
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+    }
+    
+    .lumex-logo:hover .corner-accent {
+      opacity: 0.8;
+      animation: accent-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes dot-pulse {
+      0% { opacity: 0.8; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.2); }
+    }
+    
+    @keyframes accent-glow {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.9; }
+    }
+    
+    .company-name {
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    
+    .company-subtitle {
+      text-transform: uppercase;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+    
+    .brand-tagline {
+      text-transform: uppercase;
+      font-feature-settings: "kern" 1, "liga" 1;
+      opacity: 0.8;
+    }
+    
+    /* Staggered animation delays for innovation elements */
+    .innovation-diamond:nth-child(1) { animation-delay: 0s; }
+    .innovation-dot { animation-delay: 0.5s; }
+    .innovation-diamond:nth-child(3) { animation-delay: 1s; }
+    
+    /* Professional, clean styling */
+    * {
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+</svg>

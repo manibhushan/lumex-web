@@ -22,20 +22,46 @@
 
 .nav__brand {
   display: flex;
-  flex-direction: column;
   text-decoration: none;
   color: inherit;
+  transition: all var(--transition-base);
 }
 
 .nav__brand:hover {
   text-decoration: none;
+  transform: scale(1.02);
 }
 
 .nav__brand:visited {
   color: inherit;
 }
 
-.nav__logo {
+.nav__logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.nav__logo-svg {
+  height: 55px;
+  width: auto;
+  max-width: 320px;
+  transition: all var(--transition-base);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+}
+
+.nav__logo-svg:hover {
+  transform: translateY(-0.5px);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Fallback styles for when SVG is not available */
+.nav__logo-fallback {
+  display: none;
+  flex-direction: column;
+}
+
+.nav__logo-text {
   font-size: var(--font-size-2xl);
   font-weight: 800;
   background: var(--gradient-primary);
@@ -43,17 +69,39 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
-  transition: transform var(--transition-base);
+  line-height: 1.2;
 }
 
-.nav__logo:hover {
-  transform: scale(1.05);
-}
-
-.nav__tagline {
+.nav__tagline-text {
   font-size: var(--font-size-sm);
   color: var(--color-gray-600);
   margin: 0;
+  line-height: 1.2;
+}
+
+/* Show fallback if SVG fails to load or for accessibility */
+.nav__logo-svg:not([src]),
+.nav__logo-svg[src=""] ~ .nav__logo-fallback {
+  display: flex;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .nav__logo-svg {
+    height: 46px;
+    max-width: 260px;
+  }
+  
+  .nav__logo-container {
+    gap: var(--spacing-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__logo-svg {
+    height: 42px;
+    max-width: 220px;
+  }
 }
 
 .nav__menu {
@@ -66,7 +114,8 @@
 @media (min-width: 768px) {
   .nav__menu {
     display: flex;
-    gap: var(--spacing-8);
+    gap: var(--spacing-4);
+    margin-left: auto;
   }
 }
 
@@ -78,7 +127,7 @@
   color: var(--color-gray-700);
   text-decoration: none;
   font-weight: 600;
-  padding: var(--spacing-3) var(--spacing-5);
+  padding: var(--spacing-3) var(--spacing-4);
   border-radius: var(--border-radius-xl);
   transition: all var(--transition-base);
   position: relative;

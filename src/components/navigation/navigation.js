@@ -62,6 +62,16 @@ export default {
       if (!this.$el.contains(event.target) && this.isMobileMenuOpen) {
         this.closeMobileMenu();
       }
+    },
+    
+    handleLogoError(event) {
+      // If SVG logo fails to load, show the fallback text logo
+      const logoSvg = event.target;
+      const logoFallback = logoSvg.parentNode.querySelector('.nav__logo-fallback');
+      if (logoFallback) {
+        logoSvg.style.display = 'none';
+        logoFallback.style.display = 'flex';
+      }
     }
   },
   
