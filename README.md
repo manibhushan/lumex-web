@@ -19,90 +19,105 @@ A modern, responsive website for Lumex Enterprise Solutions, built with Vue.js 3
 
 ```
 lumex-web/
-├── .env                           # Environment variables (development)
-├── .env.production                # Environment variables (production)
-├── .gitignore                     # Git ignore patterns
-├── .stylelintrc.yaml             # StyleLint configuration
-├── DEPLOYMENT.md                  # Deployment documentation
-├── README.md                      # Project documentation
-├── index.html                     # Main entry point
-├── package.json                   # Dependencies and scripts
-├── package-lock.json             # Locked dependencies
-├── vite.config.js                # Vite configuration
-├── dist/                          # Built application (generated)
-├── public/                        # Static assets
-│   ├── index.html                # Alternative entry point
-│   ├── assets/                   # Static assets
-│   └── css/                      # Global CSS stylesheets
-│       ├── index.css             # CSS entry point
-│       ├── style.css             # Global styles and CSS variables
-│       └── components/           # Shared component CSS
-│           ├── cards.css         # Card component styling
-│           ├── forms.css         # Form component styling
-│           └── hero.css          # Hero section & page header styling
-└── src/                          # Source code
-    ├── App.vue                   # Root Vue component
-    ├── main.js                   # Application entry point
-    ├── style.css                 # CSS imports
-    ├── components/               # Vue components
-    │   ├── careers/
-    │   │   ├── careers.css       # Career page specific styles
-    │   │   ├── careers.html      # Career page template
-    │   │   ├── careers.js        # Career page logic
-    │   │   └── careers.vue       # Career page component
-    │   ├── contact-us/
-    │   │   ├── contact-us.css    # Contact page specific styles
-    │   │   ├── contact-us.html   # Contact page template
-    │   │   ├── contact-us.js     # Contact page logic
-    │   │   └── contact-us.vue    # Contact page component
-    │   ├── footer/
-    │   │   ├── footer.css        # Footer specific styles
-    │   │   ├── footer.html       # Footer template
-    │   │   ├── footer.js         # Footer logic
-    │   │   └── footer.vue        # Footer component
-    │   ├── home/
-    │   │   ├── home.css          # Home page specific styles
-    │   │   ├── home.html         # Home page template
-    │   │   ├── home.js           # Home page logic
-    │   │   └── home.vue          # Home page component
-    │   ├── navigation/
-    │   │   ├── navigation.css    # Navigation specific styles
-    │   │   ├── navigation.html   # Navigation template
-    │   │   ├── navigation.js     # Navigation logic
-    │   │   └── navigation.vue    # Navigation component
-    │   ├── recruitment/
-    │   │   ├── recruitment.css   # Recruitment page specific styles
-    │   │   ├── recruitment.html  # Recruitment page template
-    │   │   ├── recruitment.js    # Recruitment page logic
-    │   │   └── recruitment.vue   # Recruitment page component
-    │   └── technology/
-    │       ├── technology.css    # Technology page specific styles
-    │       ├── technology.html   # Technology page template
-    │       ├── technology.js     # Technology page logic
-    │       └── technology.vue    # Technology page component
-    ├── data/                     # Static content data
-    │   ├── components/           # Component-specific data
-    │   │   ├── careers-*.json    # Career page data files
-    │   │   ├── contact-*.json    # Contact page data files
-    │   │   ├── home-*.json       # Home page data files
-    │   │   ├── job-openings.json # Job listings
-    │   │   ├── office-locations.json # Office location data
-    │   │   ├── recruitment-*.json # Recruitment page data files
-    │   │   ├── response-commitments.json # Response time data
-    │   │   └── technology-*.json  # Technology page data files
-    │   └── shared/               # Shared data across components
-    │       ├── company-info.json # Company information
-    │       ├── contact-info.json # Contact details
-    │       ├── footer-links.json # Footer navigation
-    │       ├── navigation-items.json # Navigation menu
-    │       ├── page-content.json # Common page content
-    │       └── social-links.json # Social media links
-    ├── router/                   # Vue Router configuration
-    │   ├── router.js            # Route definitions
-    │   └── vue-router.js        # Router setup
-    └── utils/                    # Utility functions
-        ├── validation.js        # Form validation utilities
-        └── vibrancy-enhancer.js # UI enhancement utilities
+├── index.html                      # Main entry point
+├── package.json                    # Dependencies and scripts
+├── vite.config.js                  # Vite configuration
+├── public/                         # Static assets
+│   └── css/                        # CSS stylesheets
+│       ├── style.css              # Global styles and CSS variables
+│       └── components/            # Component-specific CSS
+│           ├── navigation.css      # Navigation styling
+│           ├── hero.css           # Hero section styling
+│           ├── footer.css         # Footer styling
+│           └── careers.css        # Careers page styling
+├── src/                           # Source code
+│   ├── main.js                    # Application entry point
+│   ├── App.vue                    # Root Vue component
+│   ├── style.css                  # CSS imports
+│   ├── components/                # Vue components
+│   │   ├── home/
+│   │   │   ├── index.vue          # Home page component
+│   │   │   └── script.js          # Component logic
+│   │   ├── recruitment/
+│   │   │   ├── index.vue          # Recruitment page component
+│   │   │   └── script.js          # Component logic
+│   │   ├── technology/
+│   │   │   ├── index.vue          # Technology solutions component
+│   │   │   └── script.js          # Component logic
+│   │   ├── careers/
+│   │   │   ├── index.vue          # Careers page component
+│   │   │   └── script.js          # Component logic
+│   │   ├── contact-us/
+│   │   │   ├── index.vue          # Contact page component
+│   │   │   └── script.js          # Component logic
+│   │   ├── navigation/
+│   │   │   ├── index.vue          # Navigation component
+│   │   │   └── script.js          # Navigation logic
+│   │   └── footer/
+│   │       ├── index.vue          # Footer component
+│   │       └── script.js          # Footer logic
+│   ├── data/                      # Static content data
+│   │   ├── components/            # Component-specific data organized by page
+│   │   │   ├── careers/           # Career page data files
+│   │   │   │   ├── careers-benefits.json
+│   │   │   │   ├── careers-culture-items.json
+│   │   │   │   ├── careers-growth.json
+│   │   │   │   ├── careers-statistics.json
+│   │   │   │   ├── careers-teams.json
+│   │   │   │   ├── careers-testimonials.json
+│   │   │   │   └── job-openings.json
+│   │   │   ├── contact-us/        # Contact page data files
+│   │   │   │   ├── contact-faq.json
+│   │   │   │   ├── contact-form-alternatives.json
+│   │   │   │   ├── contact-methods.json
+│   │   │   │   ├── office-locations.json
+│   │   │   │   └── response-commitments.json
+│   │   │   ├── home/              # Home page data files
+│   │   │   │   ├── home-company-overview.json
+│   │   │   │   ├── home-core-values.json
+│   │   │   │   ├── home-hero-content.json
+│   │   │   │   ├── home-industries.json
+│   │   │   │   ├── home-process-steps.json
+│   │   │   │   ├── home-services.json
+│   │   │   │   ├── home-stats.json
+│   │   │   │   ├── home-tech-stack.json
+│   │   │   │   └── home-testimonials.json
+│   │   │   ├── recruitment/       # Recruitment page data files
+│   │   │   │   ├── recruitment-candidate-experience.json
+│   │   │   │   ├── recruitment-challenges.json
+│   │   │   │   ├── recruitment-industries.json
+│   │   │   │   ├── recruitment-metrics.json
+│   │   │   │   ├── recruitment-process-steps.json
+│   │   │   │   ├── recruitment-services.json
+│   │   │   │   ├── recruitment-specialized-roles.json
+│   │   │   │   ├── recruitment-tech-stack.json
+│   │   │   │   └── recruitment-testimonials.json
+│   │   │   └── technology/        # Technology page data files
+│   │   │       ├── technology-benefits.json
+│   │   │       ├── technology-case-studies.json
+│   │   │       ├── technology-categories.json
+│   │   │       ├── technology-innovation.json
+│   │   │       ├── technology-metrics.json
+│   │   │       ├── technology-partnerships.json
+│   │   │       ├── technology-process-steps.json
+│   │   │       ├── technology-services.json
+│   │   │       └── technology-testimonials.json
+│   │   └── shared/                # Shared data across components
+│   │       ├── company-info.json  # Company information
+│   │       ├── contact-info.json  # Contact details
+│   │       ├── page-content.json  # Common page content
+│   │       ├── navigation/        # Navigation-related data
+│   │       │   └── navigation-items.json # Navigation menu items
+│   │       └── footer/            # Footer-related data
+│   │           ├── footer-links.json # Footer navigation links
+│   │           └── social-links.json # Social media links
+│   ├── router/                    # Vue Router configuration
+│   │   ├── router.js             # Route definitions
+│   │   └── vue-router.js         # Router setup
+│   └── utils/                     # Utility functions
+│       └── validation.js          # Form validation utilities
+├── STATIC-CONTENT-REFACTORING.md # Refactoring documentation
+└── README.md                      # This file
 ```
 
 ## 🛠️ Getting Started
@@ -207,15 +222,16 @@ All static content is now externalized into JSON files for easy management:
 - Update `src/data/shared/contact-info.json` for contact details
 
 **Page Content:**
-- **Home**: `src/data/components/home-*.json`
-- **Technology**: `src/data/components/technology-*.json`  
-- **Recruitment**: `src/data/components/recruitment-*.json`
-- **Careers**: `src/data/components/careers-*.json` and job openings
+- **Home**: `src/data/components/home/home-*.json`
+- **Technology**: `src/data/components/technology/technology-*.json`  
+- **Recruitment**: `src/data/components/recruitment/recruitment-*.json`
+- **Careers**: `src/data/components/careers/careers-*.json` and job openings
+- **Contact**: `src/data/components/contact-us/contact-*.json` and office locations
 
 **Navigation & Links:**
-- Navigation menu: `src/data/shared/navigation-items.json`
-- Footer links: `src/data/shared/footer-links.json`
-- Social media: `src/data/shared/social-links.json`
+- Navigation menu: `src/data/shared/navigation/navigation-items.json`
+- Footer links: `src/data/shared/footer/footer-links.json`
+- Social media: `src/data/shared/footer/social-links.json`
 
 ### Adding New Components
 1. Create component directory in `src/components/[component-name]/`
@@ -228,7 +244,7 @@ All static content is now externalized into JSON files for easy management:
 1. Create Vue component in `src/components/[page-name]/`
 2. Add route definition to `src/router/router.js`
 3. Import component in router configuration
-4. Add navigation link to `src/data/shared/navigation-items.json`
+4. Add navigation link to `src/data/shared/navigation/navigation-items.json`
 
 ## 🏗️ Architecture
 

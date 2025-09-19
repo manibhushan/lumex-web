@@ -1,9 +1,9 @@
 import contactInfoData from '../../data/shared/contact-info.json';
-import contactMethodsData from '../../data/components/contact-methods.json';
-import contactFaqData from '../../data/components/contact-faq.json';
-import officeLocationsData from '../../data/components/office-locations.json';
-import responseCommitmentsData from '../../data/components/response-commitments.json';
-import contactFormAlternativesData from '../../data/components/contact-form-alternatives.json';
+import contactMethodsData from '../../data/components/contact-us/contact-methods.json';
+import contactFaqData from '../../data/components/contact-us/contact-faq.json';
+import officeLocationsData from '../../data/components/contact-us/office-locations.json';
+import responseCommitmentsData from '../../data/components/contact-us/response-commitments.json';
+import contactFormAlternativesData from '../../data/components/contact-us/contact-form-alternatives.json';
 import { FormValidator } from '../../utils/validation.js';
 
 export default {

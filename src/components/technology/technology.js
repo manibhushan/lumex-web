@@ -1,12 +1,12 @@
-import techServicesData from '../../data/components/technology-services.json';
-import techCategoriesData from '../../data/components/technology-categories.json';
-import caseStudiesData from '../../data/components/technology-case-studies.json';
-import processStepsData from '../../data/components/technology-process-steps.json';
-import techMetricsData from '../../data/components/technology-metrics.json';
-import techTestimonialsData from '../../data/components/technology-testimonials.json';
-import techInnovationData from '../../data/components/technology-innovation.json';
-import techPartnershipsData from '../../data/components/technology-partnerships.json';
-import techBenefitsData from '../../data/components/technology-benefits.json';
+import techServicesData from '../../data/components/technology/technology-services.json';
+import techCategoriesData from '../../data/components/technology/technology-categories.json';
+import caseStudiesData from '../../data/components/technology/technology-case-studies.json';
+import processStepsData from '../../data/components/technology/technology-process-steps.json';
+import techMetricsData from '../../data/components/technology/technology-metrics.json';
+import techTestimonialsData from '../../data/components/technology/technology-testimonials.json';
+import techInnovationData from '../../data/components/technology/technology-innovation.json';
+import techPartnershipsData from '../../data/components/technology/technology-partnerships.json';
+import techBenefitsData from '../../data/components/technology/technology-benefits.json';
 import { pageHeaders, sectionTitles, contactSections } from '../../data/shared/page-content.json';
 
 export default {

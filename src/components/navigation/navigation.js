@@ -1,4 +1,4 @@
-import navigationItemsData from '../../data/shared/navigation-items.json';
+import navigationItemsData from '../../data/shared/navigation/navigation-items.json';
 import { shortName, tagline } from '../../data/shared/company-info.json';
 
 export default {

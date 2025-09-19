@@ -1,12 +1,12 @@
-import recruitmentServicesData from '../../data/components/recruitment-services.json';
-import industriesData from '../../data/components/recruitment-industries.json';
-import processStepsData from '../../data/components/recruitment-process-steps.json';
-import specializedRolesData from '../../data/components/recruitment-specialized-roles.json';
-import metricsData from '../../data/components/recruitment-metrics.json';
-import testimonialsData from '../../data/components/recruitment-testimonials.json';
-import challengesData from '../../data/components/recruitment-challenges.json';
-import candidateExperienceData from '../../data/components/recruitment-candidate-experience.json';
-import techStackData from '../../data/components/recruitment-tech-stack.json';
+import recruitmentServicesData from '../../data/components/recruitment/recruitment-services.json';
+import industriesData from '../../data/components/recruitment/recruitment-industries.json';
+import processStepsData from '../../data/components/recruitment/recruitment-process-steps.json';
+import specializedRolesData from '../../data/components/recruitment/recruitment-specialized-roles.json';
+import metricsData from '../../data/components/recruitment/recruitment-metrics.json';
+import testimonialsData from '../../data/components/recruitment/recruitment-testimonials.json';
+import challengesData from '../../data/components/recruitment/recruitment-challenges.json';
+import candidateExperienceData from '../../data/components/recruitment/recruitment-candidate-experience.json';
+import techStackData from '../../data/components/recruitment/recruitment-tech-stack.json';
 import { pageHeaders, sectionTitles, contactSections } from '../../data/shared/page-content.json';
 
 export default {

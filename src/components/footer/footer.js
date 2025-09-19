@@ -1,7 +1,7 @@
 import companyInfoData from '../../data/shared/company-info.json';
 import contactInfoData from '../../data/shared/contact-info.json';
-import socialLinksData from '../../data/shared/social-links.json';
-import footerLinksData from '../../data/shared/footer-links.json';
+import socialLinksData from '../../data/shared/footer/social-links.json';
+import footerLinksData from '../../data/shared/footer/footer-links.json';
 
 export default {
   name: 'FooterComponent',

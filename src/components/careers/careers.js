@@ -1,10 +1,10 @@
-import jobOpeningsData from '../../data/components/job-openings.json';
-import cultureItemsData from '../../data/components/careers-culture-items.json';
-import benefitsData from '../../data/components/careers-benefits.json';
-import careerStatsData from '../../data/components/careers-statistics.json';
-import employeeTestimonialsData from '../../data/components/careers-testimonials.json';
-import careerGrowthData from '../../data/components/careers-growth.json';
-import teamsData from '../../data/components/careers-teams.json';
+import jobOpeningsData from '../../data/components/careers/job-openings.json';
+import cultureItemsData from '../../data/components/careers/careers-culture-items.json';
+import benefitsData from '../../data/components/careers/careers-benefits.json';
+import careerStatsData from '../../data/components/careers/careers-statistics.json';
+import employeeTestimonialsData from '../../data/components/careers/careers-testimonials.json';
+import careerGrowthData from '../../data/components/careers/careers-growth.json';
+import teamsData from '../../data/components/careers/careers-teams.json';
 import { FormValidator } from '../../utils/validation.js';
 
 export default {
