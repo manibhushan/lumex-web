@@ -39,7 +39,7 @@
 .nav__logo-container {
   display: flex;
   align-items: center;
-  gap: var(--spacing-4);
+  gap: var(--spacing-1);
 }
 
 .nav__logo-svg {
@@ -133,7 +133,7 @@
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   letter-spacing: 0.05em;
 }
 
