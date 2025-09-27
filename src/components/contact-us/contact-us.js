@@ -155,18 +155,22 @@ export default {
   
   mounted() {
     // Set up real-time validation when component is mounted
-    const formElement = this.$el.querySelector('form');
-    if (formElement) {
-      this.validator.setupRealTimeValidation(formElement, 'contact');
-      
-      // Listen for error-cleared events to update Vue state
-      formElement.addEventListener('error-cleared', (event) => {
-        const fieldName = event.detail.fieldName;
-        if (this.errors[fieldName]) {
-          this.errors[fieldName] = '';
+    this.$nextTick(() => {
+      if (this.$el && typeof this.$el.querySelector === 'function') {
+        const formElement = this.$el.querySelector('form');
+        if (formElement) {
+          this.validator.setupRealTimeValidation(formElement, 'contact');
+          
+          // Listen for error-cleared events to update Vue state
+          formElement.addEventListener('error-cleared', (event) => {
+            const fieldName = event.detail.fieldName;
+            if (this.errors[fieldName]) {
+              this.errors[fieldName] = '';
+            }
+          });
         }
-      });
-    }
+      }
+    });
   },
   
   beforeUnmount() {

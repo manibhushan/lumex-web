@@ -1,4 +1,92 @@
-/* Specialized Roles Section */
+/* Recruitment Page Color Overrides Only */
+
+/* Services Overview Section - Colors Only */
+.services-overview {
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+}
+
+section.services-overview .section-title {
+  color: var(--color-gray-900);
+}
+
+.service-item {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.service-item::before {
+  background: var(--gradient-primary);
+}
+
+.service-item__icon {
+  color: var(--color-primary);
+}
+
+.services-overview .service-item__title {
+  color: var(--color-gray-900);
+}
+
+.service-item__description {
+  color: var(--color-black);
+}
+
+/* Industries Section - Colors Only */
+.industries {
+  background: #f5f5f5;
+}
+
+section.industries .section-title {
+  color: var(--color-gray-900);
+}
+
+.industry-card {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.industry-card::before {
+  background: var(--gradient-secondary);
+}
+
+.industries .industry-card__title {
+  color: var(--color-gray-900);
+}
+
+.industry-card__description {
+  color: var(--color-black);
+}
+
+/* Process Section - Colors Only */
+.process {
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+}
+
+section.process .section-title {
+  color: var(--color-gray-900);
+}
+
+.step {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.step::before {
+  background: var(--gradient-accent);
+}
+
+.step__number {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+.process .step__title {
+  color: var(--color-gray-900);
+}
+
+.step__description {
+  color: var(--color-black);
+}
+
 .specialized-roles {
   padding: var(--spacing-20) 0;
   background: 
@@ -13,10 +101,7 @@
 .specialized-roles .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -95,7 +180,7 @@
 }
 
 .role-card__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-6);
   line-height: 1.6;
   position: relative;
@@ -128,9 +213,8 @@
 
 /* Success Metrics Section */
 .success-metrics {
-  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+  background: #f5f5f5;
   padding: var(--spacing-20) 0;
-  position: relative;
 }
 
 .success-metrics::before {
@@ -147,10 +231,7 @@
 .success-metrics .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
   position: relative;
   z-index: 2;
@@ -213,10 +294,7 @@
 .metric-card__number {
   font-size: var(--font-size-4xl);
   font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
   margin-bottom: var(--spacing-2);
   position: relative;
   z-index: 1;
@@ -224,7 +302,7 @@
 }
 
 .metric-card__label {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-weight: 600;
   font-size: var(--font-size-sm);
   text-transform: uppercase;
@@ -235,7 +313,7 @@
 }
 
 .metric-card__description {
-  color: var(--color-gray-500);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   position: relative;
   z-index: 1;
@@ -244,16 +322,13 @@
 /* Client Testimonials Section */
 .client-testimonials {
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
 }
 
 .client-testimonials .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -303,7 +378,7 @@
 }
 
 .testimonial-card__quote {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-style: italic;
   margin-bottom: var(--spacing-6);
   position: relative;
@@ -344,14 +419,14 @@
 }
 
 .testimonial-card__company {
-  color: var(--color-gray-500);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   margin-bottom: var(--spacing-4);
 }
 
 .testimonial-card__placement {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-600);
+  color: var(--color-black);
   border-top: 1px solid var(--color-gray-200);
   padding-top: var(--spacing-4);
   font-weight: 500;
@@ -368,10 +443,7 @@
 .hiring-challenges .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -446,14 +518,14 @@
 }
 
 .challenge-item__problem {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-6);
   line-height: 1.6;
 }
 
 .challenge-item__solution {
   background: linear-gradient(135deg, var(--color-success) 0%, #00b894 100%);
-  color: var(--color-white);
+  color: var(--color-black);
   padding: var(--spacing-4);
   border-radius: var(--border-radius-lg);
   font-weight: 600;
@@ -463,7 +535,7 @@
 /* Candidate Experience Section */
 .candidate-experience {
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
 }
 
 .experience-content {
@@ -493,10 +565,7 @@
 .experience-title {
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   margin-bottom: var(--spacing-6);
 }
 
@@ -507,7 +576,7 @@
 }
 
 .experience-description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-lg);
   line-height: 1.7;
   margin-bottom: var(--spacing-8);
@@ -542,7 +611,7 @@
 }
 
 .experience-feature__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   line-height: 1.6;
 }
 
@@ -596,10 +665,7 @@
 .experience-stat__number {
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
   display: block;
   margin-bottom: var(--spacing-2);
   position: relative;
@@ -608,7 +674,7 @@
 }
 
 .experience-stat__label {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   font-weight: 600;
   text-transform: uppercase;
@@ -619,9 +685,8 @@
 
 /* Technology Stack Section */
 .recruitment-tech {
-  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+  background: #f5f5f5;
   padding: var(--spacing-20) 0;
-  position: relative;
 }
 
 .recruitment-tech::before {
@@ -636,15 +701,7 @@
 }
 
 .recruitment-tech .section-title {
-  text-align: center;
-  margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  position: relative;
-  z-index: 2;
+  color: var(--color-black);
 }
 
 .tech-categories {
@@ -701,12 +758,9 @@
 }
 
 .tech-category-card__title {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-gray-900);
-  margin-bottom: var(--spacing-6);
-  position: relative;
-  z-index: 1;
+  color: var(--color-black);
+  font-size: var(--font-size-lg);
+  padding-bottom: var(--spacing-4);
 }
 
 .tech-category-card__items {
@@ -736,7 +790,7 @@
 .recruitment-cta {
   background: var(--gradient-hero);
   padding: var(--spacing-20) 0;
-  color: var(--color-white);
+  color: var(--color-black);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -767,7 +821,7 @@
 }
 
 .cta-title {
-  color: var(--color-white);
+  color: var(--color-black);
   margin-bottom: var(--spacing-6);
   font-weight: 800;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -812,7 +866,7 @@
 
 .cta-actions .btn--outline {
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-black);
   border: 2px solid var(--color-white);
 }
 
@@ -824,6 +878,21 @@
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+
   .roles-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-6);
@@ -852,6 +921,9 @@
     gap: var(--spacing-10);
   }
   
+  .service-item,
+  .industry-card,
+  .step,
   .role-card,
   .metric-card,
   .testimonial-card,
@@ -878,6 +950,9 @@
     gap: var(--spacing-4);
   }
   
+  .services-overview,
+  .industries,
+  .process,
   .specialized-roles,
   .success-metrics,
   .client-testimonials,
@@ -888,6 +963,9 @@
     padding: var(--spacing-12) 0;
   }
   
+  .service-item,
+  .industry-card,
+  .step,
   .role-card,
   .metric-card,
   .testimonial-card,
@@ -901,13 +979,7 @@
 /* Contact Section */
 .contact-section {
   padding: var(--spacing-20) 0;
-  background: 
-    linear-gradient(135deg, #ffffff 0%, #faf5ff 100%),
-    var(--pattern-waves);
-  background-size: 
-    100% 100%,
-    250px 50px;
-  position: relative;
+  background: #ffffff;
 }
 
 .contact-content {
@@ -918,16 +990,13 @@
 
 .contact-title {
   margin-bottom: var(--spacing-6);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
 .contact-description {
   font-size: var(--font-size-lg);
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-8);
   line-height: 1.7;
 }
@@ -942,45 +1011,23 @@
 
 .contact-item {
   font-size: var(--font-size-base);
-  color: var(--color-gray-700);
+  color: var(--color-black);
+}
+
+.contact-label {
+  margin-right: var(--spacing-2);
 }
 
 .contact-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-3) var(--spacing-6);
-  margin-left: var(--spacing-2);
-  background: 
-    linear-gradient(135deg, #6b46c1 0%, #8b5cf6 100%);
-  color: var(--color-white);
+  color: var(--color-primary);
   text-decoration: none;
-  border-radius: var(--border-radius-lg);
-  font-weight: 600;
-  font-size: var(--font-size-sm);
-  transition: all var(--transition-base);
-  box-shadow: 
-    0 2px 4px rgba(107, 70, 193, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(107, 70, 193, 0.3);
 }
 
 .contact-link:hover {
-  background: 
-    linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
-  transform: translateY(-2px);
-  box-shadow: 
-    0 4px 8px rgba(107, 70, 193, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border-color: rgba(107, 70, 193, 0.5);
+  text-decoration: underline;
 }
 
-.contact-link:active {
-  transform: translateY(0);
-  box-shadow: 
-    0 2px 4px rgba(107, 70, 193, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
+
 
 @media (min-width: 768px) {
   .contact-info {

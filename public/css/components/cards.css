@@ -4,7 +4,7 @@
 .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  color: var(--color-gray-900);
+  color: var(--color-black);
 }
 
 /* Overview Section */
@@ -19,7 +19,7 @@
 
 .overview__description {
   font-size: var(--font-size-lg);
-  color: var(--color-gray-600);
+  color: var(--color-black);
   text-align: center;
   max-width: 800px;
   margin: 0 auto var(--spacing-12);
@@ -87,7 +87,7 @@
 .service-item:hover {
   transform: translateY(-12px) scale(1.02);
   box-shadow: var(--shadow-vibrant);
-  border-color: rgba(102, 126, 234, 0.3);
+  border-color: rgba(107, 114, 128, 0.3);
 }
 
 .service-card::after,
@@ -113,9 +113,7 @@
 .service-item__icon {
   font-size: 4rem;
   margin-bottom: var(--spacing-6);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--color-primary);
   position: relative;
   z-index: 1;
 }
@@ -123,9 +121,7 @@
 .service-card__title,
 .service-item__title {
   margin-bottom: var(--spacing-4);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--color-black);
   font-weight: 700;
   position: relative;
   z-index: 1;
@@ -133,7 +129,7 @@
 
 .service-card__description,
 .service-item__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-6);
   line-height: 1.7;
   position: relative;
@@ -177,6 +173,7 @@
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 800;
   position: relative;
   z-index: 2;
@@ -213,14 +210,12 @@
 
 .value-item__title {
   margin-bottom: var(--spacing-4);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--color-black);
   font-weight: 700;
 }
 
 .value-item__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   line-height: 1.6;
 }
 
@@ -260,7 +255,7 @@
   width: 60px;
   height: 60px;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-black);
   border-radius: 50%;
   font-size: var(--font-size-xl);
   font-weight: 700;
@@ -273,7 +268,7 @@
 }
 
 .step__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   line-height: 1.6;
 }
@@ -311,7 +306,7 @@
 }
 
 .industry-card {
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   padding: var(--spacing-6);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
@@ -331,7 +326,7 @@
 }
 
 .industry-card__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   line-height: 1.6;
 }
@@ -372,7 +367,7 @@
 
 .tech-tag {
   background-color: var(--color-gray-100);
-  color: var(--color-gray-700);
+  color: var(--color-black);
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--border-radius);
   font-size: var(--font-size-sm);
@@ -383,7 +378,7 @@
 /* Tech Stack Section */
 .tech-stack {
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   position: relative;
   z-index: 1;
 }
@@ -426,7 +421,7 @@
   box-shadow: 
     var(--shadow-sm),
     0 0 0 1px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(107, 114, 128, 0.2);
   position: relative;
   z-index: 3;
 }
@@ -448,13 +443,13 @@
 
 .tech-item {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  color: var(--color-white);
+  color: var(--color-black);
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--border-radius);
   font-size: var(--font-size-sm);
   font-weight: 600;
   border: 2px solid transparent;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.15);
   transition: all var(--transition-base);
   position: relative;
   z-index: 4;
@@ -463,7 +458,7 @@
 
 .tech-item:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 8px 16px rgba(107, 114, 128, 0.25);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -472,12 +467,12 @@
   background: var(--color-white);
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.15);
 }
 
 .tech-item.high-contrast:hover {
   background: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-black);
   border-color: var(--color-primary);
 }
 
@@ -489,19 +484,19 @@
   /* Stronger text shadow for readability */
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   /* Minimum contrast guarantee */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-  color: white !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  color: black !important;
   /* Strong border for definition */
   border: 2px solid rgba(255, 255, 255, 0.2) !important;
   /* Enhanced shadow */
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .tech-stack .tech-item:hover {
   /* Enhanced hover state */
-  background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%) !important;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Case Studies */
@@ -530,7 +525,7 @@
 }
 
 .case-study {
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   padding: var(--spacing-6);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
@@ -555,7 +550,7 @@
 
 .result-tag {
   background-color: var(--color-success);
-  color: var(--color-white);
+  color: var(--color-black);
   padding: var(--spacing-1) var(--spacing-3);
   border-radius: var(--border-radius);
   font-size: var(--font-size-xs);
@@ -596,7 +591,7 @@
 }
 
 .testimonial-card {
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   padding: var(--spacing-8);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);

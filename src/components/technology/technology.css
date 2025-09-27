@@ -1,4 +1,125 @@
-/* Technology Page Specific Styles */
+/* Technology Page Color Overrides Only */
+
+/* Services Overview Section - Colors Only */
+.services-overview {
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+}
+
+.services-overview .section-title {
+  color: var(--color-gray-900);
+}
+
+.service-item {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.service-item::before {
+  background: var(--gradient-primary);
+}
+
+.service-item__icon {
+  color: var(--color-primary);
+}
+
+.service-item__title {
+  color: var(--color-gray-900);
+}
+
+.service-item__description {
+  color: var(--color-black);
+}
+
+/* Technologies Section - Colors Only */
+.technologies {
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+}
+
+.technologies .section-title {
+  color: var(--color-gray-900);
+}
+
+.tech-category {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-gray-300);
+}
+
+.tech-category::before {
+  background: var(--gradient-secondary);
+}
+
+.tech-category__title {
+  color: var(--color-gray-900);
+}
+
+.tech-tag {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-gray-300);
+}
+
+/* Case Studies Section - Colors Only */
+.case-studies {
+  background: #f5f5f5;
+  padding: var(--spacing-20) 0;
+}
+
+.case-studies .section-title {
+  color: var(--color-gray-900);
+}
+
+.case-study {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.case-study::before {
+  background: var(--gradient-accent);
+}
+
+.case-study__title {
+  color: var(--color-gray-900);
+}
+
+.case-study__description {
+  color: var(--color-black);
+}
+
+.result-tag {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+/* Process Section - Colors Only */
+.process {
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+}
+
+.process .section-title {
+  color: var(--color-gray-900);
+}
+
+.step {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.step::before {
+  background: var(--gradient-accent);
+}
+
+.step__number {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+.step__title {
+  color: var(--color-gray-900);
+}
+
+.step__description {
+  color: var(--color-black);
+}
 
 /* Technology Metrics Section */
 .tech-metrics {
@@ -30,10 +151,7 @@
 .tech-metrics .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
   position: relative;
   z-index: 2;
@@ -102,10 +220,7 @@
 .metric-card__number {
   font-size: var(--font-size-4xl);
   font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
   margin-bottom: var(--spacing-2);
   position: relative;
   z-index: 1;
@@ -113,7 +228,7 @@
 }
 
 .metric-card__label {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-weight: 600;
   font-size: var(--font-size-sm);
   text-transform: uppercase;
@@ -124,7 +239,7 @@
 }
 
 .metric-card__description {
-  color: var(--color-gray-500);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   position: relative;
   z-index: 1;
@@ -132,17 +247,14 @@
 
 /* Technology Testimonials Section */
 .tech-testimonials {
+  background: #f5f5f5;
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
 }
 
 .tech-testimonials .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -198,7 +310,7 @@
 }
 
 .testimonial-card__quote {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-style: italic;
   margin-bottom: var(--spacing-6);
   position: relative;
@@ -239,14 +351,14 @@
 }
 
 .testimonial-card__company {
-  color: var(--color-gray-500);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   margin-bottom: var(--spacing-4);
 }
 
 .testimonial-card__project {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-4);
   padding-top: var(--spacing-4);
   border-top: 1px solid var(--color-gray-200);
@@ -263,12 +375,9 @@
 }
 
 .tech-badge {
-  background: var(--gradient-primary);
-  color: var(--color-white);
-  padding: var(--spacing-1) var(--spacing-3);
-  border-radius: var(--border-radius-lg);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-gray-300);
 }
 
 /* Technology Innovation Section */
@@ -286,10 +395,7 @@
 .tech-innovation .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -362,7 +468,7 @@
 }
 
 .innovation-card__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-6);
   line-height: 1.6;
   position: relative;
@@ -380,33 +486,27 @@
 }
 
 .benefit-tag {
-  background: var(--gradient-secondary);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-gray-300);
   padding: var(--spacing-2) var(--spacing-3);
   border-radius: var(--border-radius-lg);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  transition: all var(--transition-base);
 }
 
 .benefit-tag:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-colored);
+  background: var(--color-gray-50);
 }
 
 /* Technology Partnerships Section */
 .tech-partnerships {
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
 }
 
 .tech-partnerships .section-title {
   text-align: center;
   margin-bottom: var(--spacing-12);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -511,7 +611,7 @@
 
 .spec-tag {
   background: var(--color-gray-100);
-  color: var(--color-gray-700);
+  color: var(--color-black);
   padding: var(--spacing-1) var(--spacing-3);
   border-radius: var(--border-radius);
   font-size: var(--font-size-xs);
@@ -524,7 +624,7 @@
 }
 
 .partner-card__certifications li {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   margin-bottom: var(--spacing-1);
   position: relative;
@@ -542,7 +642,7 @@
 /* Technology Benefits Section */
 .tech-benefits {
   padding: var(--spacing-20) 0;
-  background-color: var(--color-white);
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
 }
 
 .benefits-content {
@@ -572,10 +672,7 @@
 .benefits-title {
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   margin-bottom: var(--spacing-6);
 }
 
@@ -586,7 +683,7 @@
 }
 
 .benefits-description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-lg);
   line-height: 1.7;
   margin-bottom: var(--spacing-8);
@@ -621,7 +718,7 @@
 }
 
 .benefit-feature__description {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   line-height: 1.6;
 }
 
@@ -675,10 +772,7 @@
 .benefit-stat__number {
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
   display: block;
   margin-bottom: var(--spacing-2);
   position: relative;
@@ -687,7 +781,7 @@
 }
 
 .benefit-stat__label {
-  color: var(--color-gray-600);
+  color: var(--color-black);
   font-size: var(--font-size-sm);
   font-weight: 600;
   text-transform: uppercase;
@@ -700,7 +794,7 @@
 .technology-cta {
   background: var(--gradient-hero);
   padding: var(--spacing-20) 0;
-  color: var(--color-white);
+  color: var(--color-black);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -731,7 +825,7 @@
 }
 
 .cta-title {
-  color: var(--color-white);
+  color: var(--color-black);
   margin-bottom: var(--spacing-6);
   font-weight: 800;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -776,7 +870,7 @@
 
 .cta-actions .btn--outline {
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-black);
   border: 2px solid var(--color-white);
 }
 
@@ -845,52 +939,17 @@
 
 /* Contact Link Button Styling */
 .contact-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-3) var(--spacing-6);
-  margin-left: var(--spacing-2);
-  background: 
-    linear-gradient(135deg, #6b46c1 0%, #8b5cf6 100%);
-  color: var(--color-white);
+  color: var(--color-primary);
   text-decoration: none;
-  border-radius: var(--border-radius-lg);
-  font-weight: 600;
-  font-size: var(--font-size-sm);
-  transition: all var(--transition-base);
-  box-shadow: 
-    0 2px 4px rgba(107, 70, 193, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(107, 70, 193, 0.3);
 }
 
 .contact-link:hover {
-  background: 
-    linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
-  transform: translateY(-2px);
-  box-shadow: 
-    0 4px 8px rgba(107, 70, 193, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border-color: rgba(107, 70, 193, 0.5);
-}
-
-.contact-link:active {
-  transform: translateY(0);
-  box-shadow: 
-    0 2px 4px rgba(107, 70, 193, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-decoration: underline;
 }
 
 /* Contact Section */
 .contact-section {
   padding: var(--spacing-20) 0;
-  background: 
-    linear-gradient(135deg, #ffffff 0%, #faf5ff 100%),
-    var(--pattern-waves);
-  background-size: 
-    100% 100%,
-    250px 50px;
-  position: relative;
 }
 
 .contact-content {
@@ -901,16 +960,13 @@
 
 .contact-title {
   margin-bottom: var(--spacing-6);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
 .contact-description {
   font-size: var(--font-size-lg);
-  color: var(--color-gray-600);
+  color: var(--color-black);
   margin-bottom: var(--spacing-8);
   line-height: 1.7;
 }
@@ -925,7 +981,11 @@
 
 .contact-item {
   font-size: var(--font-size-base);
-  color: var(--color-gray-700);
+  color: var(--color-black);
+}
+
+.contact-label {
+  margin-right: var(--spacing-2);
 }
 
 @media (min-width: 768px) {
