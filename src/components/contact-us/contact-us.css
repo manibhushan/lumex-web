@@ -838,4 +838,35 @@
   .alternative-card {
     margin-bottom: var(--spacing-4);
   }
+  
+  /* Fix z-index and touch event issues on mobile */
+  *::before,
+  *::after {
+    pointer-events: none;
+  }
+  
+  /* Ensure interactive elements can be touched */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+  
+  /* Reset z-index stacking on mobile to prevent scroll blocking */
+  section {
+    z-index: auto;
+  }
+  
+  .contact-method-card,
+  .office-card,
+  .commitment-card,
+  .alternative-card,
+  .faq-category-btn,
+  .faq-item {
+    z-index: auto;
+    position: relative;
+  }
 }

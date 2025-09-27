@@ -937,6 +937,40 @@
   .benefit-stat {
     padding: var(--spacing-4);
   }
+  
+  /* Fix z-index and touch event issues on mobile */
+  *::before,
+  *::after {
+    pointer-events: none;
+  }
+  
+  /* Ensure interactive elements can be touched */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+  
+  /* Reset z-index stacking on mobile to prevent scroll blocking */
+  section {
+    z-index: auto;
+  }
+  
+  .service-item,
+  .tech-category,
+  .case-study,
+  .metric-card,
+  .testimonial-card,
+  .innovation-card,
+  .partner-card,
+  .benefit-feature,
+  .step {
+    z-index: auto;
+    position: relative;
+  }
 }
 
 /* Contact Link Button Styling */

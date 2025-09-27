@@ -1009,6 +1009,36 @@
   .application-form {
     padding: var(--spacing-6);
   }
+  
+  /* Fix z-index and touch event issues on mobile */
+  *::before,
+  *::after {
+    pointer-events: none;
+  }
+  
+  /* Ensure interactive elements can be touched */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+  
+  /* Reset z-index stacking on mobile to prevent scroll blocking */
+  section {
+    z-index: auto;
+  }
+  
+  .job-card,
+  .stat-card,
+  .employee-testimonial,
+  .growth-card,
+  .team-card {
+    z-index: auto;
+    position: relative;
+  }
 }
 
 /* Form Overrides for Careers Page */

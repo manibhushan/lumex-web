@@ -974,6 +974,40 @@ section.process .section-title {
   .experience-stat {
     padding: var(--spacing-4);
   }
+  
+  /* Fix z-index and touch event issues on mobile */
+  *::before,
+  *::after {
+    pointer-events: none;
+  }
+  
+  /* Ensure interactive elements can be touched */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+  
+  /* Reset z-index stacking on mobile to prevent scroll blocking */
+  section {
+    z-index: auto;
+  }
+  
+  .service-item,
+  .industry-card,
+  .step,
+  .role-card,
+  .metric-card,
+  .testimonial-card,
+  .challenge-item,
+  .experience-feature,
+  .tech-category-card {
+    z-index: auto;
+    position: relative;
+  }
 }
 
 /* Contact Section */
