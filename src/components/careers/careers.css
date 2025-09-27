@@ -1053,3 +1053,18 @@
   color: var(--color-black);
   border: 1px solid var(--color-gray-300);
 }
+
+.application .form-file {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 2px dashed var(--color-gray-300);
+}
+
+.application .form-file:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-gray-50);
+}
+
+.application .form-help {
+  color: var(--color-black);
+}

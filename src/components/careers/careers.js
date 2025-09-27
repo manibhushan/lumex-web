@@ -17,6 +17,7 @@ export default {
         lastName: '',
         email: '',
         phone: '',
+        position: '',
         resume: null,
         coverLetter: ''
       },
@@ -25,6 +26,7 @@ export default {
         lastName: '',
         email: '',
         phone: '',
+        position: '',
         resume: '',
         coverLetter: ''
       },
@@ -33,6 +35,7 @@ export default {
         lastName: false,
         email: false,
         phone: false,
+        position: false,
         resume: false,
         coverLetter: false
       },
@@ -80,6 +83,7 @@ export default {
       formData.append('lastName', this.formData.lastName);
       formData.append('email', this.formData.email);
       formData.append('phone', this.formData.phone);
+      formData.append('position', this.formData.position);
       formData.append('resume', this.formData.resume);
       formData.append('coverLetter', this.formData.coverLetter);
 
@@ -92,6 +96,7 @@ export default {
         lastName: validationResult.errors.lastName || '',
         email: validationResult.errors.email || '',
         phone: validationResult.errors.phone || '',
+        position: validationResult.errors.position || '',
         resume: validationResult.errors.resume || '',
         coverLetter: validationResult.errors.coverLetter || ''
       };
@@ -113,10 +118,11 @@ export default {
         let resumeUrl = '';
         if (this.formData.resume) {
           try {
-            resumeUrl = await uploadResumeToFirebase(this.formData.resume);
+            resumeUrl = await uploadResumeToFirebase(this.formData.resume, this.formData.position);
           } catch (uploadError) {
             console.error('Error uploading resume:', uploadError);
             this.showError('Failed to upload resume. Please try again or contact support if the issue persists.');
+            this.isSubmitting = false; // Reset submitting state
             return; // Exit early if upload fails
           }
         }
@@ -127,6 +133,7 @@ export default {
         formDataToSubmit.append('lastName', this.formData.lastName);
         formDataToSubmit.append('email', this.formData.email);
         formDataToSubmit.append('phone', this.formData.phone);
+        formDataToSubmit.append('position', this.formData.position);
         formDataToSubmit.append('resumeUrl', resumeUrl);
         formDataToSubmit.append('coverLetter', this.formData.coverLetter);
 
@@ -139,15 +146,21 @@ export default {
           }
         });
 
+        console.log('Form submission response:', response.status, response.statusText);
+
         if (response.ok) {
-          this.showSuccessMessage = true;
+          console.log('Form submitted successfully, showing success message');
           this.resetForm();
+          // Set success message AFTER resetForm to prevent it from being cleared
+          this.showSuccessMessage = true;
           // Hide success message after 10 seconds
           setTimeout(() => {
             this.showSuccessMessage = false;
           }, 10000);
         } else {
-          throw new Error('Form submission failed');
+          const errorText = await response.text();
+          console.error('Form submission failed:', response.status, errorText);
+          throw new Error(`Form submission failed: ${response.status} ${response.statusText}`);
         }
       } catch (error) {
         console.error('Error submitting form:', error);
@@ -162,6 +175,7 @@ export default {
         lastName: '',
         email: '',
         phone: '',
+        position: '',
         resume: null,
         coverLetter: ''
       };
@@ -170,6 +184,7 @@ export default {
         lastName: '',
         email: '',
         phone: '',
+        position: '',
         resume: '',
         coverLetter: ''
       };
@@ -178,6 +193,7 @@ export default {
         lastName: false,
         email: false,
         phone: false,
+        position: false,
         resume: false,
         coverLetter: false
       };

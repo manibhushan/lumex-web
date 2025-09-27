@@ -251,6 +251,25 @@
                 >
                 <span class="form-error" id="phone-error">{{ (formTouched.phone && errors.phone) ? errors.phone : '' }}</span>
               </div>
+
+              <div class="form-group">
+                <label for="position" class="form-label">Position of Interest *</label>
+                <select 
+                  id="position" 
+                  name="position" 
+                  class="form-select" 
+                  required
+                  v-model="formData.position"
+                  @blur="markFieldTouched('position')"
+                  @change="clearFieldError('position')"
+                >
+                  <option value="">Select a position</option>
+                  <option v-for="job in jobOpenings" :key="job.id" :value="job.title">
+                    {{ job.title }} - {{ job.department }}
+                  </option>
+                </select>
+                <span class="form-error" id="position-error">{{ (formTouched.position && errors.position) ? errors.position : '' }}</span>
+              </div>
             </div>
 
             <div class="form-group">

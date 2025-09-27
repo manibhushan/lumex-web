@@ -5,18 +5,33 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 /**
  * Upload a resume file to Firebase Storage
  * @param {File} file - The file to upload
+ * @param {string} position - The position name to create a folder (optional)
  * @returns {Promise<string>} - Promise that resolves to the download URL
  */
-export async function uploadResumeToFirebase(file) {
+export async function uploadResumeToFirebase(file, position = null) {
   try {
     // Validate file
     if (!file) {
       throw new Error('No file provided');
     }
 
+    // Create a sanitized folder name from position
+    let folderPath = 'resumes';
+    if (position) {
+      // Sanitize position name for use as folder name
+      const sanitizedPosition = position
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-') // Replace spaces with hyphens
+        .replace(/-+/g, '-') // Replace multiple hyphens with single
+        .trim('-'); // Remove leading/trailing hyphens
+      
+      folderPath = `resumes/${sanitizedPosition}`;
+    }
+
     // Create a unique filename with timestamp
     const timestamp = new Date().getTime();
-    const fileName = `resumes/${timestamp}_${file.name}`;
+    const fileName = `${folderPath}/${timestamp}_${file.name}`;
     
     // Create a reference to the file location in Firebase Storage
     const storageRef = ref(storage, fileName);
