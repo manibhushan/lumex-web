@@ -927,7 +927,7 @@
   .tech-partnerships,
   .tech-benefits,
   .technology-cta {
-    padding: var(--spacing-12) 0;
+    padding: var(--spacing-8) 0;
   }
   
   .metric-card,
@@ -952,6 +952,11 @@
   select {
     pointer-events: auto;
     touch-action: manipulation;
+  }
+  
+  /* Disable oversized decorative pseudo-elements on mobile */
+  .tech-metrics::before {
+    display: none;
   }
   
   /* Reset z-index stacking on mobile to prevent scroll blocking */
